@@ -1,6 +1,6 @@
 // GET /api/verify?id=EG-XXXX-XXXX — vérifie l'authenticité d'une attestation.
 import { getStore } from "@netlify/blobs";
-import { ID_RE, json } from "../lib/core.mjs";
+import { ID_RE, TITLES, json } from "../lib/core.mjs";
 
 export default async (req) => {
   if (req.method !== "GET") return json({ error: "Méthode non autorisée." }, 405, { allow: "GET" });
@@ -9,8 +9,9 @@ export default async (req) => {
 
   const rec = await getStore({ name: "attestations", consistency: "strong" }).get(id, { type: "json" });
   if (!rec) return json({ valid: false }, 404);
-  const { name, title, score, total, issuedAt } = rec;
-  return json({ valid: true, id, name, title, score, total, issuedAt });
+  const { name, module, score, total, issuedAt } = rec;
+  const t = TITLES[module] || { fr: rec.title, en: rec.title };
+  return json({ valid: true, id, name, title: t.fr, titleEn: t.en, score, total, issuedAt });
 };
 
 export const config = { path: "/api/verify" };

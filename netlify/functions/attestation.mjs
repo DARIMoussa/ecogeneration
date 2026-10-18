@@ -54,6 +54,7 @@ export default async (req, context) => {
     name: v.name,
     module: v.module,
     title: v.mod.title,
+    titleEn: v.mod.titleEn,
     score: result.score,
     total: result.total,
     issuedAt: new Date().toISOString(),
