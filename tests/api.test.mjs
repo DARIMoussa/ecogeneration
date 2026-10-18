@@ -35,7 +35,7 @@ test("réussite → attestation enregistrée puis vérifiable", async () => {
   const d = await r.json();
   assert.equal(d.passed, true);
   const v = await (await verify(new Request(URL0 + "/api/verify?id=" + d.id.toLowerCase()))).json();
-  assert.deepEqual([v.valid, v.name, v.score], [true, "Awa KOFFI", 10]);
+  assert.deepEqual([v.valid, v.name, v.score, v.titleEn], [true, "Awa KOFFI", 10, "The 17 Sustainable Development Goals"]);
   assert.equal("answers" in v, false);
 });
 
