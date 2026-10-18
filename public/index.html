@@ -1352,6 +1352,29 @@
 
   /* ===== MODULES EN LIGNE + ATTESTATIONS (correction côté serveur) ===== */
   const COURSES=CONTENT.courses;
+  const SIGNATURE=new Image(); SIGNATURE.src='/assets/signature.png';
+  const sigReady=new Promise(res=>{if(SIGNATURE.complete&&SIGNATURE.naturalWidth)res();else{SIGNATURE.onload=res;SIGNATURE.onerror=res;}});
+
+  // Cachet ÉcoGénération (dessiné, pas une image)
+  function drawSeal(x,cx,cy,R,year){
+    const ink='rgba(31,107,64,.85)';
+    x.save();x.translate(cx,cy);x.rotate(-0.15);
+    x.strokeStyle=ink;x.fillStyle=ink;x.textAlign='center';x.textBaseline='middle';
+    x.lineWidth=3.5;x.beginPath();x.arc(0,0,R,0,Math.PI*2);x.stroke();
+    x.lineWidth=1.4;x.beginPath();x.arc(0,0,R-7,0,Math.PI*2);x.stroke();
+    x.beginPath();x.arc(0,0,R-31,0,Math.PI*2);x.stroke();
+    // texte circulaire, réparti selon la largeur réelle de chaque lettre
+    const ring='ÉCOGÉNÉRATION • ABOMEY-CALAVI • BÉNIN • ', rr=R-19;
+    x.font='700 12.5px Arial';
+    const widths=[...ring].map(ch=>x.measureText(ch).width), total=widths.reduce((u,v)=>u+v,0);
+    const scale=(Math.PI*2*rr)/total; let ang=-Math.PI/2;
+    [...ring].forEach((ch,i)=>{const a=ang+widths[i]*scale/2/rr;x.save();x.rotate(a+Math.PI/2);x.translate(0,-rr);x.fillText(ch,0,0);x.restore();ang+=widths[i]*scale/rr;});
+    // centre
+    x.font='700 30px Georgia';x.fillText('ÉG',0,-10);
+    x.font='700 12px Arial';x.fillText('★ '+year+' ★',0,13);
+    x.font='700 7.5px Arial';x.fillText(T.cert.sealLine,0,29);
+    x.restore();
+  }
   let curCourse=null, curKey=null, learnerName="";
   const need=()=>Math.ceil(curCourse.quiz.length*0.8);
   const panel=document.getElementById('course-panel');
@@ -1416,7 +1439,7 @@
           <button class="btn-primary" onclick="downloadCert()">${T.download}</button>
           <button class="btn-ghost" onclick="closeCourse()">${T.finish}</button>
         </div></div>`;
-      drawCert(d,curCourse.titre,verifyUrl);
+      await sigReady; drawCert(d,curCourse.titre,verifyUrl);
     }else{
       panel.innerHTML=`<h3>${T.almost}</h3>
         <p style="opacity:.85;margin:10px 0 4px">${T.scoreNeed(d.score,d.total,d.need)}</p>
@@ -1446,8 +1469,11 @@
     x.fillStyle='#1b2620';x.font='18px Arial';
     x.textAlign='left';x.fillText(K.issued+d,150,720);
     x.font='15px Arial';x.fillStyle='#555';x.fillText(K.ref+rec.id,150,748);x.font='13px Arial';x.fillStyle='#777';x.fillText(K.verify+location.host+CONTENT.verifyPath,150,770);x.fillStyle='#1b2620';x.font='18px Arial';
-    x.textAlign='right';x.fillText(K.signer,1050,710);
-    x.strokeStyle='#1b2620';x.lineWidth=1;x.beginPath();x.moveTo(830,720);x.lineTo(1050,720);x.stroke();
+    drawSeal(x,858,636,82,String(new Date(rec.issuedAt).getFullYear()));
+    if(SIGNATURE.naturalWidth){const w=300,h=w*SIGNATURE.naturalHeight/SIGNATURE.naturalWidth;x.drawImage(SIGNATURE,1065-w,716-h,w,h);}
+    x.strokeStyle='#1b2620';x.lineWidth=1;x.beginPath();x.moveTo(780,722);x.lineTo(1065,722);x.stroke();
+    x.fillStyle='#1b2620';x.textAlign='center';x.font='600 17px Arial';x.fillText('Moussa DARI',922,746);
+    x.font='14px Arial';x.fillStyle='#555';x.fillText(K.signer,922,766);
     if(window.qrcode){
       const q=qrcode(0,'M');q.addData(verifyUrl);q.make();
       const n=q.getModuleCount(),size=130,cell=size/n,ox=600-size/2,oy=600;
