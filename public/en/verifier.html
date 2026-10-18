@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify a certificate — ÉcoGénération</title>
+<meta content="Check that a certificate of achievement issued by ÉcoGénération is authentic." name="description"/>
+<link href="https://ecogeneration.netlify.app/en/verifier.html" rel="canonical"/>
+<link href="https://ecogeneration.netlify.app/verifier.html" hreflang="fr" rel="alternate"/>
+<link href="https://ecogeneration.netlify.app/en/verifier.html" hreflang="en" rel="alternate"/>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#13402b" name="theme-color"/>
+<style>
+  :root{--canopee:#13402b;--feuille:#2f7d4f;--pousse:#8cc63f;--sol:#b8743a;--sable:#f6f1e7;--sable-fonce:#ebe3d2;--encre:#1b2620}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--sable);color:var(--encre);line-height:1.6;min-height:100vh}
+  .wrap{max-width:620px;margin:0 auto;padding:40px 18px 64px}
+  .top{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--canopee);font-family:Georgia,serif;font-weight:700;font-size:1.25rem;margin-bottom:32px}
+  .top img{width:30px;height:30px}
+  h1{font-family:Georgia,serif;color:var(--canopee);font-size:1.9rem;line-height:1.2;margin-bottom:8px}
+  .intro{opacity:.8;margin-bottom:24px}
+  form{display:flex;gap:10px;flex-wrap:wrap}
+  input{flex:1 1 220px;padding:13px 14px;border:1px solid var(--sable-fonce);border-radius:12px;font:inherit;font-size:1rem;background:#fff;text-transform:uppercase;letter-spacing:.06em}
+  button{padding:13px 22px;border:0;border-radius:12px;background:var(--canopee);color:var(--sable);font:inherit;font-weight:600;cursor:pointer}
+  button:hover{background:var(--feuille)}
+  :focus-visible{outline:3px solid var(--pousse);outline-offset:2px}
+  .result{margin-top:28px;border-radius:16px;padding:22px;display:none}
+  .result.show{display:block}
+  .ok{background:#fff;border:2px solid var(--pousse)}
+  .ko{background:#fbe4dc;border:2px solid #e3a58c;color:#7a2a12}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--feuille);margin-bottom:14px}
+  .badge i{display:inline-flex;width:28px;height:28px;border-radius:50%;background:var(--pousse);color:#fff;align-items:center;justify-content:center;font-style:normal}
+  dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px}
+  dt{opacity:.65}
+  dd{font-weight:600}
+  .foot{margin-top:36px;font-size:.88rem;opacity:.7}
+  .foot a{color:var(--feuille)}
+</style>
+</head>
+<body>
+<main class="wrap">
+<a class="top" href="/en/"><img alt="" src="/assets/logo-icon.png"/>ÉcoGénération</a>
+<h1>Verify a certificate</h1>
+<p class="intro">Enter the reference number printed on the certificate (format EG-XXXX-XXXX), or scan its QR code.</p>
+<form id="f">
+<label for="id" style="position:absolute;left:-9999px">Reference number</label>
+<input autocomplete="off" id="id" maxlength="12" name="id" pattern="[Ee][Gg]-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}" placeholder="EG-XXXX-XXXX" required=""/>
+<button type="submit">Verify</button>
+</form>
+<div aria-live="polite" class="result" id="r" role="status"></div>
+<p class="foot">ÉcoGénération certificates are issued after passing a test graded on our servers. <a href="/en/#formations">Take a module</a> · <a href="/mentions-legales.html#confidentialite">Privacy (FR)</a> · <a href="/verifier.html" hreflang="fr" lang="fr">Français</a></p>
+</main>
+<script>
+  const EN=document.documentElement.lang==='en';
+  const T=EN?{checking:'Checking…',ok:'Authentic certificate',holder:'Holder',module:'Module',score:'Score',issued:'Issued on',ref:'Reference',
+      notFound:'<strong>No certificate matches this number.</strong><br>Check what you typed. A certificate that cannot be found was not issued by ÉcoGénération.',
+      invalid:'Invalid number.',down:'Service temporarily unavailable. Please try again later.',locale:'en-GB'}
+    :{checking:'Vérification…',ok:'Attestation authentique',holder:'Titulaire',module:'Module',score:'Score',issued:'Délivrée le',ref:'Référence',
+      notFound:'<strong>Aucune attestation ne correspond à ce numéro.</strong><br>Vérifiez la saisie. Une attestation introuvable n\'a pas été délivrée par ÉcoGénération.',
+      invalid:'Numéro invalide.',down:'Service momentanément indisponible. Réessayez plus tard.',locale:'fr-FR'};
+  const f=document.getElementById('f'), input=document.getElementById('id'), r=document.getElementById('r');
+  const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  function show(cls,html){r.className='result show '+cls;r.innerHTML=html;}
+  async function check(id){
+    id=id.trim().toUpperCase();
+    show('',T.checking);
+    try{
+      const res=await fetch('/api/verify?id='+encodeURIComponent(id));
+      const d=await res.json();
+      if(d.valid){
+        const date=new Date(d.issuedAt).toLocaleDateString(T.locale,{day:'numeric',month:'long',year:'numeric'});
+        show('ok',`<div class="badge"><i>✓</i> ${T.ok}</div>
+          <dl><dt>${T.holder}</dt><dd>${esc(d.name)}</dd>
+          <dt>${T.module}</dt><dd>${esc(EN?(d.titleEn||d.title):d.title)}</dd>
+          <dt>${T.score}</dt><dd>${d.score}/${d.total}</dd>
+          <dt>${T.issued}</dt><dd>${date}</dd>
+          <dt>${T.ref}</dt><dd>${esc(d.id)}</dd></dl>`);
+      }else if(res.status===404){
+        show('ko',T.notFound);
+      }else{
+        show('ko',esc(EN?T.invalid:(d.error||T.invalid)));
+      }
+    }catch(e){show('ko',T.down);}
+  }
+  f.addEventListener('submit',e=>{e.preventDefault();history.replaceState(null,'','?id='+encodeURIComponent(input.value.trim().toUpperCase()));check(input.value);});
+  const q=new URLSearchParams(location.search).get('id');
+  if(q){input.value=q.toUpperCase();check(q);}
+</script>
+</body>
+</html>

@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://ecogeneration.netlify.app/en/" rel="canonical"/>
+<link href="https://ecogeneration.netlify.app/" hreflang="fr" rel="alternate"/>
+<link href="https://ecogeneration.netlify.app/en/" hreflang="en" rel="alternate"/>
+<link href="https://ecogeneration.netlify.app/" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Moussa DARI" name="author"/>
+<title>ÉcoGénération — Educating today, protecting tomorrow</title>
+<meta content="ÉcoGénération teaches pupils and students in sub-Saharan Africa about the 17 Sustainable Development Goals, leadership and climate action, from nursery school to research." name="description"/>
+<!-- Partage social (Open Graph / Twitter) -->
+<meta content="website" property="og:type"/>
+<meta content="https://ecogeneration.netlify.app/en/" property="og:url"/>
+<meta content="ÉcoGénération" property="og:site_name"/>
+<meta content="ÉcoGénération — Educating today, protecting tomorrow" property="og:title"/>
+<meta content="SDGs, leadership and climate: choose your level of study and the Sustainable Development Goal that interests you. Free, from nursery school to research." property="og:description"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="ÉcoGénération — Educating today, protecting tomorrow" name="twitter:title"/>
+<meta content="SDGs, leadership and climate: sustainable development education for sub-Saharan Africa." name="twitter:description"/>
+<meta content="#13402b" name="theme-color"/>
+<meta content="https://ecogeneration.netlify.app/assets/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="ÉcoGénération — SDGs, leadership and climate for sub-Saharan Africa" property="og:image:alt"/>
+<meta content="https://ecogeneration.netlify.app/assets/og-image.png" name="twitter:image"/>
+<!-- Favicon & icônes -->
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/logo-icon.png" rel="icon" type="image/png"/>
+<link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ÉcoGénération","url":"https://ecogeneration.netlify.app/","logo":"https://ecogeneration.netlify.app/assets/logo-icon.png","description":"Initiative d'éducation au développement durable (17 ODD, leadership, climat) pour l'Afrique subsaharienne, de la maternelle à la recherche.","email":"darimoussa5@gmail.com","telephone":"+229 01 91 62 35 28","address":{"@type":"PostalAddress","addressLocality":"Abomey-Calavi","addressCountry":"BJ"},"founder":{"@type":"Person","name":"Moussa DARI","jobTitle":"Fondateur","sameAs":["https://www.instagram.com/darimoussa8/","https://www.tiktok.com/@modar_17","https://x.com/moussa_dari_17","https://www.facebook.com/share/1Du69CdSTn/"]}}
+</script>
+<style>
+  :root{
+    --canopee:#13402b;      /* vert profond de la canopée */
+    --feuille:#2f7d4f;      /* vert feuille */
+    --pousse:#8cc63f;       /* jeune pousse */
+    --sol:#b8743a;          /* ocre du sol */
+    --sable:#f6f1e7;        /* blanc cassé / sable */
+    --sable-fonce:#ebe3d2;
+    --encre:#1b2620;
+    --display:"Fraunces", Georgia, serif;
+    --corps:"Inter", system-ui, sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--corps);
+    background:var(--sable);
+    color:var(--encre);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;letter-spacing:-0.02em}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,241,231,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--sable-fonce);
+  }
+  .nav-in{position:relative;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto}
+  .logo{font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--canopee);display:flex;align-items:center;gap:10px}
+  .logo .leaf{width:26px;height:26px;flex:none}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--encre);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.8;transition:opacity .2s}
+  .nav-links a:hover{opacity:1}
+  .nav-links a.btn{color:var(--sable);opacity:1}
+  .btn{
+    display:inline-block;background:var(--canopee);color:var(--sable);
+    padding:11px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;
+    transition:transform .15s, background .2s;
+  }
+  .btn:hover{background:var(--feuille);transform:translateY(-1px)}
+  .btn-ocre{background:var(--sol)}
+  .btn-ocre:hover{background:#a0632f}
+  .lang-switch{font-weight:700!important;opacity:1!important;border:1.5px solid var(--canopee);border-radius:999px;padding:5px 11px;font-size:.85rem!important;color:var(--canopee)!important}
+  .picker-label{text-align:center;font-weight:600;color:var(--canopee);margin:22px 0 10px;font-size:.95rem}
+  .odd-picker{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:24px}
+  .oddc{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--c,var(--canopee));background:#fff;color:var(--encre);border-radius:999px;padding:6px 12px 6px 6px;font:inherit;font-size:.82rem;cursor:pointer;max-width:240px;text-align:left;line-height:1.2;transition:transform .15s}
+  .oddc:hover{transform:translateY(-1px)}
+  .oddc b{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;border-radius:50%;background:var(--c,var(--canopee));color:var(--fg,#fff);font-size:.85rem}
+  .oddc span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .oddc[data-goal="0"]{padding:8px 16px;font-weight:600}
+  .oddc.active{background:var(--c,var(--canopee));color:var(--fg,#fff)}
+  .oddc.active b{background:rgba(255,255,255,.25)}
+  .odd-hint{text-align:center;font-size:.9rem;opacity:.75;margin:0 0 14px}
+  .odd-card{border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--sable-fonce)}
+  .odd-head{display:flex;align-items:center;gap:16px;padding:20px 22px}
+  .odd-head small{display:block;font-size:.8rem;opacity:.9;font-weight:600;letter-spacing:.02em}
+  .odd-head h3{font-family:var(--display);font-size:1.45rem;line-height:1.2;margin-top:2px}
+  .odd-num{font-family:var(--display);font-size:2.6rem;font-weight:700;line-height:1;min-width:52px;text-align:center}
+  .odd-body{padding:20px 22px 22px;display:grid;gap:14px}
+  .odd-block h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sol);margin-bottom:4px}
+  .odd-block p{font-size:1rem;line-height:1.55}
+  .odd-block.lead{background:var(--sable);border-radius:12px;padding:12px 14px}
+  .odd-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:4px}
+  .odd-links a{color:var(--feuille);font-weight:600;font-size:.92rem}
+  .odd-cta{background:var(--canopee);color:var(--sable);border:0;border-radius:999px;padding:11px 18px;font:inherit;font-weight:600;font-size:.9rem;cursor:pointer}
+  .odd-cta:hover{background:var(--feuille)}
+  @media(max-width:600px){.oddc span{display:none}.oddc{padding:4px}.oddc[data-goal="0"]{padding:8px 14px}.oddc[data-goal="0"] span{display:inline}.odd-head h3{font-size:1.2rem}}
+  .piliers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:36px}
+  .pilier{background:#fff;border:1px solid var(--sable-fonce);border-radius:18px;padding:22px}
+  .pilier h3{font-family:var(--display);color:var(--canopee);font-size:1.25rem;margin:12px 0 6px}
+  .pilier p{font-size:.95rem;opacity:.85}
+  .pi-ic{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;color:#fff;font-weight:700;font-family:var(--display);font-size:1.1rem}
+  .menu-btn{display:none;background:none;border:1px solid var(--sable-fonce);border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--canopee)}
+  @media(max-width:760px){
+    .menu-btn{display:inline-flex}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--sable);border-bottom:1px solid var(--sable-fonce);padding:8px 24px 16px}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:12px 0;border-bottom:1px solid var(--sable-fonce)}
+    .nav-links a.btn{margin-top:12px;text-align:center;border:0}
+    .nav-links a.lang-switch{align-self:flex-start;margin-top:12px;padding:6px 16px;border-bottom:1.5px solid var(--canopee)}
+  }
+  a.logo{text-decoration:none}
+  :focus-visible{outline:3px solid var(--pousse);outline-offset:2px}
+  .form-msg{display:none;margin-top:14px;padding:12px 14px;border-radius:12px;font-weight:500}
+  .form-msg.ok{display:block;background:#e6f2dc;color:var(--canopee)}
+  .form-msg.err{display:block;background:#fbe4dc;color:#7a2a12}
+  .consent{font-size:.82rem;opacity:.75;margin:6px 0 12px}
+  .consent a{color:inherit}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
+
+  /* HERO */
+  header.hero{
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(140,198,63,.25), transparent 60%),
+      linear-gradient(160deg,var(--canopee),#0d2e1f 70%);
+    color:var(--sable);
+    padding:88px 0 0;
+    overflow:hidden;
+    position:relative;
+  }
+  .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);max-width:18ch}
+  .hero .eyebrow{
+    text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:600;
+    color:var(--pousse);margin-bottom:20px;
+  }
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);max-width:46ch;margin:24px 0 32px;opacity:.9}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{
+    display:flex;gap:40px;flex-wrap:wrap;margin-top:64px;padding:30px 0;
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  .stat .num{font-family:var(--display);font-size:2.1rem;font-weight:600;color:var(--pousse)}
+  .stat .lbl{font-size:.85rem;opacity:.8;max-width:20ch}
+  /* growth path illustration */
+  .growth{display:block;width:100%;height:auto;margin-top:56px}
+
+  /* SECTIONS */
+  section{padding:80px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:600;color:var(--sol);margin-bottom:14px}
+  h2.section-title{font-size:clamp(1.9rem,4vw,2.8rem);max-width:20ch;margin-bottom:18px;color:var(--canopee)}
+  .section-intro{font-size:1.12rem;max-width:58ch;opacity:.85}
+
+  /* PROBLEME */
+  .probleme{background:var(--sable-fonce)}
+  .pq{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:500;color:var(--canopee);max-width:24ch;line-height:1.25}
+  .pq span{color:var(--sol)}
+
+  /* PARCOURS */
+  .levels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+  .level{
+    background:#fff;border-radius:18px;padding:28px 22px;
+    border:1px solid var(--sable-fonce);
+    position:relative;overflow:hidden;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .level:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(19,64,43,.12)}
+  .level .stage{font-family:var(--display);font-size:.85rem;font-weight:700;color:var(--sol);letter-spacing:.04em}
+  .level h3{font-size:1.25rem;margin:8px 0 10px;color:var(--canopee)}
+  .level p{font-size:.94rem;opacity:.82}
+  .level .dot{
+    width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;font-weight:700;color:#fff;font-family:var(--display)
+  }
+  .level:nth-child(1) .dot{background:var(--pousse)}
+  .level:nth-child(2) .dot{background:var(--feuille)}
+  .level:nth-child(3) .dot{background:var(--canopee)}
+  .level:nth-child(4) .dot{background:var(--sol)}
+  @media(max-width:860px){.levels{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.levels{grid-template-columns:1fr}}
+
+  /* APPROCHE / PILIERS */
+  .approche{background:var(--canopee);color:var(--sable)}
+  .approche h2.section-title{color:#fff}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .pillar{padding:28px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+  .pillar h3{font-size:1.2rem;color:var(--pousse);margin-bottom:10px}
+  .pillar p{font-size:.95rem;opacity:.88}
+  @media(max-width:780px){.pillars{grid-template-columns:1fr}}
+
+  /* VISION / CITATION */
+  .vision{background:var(--sol);color:#fff;text-align:center}
+  .vision blockquote{font-family:var(--display);font-size:clamp(1.5rem,3.6vw,2.4rem);font-weight:500;max-width:24ch;margin:0 auto;line-height:1.25}
+  .vision .by{margin-top:24px;font-size:.95rem;opacity:.9;letter-spacing:.04em}
+
+  /* CTA FINAL */
+  .cta-final{text-align:center;background:var(--sable-fonce)}
+  .cta-final h2{font-size:clamp(2rem,4.5vw,3rem);color:var(--canopee);max-width:18ch;margin:0 auto 18px}
+  .cta-final p{max-width:50ch;margin:0 auto 30px;font-size:1.1rem;opacity:.85}
+
+  /* FOOTER */
+  footer{background:var(--canopee);color:var(--sable);padding:54px 0 30px}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px}
+  footer .logo{color:#fff}
+  footer a{color:var(--pousse);text-decoration:none}
+  .foot-contact p{font-size:.92rem;opacity:.85;margin:4px 0}
+  .foot-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:.82rem;opacity:.7}
+
+  /* RDV / FORMULAIRE */
+  .rdv{background:var(--sable)}
+  .rdv .head{text-align:center;max-width:60ch;margin:0 auto 10px}
+  .rdv h2.section-title{color:var(--canopee);margin:0 auto 18px}
+  .steps{display:grid;grid-template-columns:1.3fr .9fr;gap:26px;margin-top:50px;align-items:start}
+  @media(max-width:880px){.steps{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--sable-fonce);border-radius:20px;padding:34px}
+  .card .step-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;color:var(--sol);font-size:.9rem;letter-spacing:.03em;margin-bottom:6px}
+  .card .step-tag .n{width:24px;height:24px;border-radius:50%;background:var(--sol);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem}
+  .card h3{font-size:1.4rem;color:var(--canopee);margin-bottom:6px}
+  .card .sub{font-size:.96rem;opacity:.8;margin-bottom:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--encre)}
+  .field .req{color:var(--sol)}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;border:1px solid #d8d2c2;border-radius:11px;
+    font-family:var(--corps);font-size:.97rem;background:var(--sable);color:var(--encre);
+    transition:border .2s, box-shadow .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--feuille);box-shadow:0 0 0 3px rgba(47,125,79,.15);background:#fff;
+  }
+  .field textarea{resize:vertical;min-height:90px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.row2{grid-template-columns:1fr}}
+  .submit{width:100%;border:none;cursor:pointer;background:var(--canopee);color:var(--sable);padding:15px;border-radius:11px;font-family:var(--corps);font-weight:600;font-size:1rem;transition:background .2s,transform .15s;margin-top:6px}
+  .submit:hover{background:var(--feuille);transform:translateY(-1px)}
+  .hp{position:absolute;left:-9999px}
+  #rdv-success{display:none;text-align:center;padding:30px 10px}
+  #rdv-success .check{width:56px;height:56px;border-radius:50%;background:var(--pousse);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 16px}
+  #rdv-success h3{color:var(--canopee);margin-bottom:8px}
+  /* calendly card */
+  .cal{background:var(--canopee);color:var(--sable);position:sticky;top:90px}
+  .cal h3{color:#fff}
+  .cal .sub{opacity:.85;color:var(--sable)}
+  .cal ul{list-style:none;margin:18px 0 24px}
+  .cal li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;opacity:.9;margin-bottom:10px}
+  .cal li svg{flex:none;margin-top:3px}
+  .cal .btn-cal{display:block;text-align:center;background:var(--pousse);color:var(--canopee);padding:15px;border-radius:11px;text-decoration:none;font-weight:700;transition:transform .15s,background .2s}
+  .cal .btn-cal:hover{background:#a0d850;transform:translateY(-1px)}
+
+  /* ===== PLATEFORME APPRENDRE ===== */
+  .apprendre{background:linear-gradient(180deg,#fff,var(--sable))}
+  .apprendre .head{text-align:center;max-width:60ch;margin:0 auto}
+  .apprendre h2.section-title{color:var(--canopee);margin:0 auto 18px}
+  .level-picker{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:40px 0 14px}
+  .lvl{border:1.5px solid var(--sable-fonce);background:#fff;color:var(--encre);padding:10px 18px;border-radius:999px;font-family:var(--corps);font-weight:600;font-size:.92rem;cursor:pointer;transition:all .18s}
+  .lvl:hover{border-color:var(--feuille)}
+  .lvl.active{background:var(--canopee);color:var(--sable);border-color:var(--canopee)}
+  .module{margin-top:30px;background:#fff;border:1px solid var(--sable-fonce);border-radius:24px;padding:34px;min-height:300px}
+  @media(max-width:560px){.module{padding:22px 16px}}
+
+  /* jeu enfants */
+  .game-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:8px}
+  .game-q{font-family:var(--display);font-size:clamp(1.3rem,3.4vw,1.9rem);color:var(--canopee);font-weight:600;max-width:24ch}
+  .score-pill{background:var(--pousse);color:var(--canopee);font-weight:700;padding:8px 16px;border-radius:999px;font-size:1rem;white-space:nowrap}
+  .progress{height:8px;background:var(--sable-fonce);border-radius:999px;overflow:hidden;margin:16px 0 24px}
+  .progress > i{display:block;height:100%;background:var(--feuille);width:0;transition:width .4s}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:560px){.choices{grid-template-columns:1fr}}
+  .choice{border:3px solid var(--sable-fonce);border-radius:20px;padding:14px;cursor:pointer;background:var(--sable);transition:transform .15s,border-color .2s,box-shadow .2s;text-align:center}
+  .choice:hover{transform:translateY(-4px);border-color:var(--feuille);box-shadow:0 12px 28px rgba(19,64,43,.12)}
+  .choice svg{width:100%;height:auto;border-radius:12px;display:block}
+  .choice .clabel{margin-top:12px;font-weight:700;font-size:1.1rem;color:var(--canopee)}
+  .choice.correct{border-color:var(--pousse);background:#f0f9e2}
+  .choice.wrong{border-color:#d98a5a;animation:shake .4s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+  .feedback{margin-top:22px;text-align:center;font-size:1.15rem;font-weight:600;min-height:30px}
+  .feedback.good{color:var(--feuille)}
+  .feedback.nudge{color:#c4702f}
+  .reward{text-align:center;padding:20px 10px}
+  .reward .stars{font-size:2.6rem;letter-spacing:6px;margin-bottom:10px}
+  .reward h3{font-family:var(--display);color:var(--canopee);font-size:2rem;margin-bottom:8px}
+  .reward p{opacity:.85;margin-bottom:22px}
+  .replay{border:none;cursor:pointer;background:var(--sol);color:#fff;padding:13px 28px;border-radius:999px;font-family:var(--corps);font-weight:700;font-size:1rem;transition:background .2s,transform .15s}
+  .replay:hover{background:#a0632f;transform:translateY(-1px)}
+
+  /* exercices niveaux supérieurs */
+  .exo .badge{display:inline-block;background:var(--sable-fonce);color:var(--canopee);font-weight:700;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.04em;margin-bottom:14px}
+  .exo h3{font-family:var(--display);color:var(--canopee);font-size:1.5rem;margin-bottom:12px}
+  .exo .prompt{background:var(--sable);border-left:4px solid var(--feuille);padding:18px 20px;border-radius:0 12px 12px 0;margin-bottom:22px;font-size:1.02rem}
+  .exo h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--sol);margin-bottom:12px}
+  .res-list{list-style:none;display:grid;gap:10px;margin-bottom:8px}
+  .res-list a{display:flex;gap:12px;align-items:center;padding:14px 16px;background:var(--sable);border:1px solid var(--sable-fonce);border-radius:12px;text-decoration:none;color:var(--encre);font-weight:600;font-size:.95rem;transition:border-color .2s,transform .15s}
+  .res-list a:hover{border-color:var(--feuille);transform:translateX(3px)}
+  .res-list a span.ic{flex:none;width:34px;height:34px;border-radius:9px;background:var(--canopee);color:var(--pousse);display:flex;align-items:center;justify-content:center;font-weight:800}
+  .res-list a small{display:block;font-weight:400;opacity:.7;font-size:.85rem;margin-top:2px}
+
+  /* ===== BIBLIOTHEQUE ===== */
+  .biblio{background:var(--sable-fonce)}
+  .biblio h2.section-title{color:var(--canopee)}
+  .shelf{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+  @media(max-width:780px){.shelf{grid-template-columns:1fr}}
+  .shelf-card{background:#fff;border-radius:18px;padding:28px;border:1px solid #e5ddcb}
+  .shelf-card h3{font-family:var(--display);color:var(--canopee);font-size:1.3rem;margin-bottom:4px}
+  .shelf-card .who{font-size:.85rem;color:var(--sol);font-weight:600;margin-bottom:16px}
+
+  /* ===== OPPORTUNITES ===== */
+  .opp{background:var(--canopee);color:var(--sable)}
+  .opp h2.section-title{color:#fff}
+  .opp .section-intro{opacity:.85}
+  .opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  @media(max-width:840px){.opp-grid{grid-template-columns:1fr}}
+  .opp-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:30px}
+  .opp-card h3{font-family:var(--display);color:var(--pousse);font-size:1.4rem;margin-bottom:6px}
+  .opp-card p.lead2{opacity:.85;font-size:.96rem;margin-bottom:20px}
+  .opp-card .field label{color:var(--sable)}
+  .opp-card .field input,.opp-card .field select,.opp-card .field textarea{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff}
+  .opp-card .field input::placeholder,.opp-card .field textarea::placeholder{color:rgba(255,255,255,.5)}
+  .opp-card .field input:focus,.opp-card .field select:focus,.opp-card .field textarea:focus{background:rgba(255,255,255,.14);border-color:var(--pousse);box-shadow:0 0 0 3px rgba(140,198,63,.2)}
+  .opp-card .field select option{color:#1b2620}
+  .opp-card .submit{background:var(--pousse);color:var(--canopee)}
+  .opp-card .submit:hover{background:#a0d850}
+
+  /* ===== POURQUOI MAINTENANT (stats) ===== */
+  .stats-sec{background:var(--canopee);color:var(--sable)}
+  .stats-sec h2.section-title{color:#fff}
+  .stats-sec .section-intro{opacity:.85}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
+  @media(max-width:880px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.stat-grid{grid-template-columns:1fr}}
+  .stat-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:26px 22px}
+  .stat-box .big{font-family:var(--display);font-size:2.6rem;font-weight:700;color:var(--pousse);line-height:1}
+  .stat-box .desc{font-size:.95rem;opacity:.9;margin-top:10px}
+  .stat-box .src{font-size:.72rem;opacity:.55;margin-top:12px}
+
+  /* ===== FORMATIONS CERTIFIANTES ===== */
+  .formations{background:var(--sable)}
+  .formations h2.section-title{color:var(--canopee)}
+  .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+  @media(max-width:880px){.course-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.course-grid{grid-template-columns:1fr}}
+  .course{background:#fff;border:1px solid var(--sable-fonce);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+  .course .tag{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+  .course .tag.on{background:#eaf6da;color:var(--feuille)}
+  .course .tag.soon{background:var(--sable-fonce);color:var(--sol)}
+  .course h3{font-family:var(--display);color:var(--canopee);font-size:1.25rem;margin-bottom:8px}
+  .course p{font-size:.93rem;opacity:.82;flex-grow:1;margin-bottom:18px}
+  .course button{border:none;cursor:pointer;background:var(--canopee);color:var(--sable);padding:12px;border-radius:10px;font-family:var(--corps);font-weight:600;font-size:.95rem;transition:background .2s}
+  .course button:hover{background:var(--feuille)}
+  .course button:disabled{background:var(--sable-fonce);color:#9a9384;cursor:not-allowed}
+  /* panneau du cours */
+  #course-panel{display:none;margin-top:30px;background:#fff;border:2px solid var(--feuille);border-radius:22px;padding:34px}
+  @media(max-width:560px){#course-panel{padding:22px 16px}}
+  #course-panel h3{font-family:var(--display);color:var(--canopee);font-size:1.5rem;margin-bottom:6px}
+  .cp-step{margin-top:14px}
+  .lesson{background:var(--sable);border-radius:14px;padding:20px;margin:16px 0}
+  .lesson li{margin:0 0 10px 18px;font-size:.97rem}
+  .lesson h4{font-family:var(--display);color:var(--canopee);font-size:1.05rem;margin:18px 0 8px}
+  .lesson p{font-size:.97rem;margin-bottom:10px}
+  .odd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin:10px 0 6px;padding:0;list-style:none}
+  .odd-grid li{margin:0;background:#fff;border:1px solid var(--sable-fonce);border-radius:10px;padding:10px 12px;font-size:.88rem;line-height:1.35}
+  .odd-grid b{display:inline-block;min-width:26px;color:var(--feuille)}
+  .odd-grid small{display:block;opacity:.7;margin-top:3px}
+  .quiz-q{margin:18px 0;padding-bottom:8px;border-bottom:1px solid var(--sable-fonce)}
+  .quiz-q p{font-weight:600;margin-bottom:10px;color:var(--canopee)}
+  .quiz-opt{display:block;padding:10px 14px;border:1.5px solid var(--sable-fonce);border-radius:10px;margin-bottom:8px;cursor:pointer;font-size:.94rem;transition:border-color .15s,background .15s}
+  .quiz-opt:hover{border-color:var(--feuille)}
+  .quiz-opt input{margin-right:10px}
+  .quiz-opt.sel{border-color:var(--feuille);background:#f0f9e2}
+  .cp-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+  .cp-actions button{border:none;cursor:pointer;padding:13px 24px;border-radius:10px;font-family:var(--corps);font-weight:700;font-size:.97rem;transition:transform .15s,background .2s}
+  .btn-primary{background:var(--sol);color:#fff}.btn-primary:hover{background:#a0632f;transform:translateY(-1px)}
+  .btn-ghost{background:var(--sable-fonce);color:var(--encre)}.btn-ghost:hover{background:#ded5c2}
+  .cert-wrap{text-align:center}
+  .cert-wrap canvas{max-width:100%;height:auto;border:1px solid var(--sable-fonce);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+  .quiz-input{width:100%;max-width:340px;padding:12px 14px;border:1.5px solid var(--sable-fonce);border-radius:10px;font-family:var(--corps);font-size:1rem;margin-top:6px}
+
+  /* ===== FONDATEUR ===== */
+  .founder{background:var(--sable-fonce)}
+  .founder-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;margin-top:20px}
+  @media(max-width:820px){.founder-grid{grid-template-columns:1fr}}
+  .founder-portrait{background:var(--canopee);border-radius:24px;padding:0;overflow:hidden;aspect-ratio:1/1;display:flex;align-items:flex-end;justify-content:center;position:relative}
+  .founder-portrait .initials{font-family:var(--display);font-size:6rem;font-weight:700;color:var(--pousse);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+  .founder-portrait .cap{position:relative;z-index:2;background:rgba(19,64,43,.85);color:var(--sable);width:100%;text-align:center;padding:14px;font-size:.9rem}
+  .founder-body h2{font-family:var(--display);color:var(--canopee);font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:6px}
+  .founder-body .role{color:var(--sol);font-weight:600;margin-bottom:18px}
+  .founder-body p{margin-bottom:14px;font-size:1.02rem}
+  .creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .cred{background:#fff;border:1px solid #e2d9c7;border-radius:999px;padding:7px 15px;font-size:.85rem;font-weight:600;color:var(--canopee)}
+
+  /* ===== OBJECTIFS (compteurs) ===== */
+  .goals{background:var(--feuille);color:#fff;text-align:center}
+  .goals h2.section-title{color:#fff;margin:0 auto 10px}
+  .goal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}
+  @media(max-width:820px){.goal-grid{grid-template-columns:1fr 1fr}}
+  .goal .gnum{font-family:var(--display);font-size:2.8rem;font-weight:700;line-height:1}
+  .goal .glbl{opacity:.92;font-size:.95rem;margin-top:8px}
+
+  /* ===== CTA SEGMENTÉS ===== */
+  .join{background:var(--sable)}
+  .join h2.section-title{color:var(--canopee)}
+  .join-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  @media(max-width:880px){.join-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.join-grid{grid-template-columns:1fr}}
+  .join-card{background:#fff;border:1px solid var(--sable-fonce);border-radius:18px;padding:26px;text-align:center;transition:transform .2s,box-shadow .2s}
+  .join-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(19,64,43,.1)}
+  .join-card .emoji{font-size:2rem}
+  .join-card h3{font-family:var(--display);color:var(--canopee);font-size:1.2rem;margin:10px 0 8px}
+  .join-card p{font-size:.9rem;opacity:.82;margin-bottom:16px;min-height:54px}
+  .join-card a{display:inline-block;background:var(--canopee);color:var(--sable);padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;transition:background .2s}
+  .join-card a:hover{background:var(--feuille)}
+
+  /* ===== NEWSLETTER + PARTAGE (footer) ===== */
+  .news{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:26px;margin-bottom:34px}
+  .news h3{color:#fff;font-family:var(--display);font-size:1.3rem;margin-bottom:6px}
+  .news p{opacity:.82;font-size:.94rem;margin-bottom:16px}
+  .news form{display:flex;gap:10px;flex-wrap:wrap}
+  .news input{flex:1;min-width:200px;padding:13px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;font-family:var(--corps);font-size:.97rem}
+  .news input::placeholder{color:rgba(255,255,255,.55)}
+  .news button{border:none;cursor:pointer;background:var(--pousse);color:var(--canopee);font-weight:700;padding:13px 24px;border-radius:10px;font-family:var(--corps);transition:background .2s}
+  .news button:hover{background:#a0d850}
+  .news .ok{color:var(--pousse);font-weight:600;margin-top:10px;display:none}
+  .share{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:8px}
+  .share span{font-size:.88rem;opacity:.8}
+  .share a,.share button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:var(--sable);display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;transition:background .2s,transform .15s}
+  .share a:hover,.share button:hover{background:var(--pousse);color:var(--canopee);transform:translateY(-2px)}
+
+  /* ===== AFFILIATIONS (logos ronds) ===== */
+  .affil{background:#fff}
+  .affil h2.section-title{color:var(--canopee)}
+  .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:32px}
+  .logo-badge{display:flex;align-items:center;gap:13px;background:var(--sable);border:1px solid var(--sable-fonce);border-radius:14px;padding:12px 14px}
+  .logo-badge .circle{width:48px;height:48px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:.9rem;color:#fff;letter-spacing:.02em}
+  .logo-badge .nm{font-size:.9rem;font-weight:600;color:var(--encre);line-height:1.2}
+  .logo-badge .nm small{display:block;font-weight:400;opacity:.62;font-size:.77rem;margin-top:2px}
+  .affil .note{text-align:center;font-size:.85rem;opacity:.6;margin-top:24px;max-width:60ch;margin-left:auto;margin-right:auto}
+
+  /* ===== APPELS A CANDIDATURE ===== */
+  .appels{background:var(--sable-fonce)}
+  .appels h2.section-title{color:var(--canopee)}
+  .appels .deadline-note{text-align:center;font-size:.9rem;background:#fff;border:1px solid #e5ddcb;border-radius:12px;padding:12px 18px;max-width:64ch;margin:22px auto 0;color:var(--sol);font-weight:600}
+  .appels .sub-head{font-family:var(--display);color:var(--canopee);font-size:1.4rem;margin:42px 0 4px}
+  .appels .sub-desc{font-size:.95rem;opacity:.78;margin-bottom:18px}
+  .res-na{display:flex;gap:12px;align-items:center;padding:14px 16px;background:var(--sable);border:1px dashed #c9bfa8;border-radius:12px;color:#8a8474;font-size:.9rem;font-weight:500}
+  .res-na .ic{flex:none;width:34px;height:34px;border-radius:9px;background:#ded5c2;color:#8a8474;display:flex;align-items:center;justify-content:center;font-weight:800}
+
+  .logo-badge img.logo-img{width:48px;height:48px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--sable-fonce);flex:none;padding:4px}
+  .affil .note code{background:var(--sable-fonce);padding:2px 6px;border-radius:5px;font-size:.85em;color:var(--canopee)}
+  .follow{margin-top:14px}
+  .follow .lbl{font-size:.88rem;opacity:.8;margin-bottom:8px;display:block}
+  .follow .row{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  :focus-visible{outline:3px solid var(--pousse);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav aria-label="Main navigation" id="top">
+<div class="nav-in">
+<a aria-label="ÉcoGénération — home" class="logo" href="#top">
+<img alt="" class="leaf" height="30" src="/assets/logo-icon.png" width="30"/>
+      ÉcoGénération
+    </a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menu-btn"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+<div class="nav-links" id="nav-links">
+<a href="#apprendre">Learn</a>
+<a href="#formations">Courses</a>
+<a href="#fondateur">Founder</a>
+<a href="#opportunites">Opportunities</a>
+<a aria-label="Version française" class="lang-switch" href="/" hreflang="fr" lang="fr">FR</a>
+<a class="btn" href="#contact">Join us</a>
+</div>
+</div>
+</nav>
+<main id="contenu">
+<header class="hero">
+<div class="wrap">
+<p class="eyebrow">SDGs · Leadership · Climate — Sub-Saharan Africa</p>
+<h1>A generation of leaders for a sustainable future.</h1>
+<p class="lead">ÉcoGénération supports pupils and students, from nursery school to research, to understand the 17 Sustainable Development Goals, build their leadership and take climate action. Because a child who learns early becomes an adult who acts.</p>
+<div class="hero-cta">
+<a class="btn btn-ocre" href="#contact">Support the project</a>
+<a class="btn" href="#apprendre" style="background:rgba(255,255,255,.12)">Choose my level and my SDG</a>
+</div>
+<div class="hero-stats">
+<div class="stat"><div class="num">17</div><div class="lbl">Sustainable Development Goals to explore</div></div>
+<div class="stat"><div class="num">7</div><div class="lbl">levels of study, from nursery school to research</div></div>
+<div class="stat"><div class="num">100%</div><div class="lbl">free and accessible from a phone</div></div>
+</div>
+<!-- Growth path signature -->
+<svg aria-hidden="true" class="growth" fill="none" preserveaspectratio="xMidYMid meet" viewbox="0 0 1140 150">
+<path d="M0 130 C 200 130, 250 90, 400 88 S 650 60, 760 48 S 1000 24, 1140 18" opacity=".6" stroke="#8cc63f" stroke-dasharray="6 6" stroke-width="2.5"></path>
+<g>
+<circle cx="120" cy="128" fill="#8cc63f" r="7"></circle><text fill="#cfe8a8" font-family="Inter" font-size="13" text-anchor="middle" x="120" y="112">Primary</text>
+<circle cx="430" cy="88" fill="#2f7d4f" r="7"></circle><text fill="#cfe8a8" font-family="Inter" font-size="13" text-anchor="middle" x="430" y="72">Lower secondary</text>
+<circle cx="760" cy="48" fill="#b8743a" r="7"></circle><text fill="#e8c9aa" font-family="Inter" font-size="13" text-anchor="middle" x="760" y="32">Upper secondary</text>
+<circle cx="1080" cy="18" fill="#f6f1e7" r="9"></circle><text fill="#f6f1e7" font-family="Inter" font-size="13" text-anchor="middle" x="1060" y="44">University</text>
+</g>
+</svg>
+</div>
+</header>
+<section class="probleme" id="mission">
+<div class="wrap reveal">
+<p class="eyebrow">The challenge</p>
+<p class="pq">Poverty, inequality, climate: the great challenges of sustainable development are first of all a <span>question of human behaviour</span>. And behaviour is shaped in childhood.</p>
+<p class="section-intro" style="margin-top:28px">
+      Changing an adult's settled habits is hard. But teaching a child to respect others and the environment, and to take responsibility, plants a seed that grows for a lifetime — and is passed on. Educating one, two, three generations transforms a whole society for good.
+    </p>
+<div class="piliers">
+<div class="pilier"><span class="pi-ic" style="background:#19486A">17</span><h3>The SDGs</h3><p>Understand the 17 Sustainable Development Goals and how they connect, at your own level.</p></div>
+<div class="pilier"><span class="pi-ic" style="background:var(--sol)">★</span><h3>Leadership</h3><p>Take the initiative, mobilise others and lead concrete projects in your community.</p></div>
+<div class="pilier"><span class="pi-ic" style="background:#3F7E44">13</span><h3>Climate</h3><p>Act on the climate emergency, to which sub-Saharan Africa is particularly exposed.</p></div>
+</div>
+</div>
+</section>
+<!-- ===== POURQUOI MAINTENANT ===== -->
+<section class="stats-sec" id="pourquoi">
+<div class="wrap">
+<div class="head reveal" style="text-align:center;max-width:60ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center;color:var(--pousse)">Why now</p>
+<h2 class="section-title" style="margin:0 auto 18px">A double emergency: climate and education</h2>
+<p class="section-intro" style="margin:0 auto">Sub-Saharan Africa is the most exposed to climate change while contributing the least to it — and it is also where the most children are out of school. Educating this generation means tackling the problem at its root.</p>
+</div>
+<div class="stat-grid reveal">
+<div class="stat-box"><div class="big" data-count="4" data-suffix="%">4%</div><div class="desc">of global greenhouse gas emissions come from Africa, yet it is the most vulnerable continent.</div><div class="src">Source: UNEP, WMO</div></div>
+<div class="stat-box"><div class="big" data-count="50" data-suffix="%+">50%+</div><div class="desc">of the world's out-of-school children live in sub-Saharan Africa.</div><div class="src">Source: UNESCO GEM 2024</div></div>
+<div class="stat-box"><div class="big" data-count="60" data-suffix="%">60%</div><div class="desc">of Africa's population is under 25: the youngest continent in the world.</div><div class="src">Source: World Bank, UN</div></div>
+<div class="stat-box"><div class="big" data-count="110" data-suffix="M">110M</div><div class="desc">Africans directly affected by climate-related disasters in a single year.</div><div class="src">Source: WMO, 2022</div></div>
+</div>
+</div>
+</section>
+<section id="parcours">
+<div class="wrap">
+<div class="reveal">
+<p class="eyebrow">A continuous pathway</p>
+<h2 class="section-title">Learning sustainability at every age</h2>
+<p class="section-intro">A step-by-step programme, adapted to each level, that follows learners from their first years to higher education.</p>
+</div>
+<div class="levels reveal">
+<div class="level">
+<div class="dot">1</div>
+<div class="stage">PRIMARY</div>
+<h3>Discover</h3>
+<p>Discover nature, waste, water and living things through play, gardening and stories.</p>
+</div>
+<div class="level">
+<div class="dot">2</div>
+<div class="stage">LOWER SECONDARY</div>
+<h3>Understand</h3>
+<p>Grasp the causes of climate change, the resource cycle and the actions that matter.</p>
+</div>
+<div class="level">
+<div class="dot">3</div>
+<div class="stage">UPPER SECONDARY</div>
+<h3>Act</h3>
+<p>Run concrete projects: tree planting, waste management, green clubs and local solutions.</p>
+</div>
+<div class="level">
+<div class="dot">4</div>
+<div class="stage">UNIVERSITY</div>
+<h3>Innovate</h3>
+<p>Design sustainable solutions, start ventures and drive change across the continent.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PLATEFORME APPRENDRE ===== -->
+<section class="apprendre" id="apprendre">
+<div class="wrap">
+<div class="head reveal">
+<p class="eyebrow" style="text-align:center">The platform</p>
+<h2 class="section-title">Choose your level of study and your SDG</h2>
+<p class="section-intro" style="margin:0 auto">1. Select your level of study. 2. Choose the Sustainable Development Goal that interests you. You get an explanation, a challenge suited to your age and a way to act as a leader.</p>
+</div>
+<p class="picker-label reveal">Your level of study</p>
+<div aria-label="Level of study" class="level-picker reveal" id="level-picker" role="group">
+<button class="lvl active" data-level="maternelle">Nursery (ages 3–5)</button>
+<button class="lvl" data-level="primaire">Primary (ages 6–11)</button>
+<button class="lvl" data-level="secondaire">Secondary (ages 11–18)</button>
+<button class="lvl" data-level="licence">Bachelor's (years 1–3)</button>
+<button class="lvl" data-level="master">Master's (M1–M2)</button>
+<button class="lvl" data-level="doctorat">PhD (years 1–3)</button>
+<button class="lvl" data-level="recherche">Research &amp; Innovation</button>
+</div>
+<p class="picker-label reveal">Which SDG interests you?</p>
+<div aria-label="Sustainable Development Goals" class="odd-picker reveal" id="odd-picker" role="group"></div>
+<div aria-live="polite" class="module reveal" id="module"><!-- contenu injecté par JS --></div>
+</div>
+</section>
+<!-- ===== FORMATIONS CERTIFIANTES ===== -->
+<section class="formations" id="formations">
+<div class="wrap">
+<div class="head reveal" style="text-align:center;max-width:62ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center">Online modules</p>
+<h2 class="section-title" style="margin:0 auto 18px">Learn, take the test, earn your certificate</h2>
+<p class="section-intro" style="margin:0 auto">Modules open to everyone, everywhere. Follow the lesson, pass the quiz and download a certificate of achievement in your name, verifiable online with its QR code. Two modules are available now.</p>
+</div>
+<div class="course-grid reveal">
+<div class="course">
+<span class="tag on">Available</span>
+<h3>The 17 Sustainable Development Goals</h3>
+<p>Understand the United Nations 2030 Agenda: the 17 SDGs, how they connect and how to act for them from your school or community.</p>
+<button onclick="startCourse('odd')">Start the module</button>
+</div>
+<div class="course">
+<span class="tag on">Available</span>
+<h3>Leadership for Sustainable Development</h3>
+<p>Understand your role as a leader facing the great challenges (poverty, inequality, climate): act, mobilise and drive change in your community.</p>
+<button onclick="startCourse('leadership')">Start the module</button>
+</div>
+<div class="course">
+<span class="tag soon">Coming soon</span>
+<h3>Regenerative agriculture</h3>
+<p>Restore soils, water and biodiversity while feeding communities.</p>
+<button disabled="">Coming soon</button>
+</div>
+<div class="course">
+<span class="tag soon">Coming soon</span>
+<h3>Renewable energy</h3>
+<p>Solar, wind, hydro: clean energy for access and for the climate.</p>
+<button disabled="">Coming soon</button>
+</div>
+<div class="course">
+<span class="tag soon">Coming soon</span>
+<h3>Adaptation &amp; resilience</h3>
+<p>Prepare for floods, droughts and extreme heat.</p>
+<button disabled="">Coming soon</button>
+</div>
+<div class="course">
+<span class="tag soon">Coming soon</span>
+<h3>Climate advocacy &amp; policy</h3>
+<p>Influence decisions and build climate into public policy.</p>
+<button disabled="">Coming soon</button>
+</div>
+<div class="course">
+<span class="tag soon">Coming soon</span>
+<h3>Climate justice</h3>
+<p>Equity, community voices and a just transition for all.</p>
+<button disabled="">Coming soon</button>
+</div>
+</div>
+<div id="course-panel"><!-- injecté par JS --></div>
+</div>
+</section>
+<!-- ===== BIBLIOTHEQUE ===== -->
+<section class="biblio" id="bibliotheque">
+<div class="wrap">
+<div class="head reveal" style="text-align:center;max-width:60ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center">Free resources</p>
+<h2 class="section-title" style="margin:0 auto 18px">The sustainable development library, by level</h2>
+<p class="section-intro" style="margin:0 auto">Free, trusted resources to learn, teach and go further — from toddlers to researchers.</p>
+</div>
+<div class="shelf reveal">
+<div class="shelf-card">
+<h3>Toddlers &amp; primary</h3>
+<p class="who">To read with a parent or teacher</p>
+<ul class="res-list">
+<li><a href="https://climatekids.nasa.gov/" rel="noopener" target="_blank"><span class="ic">N</span><span>NASA Climate Kids<small>Games and simple explanations about climate</small></span></a></li>
+<li><a href="https://www.oce.global/fr" rel="noopener" target="_blank"><span class="ic">O</span><span>Office for Climate Education<small>Learning activities for the youngest</small></span></a></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>Secondary school</h3>
+<p class="who">Understand causes and solutions</p>
+<ul class="res-list">
+<li><a href="https://www.unesco.org/en/climate-change-education" rel="noopener" target="_blank"><span class="ic">U</span><span>UNESCO — Climate change education<small>The global reference framework</small></span></a></li>
+<li><a href="https://education.nationalgeographic.org/" rel="noopener" target="_blank"><span class="ic">N</span><span>National Geographic Education<small>Resources and interactive maps</small></span></a></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>Bachelor's &amp; master's</h3>
+<p class="who">Go deeper into science and policy</p>
+<ul class="res-list">
+<li><a href="https://unccelearn.org/" rel="noopener" target="_blank"><span class="ic">L</span><span>UN CC:Learn<small>Free online courses with certificates</small></span></a></li>
+<li><a href="https://elearning.fao.org/" rel="noopener" target="_blank"><span class="ic">F</span><span>FAO eLearning Academy<small>Agriculture, climate and sustainability</small></span></a></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>PhD, research &amp; teachers</h3>
+<p class="who">Scientific and teaching sources</p>
+<ul class="res-list">
+<li><a href="https://www.ipcc.ch/" rel="noopener" target="_blank"><span class="ic">G</span><span>IPCC<small>Reference scientific reports</small></span></a></li>
+<li><a href="https://scholar.google.com/" rel="noopener" target="_blank"><span class="ic">S</span><span>Google Scholar<small>Open-access articles and publications</small></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== OPPORTUNITES ===== -->
+<section class="opp" id="opportunites">
+<div class="wrap">
+<div class="head reveal" style="text-align:center;max-width:62ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center;color:var(--pousse)">Opportunities</p>
+<h2 class="section-title">Internships, assignments &amp; teaching</h2>
+<p class="section-intro">Experts, organisations and teachers worldwide: join the movement. Every request is read by our team, who will reply by email.</p>
+</div>
+<div class="opp-grid reveal">
+<!-- Bourse de stages / missions -->
+<div class="opp-card">
+<h3>Offer an internship or an assignment</h3>
+<p class="lead2">Experienced? Recruit interns or offer your services (free or paid) anywhere in the world.</p>
+<form class="js-form" data-netlify="true" method="POST" name="mission" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="mission"/>
+<p class="hp"><label>Do not fill in: <input name="bot-field"/></label></p>
+<div class="field"><label for="m-nom">Name <span class="req">*</span></label><input autocomplete="name" id="m-nom" name="nom" required="" type="text"/></div>
+<div class="field"><label for="m-org">Organisation</label><input autocomplete="organization" id="m-org" name="organisation" type="text"/></div>
+<div class="row2">
+<div class="field"><label for="m-email">Email <span class="req">*</span></label><input autocomplete="email" id="m-email" name="email" required="" type="email"/></div>
+<div class="field"><label for="m-type">Type</label>
+<select id="m-type" name="type">
+<option>Internship</option><option>Short assignment</option><option>Mentoring</option><option>Consulting</option>
+</select>
+</div>
+</div>
+<div class="field"><label for="m-rem">Free or paid?</label>
+<select id="m-rem" name="remuneration"><option>Free / volunteer</option><option>Paid</option></select>
+</div>
+<div class="field"><label for="m-desc">Describe the assignment <span class="req">*</span></label><textarea id="m-desc" name="description" placeholder="Profile sought, duration, location, objectives…" required=""></textarea></div>
+<p class="consent">By sending this form, you agree that your data will be used only to reply to you. <a href="/mentions-legales.html#confidentialite">Privacy</a></p>
+<button class="submit" type="submit">Send my offer</button>
+<p aria-live="polite" class="form-msg" role="status"></p>
+</form>
+</div>
+<!-- Recrutement enseignants -->
+<div class="opp-card">
+<h3>Become an ÉcoGénération teacher</h3>
+<p class="lead2">Want to teach the SDGs, leadership and climate in schools? Join our teacher network.</p>
+<form class="js-form" data-netlify="true" method="POST" name="enseignant" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="enseignant"/>
+<p class="hp"><label>Do not fill in: <input name="bot-field"/></label></p>
+<div class="field"><label for="e-nom">Full name <span class="req">*</span></label><input autocomplete="name" id="e-nom" name="nom" required="" type="text"/></div>
+<div class="row2">
+<div class="field"><label for="e-email">Email <span class="req">*</span></label><input autocomplete="email" id="e-email" name="email" required="" type="email"/></div>
+<div class="field"><label for="e-pays">Country <span class="req">*</span></label><input autocomplete="country-name" id="e-pays" name="pays" required="" type="text"/></div>
+</div>
+<div class="field"><label for="e-niv">Level you can teach</label>
+<select id="e-niv" name="niveau">
+<option>Nursery / Primary</option><option>Secondary school</option><option>University</option><option>All levels</option>
+</select>
+</div>
+<div class="field"><label for="e-exp">Your experience <span class="req">*</span></label><textarea id="e-exp" name="experience" placeholder="Training, teaching or field experience in sustainable development, leadership or climate…" required=""></textarea></div>
+<p class="consent">By sending this form, you agree that your data will be used only to reply to you. <a href="/mentions-legales.html#confidentialite">Privacy</a></p>
+<button class="submit" type="submit">Join the network</button>
+<p aria-live="polite" class="form-msg" role="status"></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== APPELS A CANDIDATURE ===== -->
+<section class="appels" id="appels">
+<div class="wrap">
+<div class="head reveal" style="text-align:center;max-width:64ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center">Opportunities</p>
+<h2 class="section-title" style="margin:0 auto 18px">Calls for applications: SDGs, leadership and climate</h2>
+<p class="section-intro" style="margin:0 auto">Grants, prizes, fellowships and conferences to take action — selected for young leaders and entrepreneurs in sustainable development, in Africa and worldwide.</p>
+<p class="deadline-note">⏳ Deadlines change every year. Always check the official website before applying.</p>
+</div>
+<h3 class="sub-head reveal">Small grants &amp; prizes, by age group</h3>
+<p class="sub-desc reveal">Where no direct grant exists yet, it is marked “N/A” — a gap ÉcoGénération intends to fill.</p>
+<div class="shelf reveal">
+<div class="shelf-card">
+<h3>Childhood · ages 3–11</h3>
+<p class="who">Awareness, no direct funding yet</p>
+<ul class="res-list">
+<li><div class="res-na"><span class="ic">—</span><span>N/A — no direct grant at this age.<br/>Participation through school and our modules. A junior grant is being considered.</span></div></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>Teenagers · ages 12–17</h3>
+<p class="who">Youth prizes and accelerators</p>
+<ul class="res-list">
+<li><a href="https://childrensclimateprize.org/" rel="noopener" target="_blank"><span class="ic">C</span><span>Children's Climate Prize<small>Ages 12–17 · international prize</small></span></a></li>
+<li><a href="https://theworldaround.org/young-climate-prize" rel="noopener" target="_blank"><span class="ic">Y</span><span>Young Climate Prize<small>Ages 13–25 · mentoring &amp; visibility</small></span></a></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>Young people · ages 18–25</h3>
+<p class="who">Competitions, fellowships and summits</p>
+<ul class="res-list">
+<li><a href="https://anzishaprize.org/" rel="noopener" target="_blank"><span class="ic">A</span><span>Anzisha Prize<small>Ages 15–22 · African entrepreneurs</small></span></a></li>
+<li><a href="https://climatelaunchpad.org/" rel="noopener" target="_blank"><span class="ic">C</span><span>ClimateLaunchpad<small>Global green ideas competition</small></span></a></li>
+<li><a href="https://www.oneyoungworld.com/" rel="noopener" target="_blank"><span class="ic">O</span><span>One Young World<small>Global summit of young leaders</small></span></a></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>Young professionals · ages 25–35</h3>
+<p class="who">Leadership and impact fellowships</p>
+<ul class="res-list">
+<li><a href="https://yali.state.gov/" rel="noopener" target="_blank"><span class="ic">Y</span><span>Mandela Washington Fellowship (YALI)<small>African leaders</small></span></a></li>
+<li><a href="https://acumenacademy.org/" rel="noopener" target="_blank"><span class="ic">G</span><span>Green RISE Africa (Acumen)<small>African climate entrepreneurs</small></span></a></li>
+<li><a href="https://www.tonyelumelufoundation.org/" rel="noopener" target="_blank"><span class="ic">T</span><span>Tony Elumelu Foundation<small>Seed capital for entrepreneurs</small></span></a></li>
+</ul>
+</div>
+</div>
+<h3 class="sub-head reveal">Sustainable entrepreneurship — for-profit &amp; non-profit</h3>
+<p class="sub-desc reveal">For green start-ups as well as social-purpose organisations.</p>
+<div class="shelf reveal">
+<div class="shelf-card">
+<h3>Green start-ups &amp; businesses</h3>
+<p class="who">For-profit</p>
+<ul class="res-list">
+<li><a href="https://climatelaunchpad.org/" rel="noopener" target="_blank"><span class="ic">C</span><span>ClimateLaunchpad<small>Early-stage cleantech ideas</small></span></a></li>
+<li><a href="https://earthshotprize.org/" rel="noopener" target="_blank"><span class="ic">E</span><span>The Earthshot Prize<small>£1M per winning solution</small></span></a></li>
+<li><a href="https://www.tonyelumelufoundation.org/" rel="noopener" target="_blank"><span class="ic">T</span><span>Tony Elumelu Foundation<small>$5,000 seed funding + training</small></span></a></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>Social impact &amp; non-profit</h3>
+<p class="who">Non-profit</p>
+<ul class="res-list">
+<li><a href="https://echoinggreen.org/" rel="noopener" target="_blank"><span class="ic">E</span><span>Echoing Green<small>Fellowships for social entrepreneurs</small></span></a></li>
+<li><a href="https://acumenacademy.org/" rel="noopener" target="_blank"><span class="ic">A</span><span>Acumen Academy<small>Social change leaders</small></span></a></li>
+<li><a href="https://www.cartierwomensinitiative.com/" rel="noopener" target="_blank"><span class="ic">C</span><span>Cartier Women's Initiative<small>Women with impact (climate included)</small></span></a></li>
+</ul>
+</div>
+</div>
+<h3 class="sub-head reveal">Conferences &amp; travel — national and international</h3>
+<p class="sub-desc reveal">To represent, negotiate and learn on the global stage.</p>
+<div class="shelf reveal">
+<div class="shelf-card">
+<h3>Climate &amp; negotiations</h3>
+<p class="who">Youth voices</p>
+<ul class="res-list">
+<li><a href="https://youngo.uno/" rel="noopener" target="_blank"><span class="ic">Y</span><span>YOUNGO &amp; COY/LCOY<small>Official youth constituency of the UNFCCC</small></span></a></li>
+<li><a href="https://www.peoplepowered.org/" rel="noopener" target="_blank"><span class="ic">P</span><span>Climate Democracy Accelerator<small>People Powered · climate democracy</small></span></a></li>
+</ul>
+</div>
+<div class="shelf-card">
+<h3>Leadership &amp; summits</h3>
+<p class="who">Global networks</p>
+<ul class="res-list">
+<li><a href="https://www.oneyoungworld.com/" rel="noopener" target="_blank"><span class="ic">O</span><span>One Young World Summit<small>Participation scholarships available</small></span></a></li>
+<li><a href="https://www.obama.org/programs/leaders/" rel="noopener" target="_blank"><span class="ic">O</span><span>Obama Foundation Leaders<small>Africa programme</small></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== FONDATEUR ===== -->
+<section class="founder" id="fondateur">
+<div class="wrap">
+<div class="head reveal" style="max-width:60ch;margin-bottom:10px">
+<p class="eyebrow">Founder</p>
+</div>
+<div class="founder-grid reveal">
+<div class="founder-portrait">
+<span class="initials">MD</span>
+<div class="cap">Moussa DARI · Founder &amp; CEO</div>
+</div>
+<div class="founder-body">
+<h2>Moussa DARI</h2>
+<p class="role">Social entrepreneur &amp; SDG advocate · Abomey-Calavi, Benin</p>
+<p>A student of cybersecurity and renewable energy, Moussa is the founder of <strong>ECOFEED</strong>, a social agri-food enterprise that trains rural women and promotes sustainable food in West Africa.</p>
+<p>Convinced that sustainable development is first of all a matter of education and behaviour, he founded <strong>ÉcoGénération</strong> to spread knowledge of the 17 SDGs and train leaders from an early age — and transform a whole society for good.</p>
+<p>His path, marked by academic excellence and constant community engagement, has led him to join several international networks of young leaders in sustainable development, climate and entrepreneurship.</p>
+<div class="creds">
+<span class="cred">Mastercard Foundation Scholar</span>
+<span class="cred">Sciences Po Paris Fellow</span>
+<span class="cred">Tony Elumelu Foundation Alumni 2024</span>
+<span class="cred">ODON Vallet Scholar</span>
+<span class="cred">Kofi Annan Changemaker 2026</span>
+<span class="cred">YOUNGO</span>
+<span class="cred">Founder of ECOFEED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== AFFILIATIONS / RECONNAISSANCE ===== -->
+<section class="affil" id="affiliations">
+<div class="wrap">
+<div class="head reveal" style="text-align:center;max-width:62ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center">Background, training &amp; recognition</p>
+<h2 class="section-title" style="margin:0 auto 18px">Trained and recognised by leading institutions</h2>
+<p class="section-intro" style="margin:0 auto">ÉcoGénération's founder has been trained, supported or recognised by the following organisations.</p>
+</div>
+<div class="logos reveal">
+<div class="logo-badge" data-logo="mastercard"><span class="circle" style="background:#2f7d4f">MCF</span><span class="nm">Mastercard Foundation<small>Scholar &amp; FAST Alumnus</small></span></div>
+<div class="logo-badge" data-logo="sciencespo"><span class="circle" style="background:#13402b">SP</span><span class="nm">Sciences Po Paris<small>Summer School Fellow</small></span></div>
+<div class="logo-badge" data-logo="tef"><span class="circle" style="background:#b8743a">TEF</span><span class="nm">Tony Elumelu Foundation<small>Entrepreneurship Programme · Alumni 2024</small></span></div>
+<div class="logo-badge" data-logo="odonvallet"><span class="circle" style="background:#2f7d4f">OV</span><span class="nm">ODON Vallet Foundation<small>Academic excellence</small></span></div>
+<div class="logo-badge" data-logo="kofiannan"><span class="circle" style="background:#13402b">KA</span><span class="nm">Kofi Annan Foundation<small>Changemaker 2026</small></span></div>
+<div class="logo-badge" data-logo="johnmaxwell"><span class="circle" style="background:#b8743a">JM</span><span class="nm">John Maxwell Leadership<small>Values-Based Leadership</small></span></div>
+<div class="logo-badge" data-logo="fxb"><span class="circle" style="background:#2f7d4f">FXB</span><span class="nm">FXB Global (USA)<small>Climate Advocates Program 2025</small></span></div>
+<div class="logo-badge" data-logo="gmi"><span class="circle" style="background:#13402b">GMI</span><span class="nm">Global Mentorship Initiative<small>Certified mentor 2026</small></span></div>
+<div class="logo-badge" data-logo="millennium"><span class="circle" style="background:#b8743a">MIL</span><span class="nm">Millennium Fellowship<small>UNAI &amp; MCN</small></span></div>
+<div class="logo-badge" data-logo="climatesmart"><span class="circle" style="background:#2f7d4f">CSF</span><span class="nm">Climate Smart Fellowship<small>2026</small></span></div>
+<div class="logo-badge" data-logo="qsimpact"><span class="circle" style="background:#13402b">QS</span><span class="nm">QS ImpACT<small>GDA Ambassador</small></span></div>
+<div class="logo-badge" data-logo="ycm"><span class="circle" style="background:#b8743a">YCM</span><span class="nm">YCM<small>Fellow</small></span></div>
+<div class="logo-badge" data-logo="aspire"><span class="circle" style="background:#2f7d4f">AL</span><span class="nm">Aspire Institute<small>Aspire Leaders Program · 2026</small></span></div>
+<div class="logo-badge" data-logo="youngo"><span class="circle" style="background:#13402b">YG</span><span class="nm">YOUNGO<small>Youth Constituency UNFCCC · Youth for COP 2026</small></span></div>
+<div class="logo-badge" data-logo="cambridge"><span class="circle" style="background:#b8743a">UC</span><span class="nm">University of Cambridge<small>CEDAW &amp; Law (online course)</small></span></div>
+<div class="logo-badge" data-logo="ylf"><span class="circle" style="background:#2f7d4f">YLF</span><span class="nm">Youth Leadership, Climate &amp; Digital Empowerment<small>Fellowship 2026</small></span></div>
+<div class="logo-badge" data-logo="unitar"><span class="circle" style="background:#13402b">UN</span><span class="nm">UNITAR<small>SDGs &amp; Sustainable development</small></span></div>
+<div class="logo-badge" data-logo="yali"><span class="circle" style="background:#b8743a">YALI</span><span class="nm">YALI Network<small>Leadership &amp; Clean Energy</small></span></div>
+<div class="logo-badge" data-logo="gcm"><span class="circle" style="background:#2f7d4f">GCM</span><span class="nm">Global Centre for Climate Mobility<small>Masterclass</small></span></div>
+<div class="logo-badge"><span class="circle" style="background:#b8743a">CA</span><span class="nm">Climate Alpha<small>Fellow &amp; Challenge Winner</small></span></div>
+<div class="logo-badge"><span class="circle" style="background:#2f7d4f">COFP</span><span class="nm">Cardinal Onaiyekan Foundation for Peace<small>Fellow 2026/2027</small></span></div>
+<div class="logo-badge" data-logo="oneworldbenin"><span class="circle" style="background:#13402b">OWB</span><span class="nm">One World Bénin / ACN<small>1st Prize, Business Challenge</small></span></div>
+</div>
+<p class="note">These programmes reflect the founder's personal background. They do not imply any partnership with or sponsorship of ÉcoGénération by these institutions.</p>
+</div>
+</section>
+<!-- ===== OBJECTIFS / AMBITION ===== -->
+<section class="goals" id="ambition">
+<div class="wrap">
+<div class="head reveal" style="max-width:56ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center;color:rgba(255,255,255,.8)">Our ambition</p>
+<h2 class="section-title">By 2030</h2>
+<p class="section-intro" style="margin:0 auto;opacity:.92">Goals that match the stakes, to make education for sustainable development the norm rather than the exception.</p>
+</div>
+<div class="goal-grid reveal">
+<div class="goal"><div class="gnum" data-count="1000000" data-suffix="+">1 M+</div><div class="glbl">children &amp; young people reached</div></div>
+<div class="goal"><div class="gnum" data-count="500" data-suffix="+">500+</div><div class="glbl">partner schools</div></div>
+<div class="goal"><div class="gnum" data-count="15" data-suffix="">15</div><div class="glbl">sub-Saharan African countries</div></div>
+<div class="goal"><div class="gnum" data-count="7" data-suffix="">7</div><div class="glbl">pathways, from nursery to research</div></div>
+</div>
+</div>
+</section>
+<section class="approche" id="approche">
+<div class="wrap">
+<div class="reveal">
+<p class="eyebrow" style="color:var(--pousse)">Our approach</p>
+<h2 class="section-title">Convince, integrate, pass on</h2>
+<p class="section-intro" style="opacity:.85">We work hand in hand with governments and institutions to embed education for sustainable development in official curricula.</p>
+</div>
+<div class="pillars reveal">
+<div class="pillar">
+<h3>Institutional advocacy</h3>
+<p>Persuade ministries to include environmental education in the national curriculum from primary school.</p>
+</div>
+<div class="pillar">
+<h3>Programmes &amp; tools</h3>
+<p>Design teaching content for each level and train teachers to deliver it.</p>
+</div>
+<div class="pillar">
+<h3>Active communities</h3>
+<p>Create green clubs, field projects and networks of engaged pupils across sub-Saharan Africa.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="vision">
+<div class="wrap reveal">
+<blockquote>“Educating a child today is protecting the planet of tomorrow.”</blockquote>
+<p class="by">— ÉcoGénération's vision</p>
+</div>
+</section>
+<!-- ===== COMMENT NOUS REJOINDRE (CTA segmentés) ===== -->
+<section class="join" id="rejoindre">
+<div class="wrap">
+<div class="head reveal" style="text-align:center;max-width:58ch;margin:0 auto">
+<p class="eyebrow" style="text-align:center">How to join us</p>
+<h2 class="section-title" style="margin:0 auto 18px">Everyone has a role to play</h2>
+<p class="section-intro" style="margin:0 auto">Whether you are a school, a government, a partner or an engaged citizen, there is a way to contribute.</p>
+</div>
+<div class="join-grid reveal">
+<div class="join-card">
+<div class="emoji">🏫</div>
+<h3>You are a school</h3>
+<p>Use our modules and teach your pupils about sustainability.</p>
+<a href="#contact">Become a pilot school</a>
+</div>
+<div class="join-card">
+<div class="emoji">🏛️</div>
+<h3>You are a government</h3>
+<p>Embed education for sustainable development in the national curriculum.</p>
+<a href="#contact">Build a partnership</a>
+</div>
+<div class="join-card">
+<div class="emoji">🤝</div>
+<h3>You are a partner</h3>
+<p>Support the roll-out and multiply the impact.</p>
+<a href="#contact">Support the project</a>
+</div>
+<div class="join-card">
+<div class="emoji">🌱</div>
+<h3>You are a citizen</h3>
+<p>Teach, volunteer or share the mission.</p>
+<a href="#opportunites">Get involved</a>
+</div>
+</div>
+</div>
+</section>
+<section class="rdv" id="contact">
+<div class="wrap">
+<div class="head reveal">
+<p class="eyebrow" style="text-align:center">Let's meet</p>
+<h2 class="section-title">Book a meeting with ÉcoGénération</h2>
+<p class="section-intro" style="margin:0 auto">Tell us who you are and what you expect from us. We will come prepared, with your questions already in hand.</p>
+</div>
+<div class="steps reveal">
+<!-- ÉTAPE 1 : formulaire (Netlify Forms envoie un email à chaque demande) -->
+<div class="card">
+<span class="step-tag"><span class="n">1</span> Tell us about your project</span>
+<h3>Your request</h3>
+<p class="sub">Everything is sent straight to our team by email.</p>
+<form data-netlify="true" id="rdv-form" method="POST" name="rdv" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="rdv"/>
+<p class="hp"><label>Do not fill in: <input name="bot-field"/></label></p>
+<div class="row2">
+<div class="field">
+<label for="nom">Full name <span class="req">*</span></label>
+<input id="nom" name="nom" required="" type="text"/>
+</div>
+<div class="field">
+<label for="org">Organisation</label>
+<input id="org" name="organisation" type="text"/>
+</div>
+</div>
+<div class="row2">
+<div class="field">
+<label for="email">Email <span class="req">*</span></label>
+<input id="email" name="email" required="" type="email"/>
+</div>
+<div class="field">
+<label for="tel">Phone</label>
+<input id="tel" name="telephone" type="tel"/>
+</div>
+</div>
+<div class="row2">
+<div class="field">
+<label for="profil">You are <span class="req">*</span></label>
+<select id="profil" name="profil" required="">
+<option disabled="" selected="" value="">Choose…</option>
+<option>School</option>
+<option>Ministry / public institution</option>
+<option>NGO / association</option>
+<option>Funder / donor</option>
+<option>Teacher</option>
+<option>Volunteer</option>
+<option>Press / media</option>
+<option>Other</option>
+</select>
+</div>
+<div class="field">
+<label for="objet">Purpose of the meeting <span class="req">*</span></label>
+<select id="objet" name="objet" required="">
+<option disabled="" selected="" value="">Choose…</option>
+<option>Partnership</option>
+<option>Bring the programme to a school</option>
+<option>Advocacy / national curriculum</option>
+<option>Funding / support</option>
+<option>Volunteering</option>
+<option>Press / interview</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="questions">What questions would you like to ask us? <span class="req">*</span></label>
+<textarea id="questions" name="questions" placeholder="List the points you want to discuss. We will answer them in the meeting." required=""></textarea>
+</div>
+<div class="field">
+<label for="message">Additional message</label>
+<textarea id="message" name="message" placeholder="Context, expectations, availability…"></textarea>
+</div>
+<p class="consent">By sending this form, you agree that your data will be used only to reply to you. <a href="/mentions-legales.html#confidentialite">Privacy</a></p>
+<button class="submit" type="submit">Send my request</button>
+<p aria-live="polite" class="form-msg" role="status"></p>
+</form>
+<div id="rdv-success">
+<div class="check">✓</div>
+<h3>Request sent!</h3>
+<p class="sub">Thank you. We have received your request and questions. We will get back to you within 2 working days to set a time.</p>
+</div>
+</div>
+<!-- ÉTAPE 2 : Calendly -->
+<div class="card cal">
+<span class="step-tag" style="color:var(--pousse)"><span class="n" style="background:var(--pousse);color:var(--canopee)">2</span> Let's agree on a time</span>
+<h3>Set a time</h3>
+<p class="sub">Once we receive your request, we will suggest a time within 2 working days. For a faster answer, message us directly.</p>
+<ul>
+<li><svg fill="none" height="18" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg> Reply within 2 working days</li>
+<li><svg fill="none" height="18" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg> Confirmation by email</li>
+<li><svg fill="none" height="18" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg> By video call or in person in Abomey-Calavi</li>
+</ul>
+<a class="btn-cal" href="https://wa.me/2290191623528?text=Hello%20%C3%89coG%C3%A9n%C3%A9ration%2C%20I%20would%20like%20to%20arrange%20a%20meeting." rel="noopener" target="_blank">Message on WhatsApp</a>
+<a class="btn-cal" href="mailto:darimoussa5@gmail.com?subject=Meeting%20%E2%80%94%20%C3%89coG%C3%A9n%C3%A9ration" style="margin-top:10px;background:transparent;border:1px solid rgba(255,255,255,.35);color:var(--sable)">Send an email</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<!-- Newsletter -->
+<div class="news reveal">
+<h3>Stay informed</h3>
+<p>Get our news, resources and opportunities. No spam, unsubscribe in one click.</p>
+<form data-netlify="true" id="news-form" method="POST" name="newsletter" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="newsletter"/>
+<p class="hp"><label>Do not fill in: <input name="bot-field"/></label></p>
+<input aria-label="Your email" name="email" placeholder="your@email.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+<p class="ok" id="news-ok">Thank you! You are subscribed.</p>
+<p class="consent" style="margin-top:8px">Your email is used only to send our news. <a href="/mentions-legales.html#confidentialite">Privacy</a></p>
+</div>
+<div class="foot-grid">
+<div>
+<div class="logo">
+<img alt="" class="leaf" height="28" src="/assets/logo-icon.png" style="background:#f6f1e7;border-radius:7px;padding:2px" width="28"/>
+          ÉcoGénération
+        </div>
+<p style="opacity:.8;margin-top:12px;max-width:32ch;font-size:.92rem">SDGs, leadership and climate: sustainable development education for sub-Saharan Africa.</p>
+<div class="share">
+<span>Share:</span>
+<a aria-label="Share on WhatsApp" id="share-wa" rel="noopener" target="_blank" title="WhatsApp"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.3 7.3 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 6.7 10a5 5 0 0 0 1 2.6 11.3 11.3 0 0 0 4.4 3.9c.6.3 1.1.4 1.5.5a3.6 3.6 0 0 0 1.6.1c.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.3-.2-.5-.3Z"></path></svg></a>
+<a aria-label="Share on LinkedIn" id="share-li" rel="noopener" target="_blank" title="LinkedIn"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2 1.4-2 2.9V21H9V9Z"></path></svg></a>
+<a aria-label="Share on X" id="share-x" rel="noopener" target="_blank" title="X"><svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18.9 2H22l-7 8 8.3 12h-6.5l-5-7.3L9 22H5.9l7.5-8.6L5 2h6.6l4.6 6.8L18.9 2Zm-1.1 18h1.8L7.3 4H5.4l12.4 16Z"></path></svg></a>
+<button aria-label="Copy link" id="share-copy" title="Copy link"><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg></button>
+</div>
+<div class="follow">
+<span class="lbl">Follow the founder:</span>
+<div class="row">
+<a aria-label="Facebook" href="https://www.facebook.com/share/1Du69CdSTn/" rel="noopener me" target="_blank" title="Facebook"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.3C16.7.2 15.8 0 14.7 0 12.3 0 11 1.4 11 4v2H8v3h3v9h3V9Z"></path></svg></a>
+<a aria-label="Instagram" href="https://www.instagram.com/darimoussa8/" rel="noopener me" target="_blank" title="Instagram"><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="20" rx="5.5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.6" cy="6.4" fill="currentColor" r="1.2" stroke="none"></circle></svg></a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@modar_17" rel="noopener me" target="_blank" title="TikTok"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.9 7.9 0 0 0 4.4 1.4V6.7a4.6 4.6 0 0 1-4.4-4.7Z"></path></svg></a>
+<a aria-label="X" href="https://x.com/moussa_dari_17" rel="noopener me" target="_blank" title="X"><svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18.9 2H22l-7 8 8.3 12h-6.5l-5-7.3L9 22H5.9l7.5-8.6L5 2h6.6l4.6 6.8L18.9 2Zm-1.1 18h1.8L7.3 4H5.4l12.4 16Z"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="foot-contact">
+<p style="font-weight:600;color:#fff;margin-bottom:8px">Contact</p>
+<p><a href="mailto:darimoussa5@gmail.com">darimoussa5@gmail.com</a></p>
+<p>+229 01 91 62 35 28</p>
+<p>Abomey-Calavi, Benin</p>
+</div>
+</div>
+<div class="foot-bottom">© 2026 ÉcoGénération · Educating today, protecting tomorrow. · <a href="/" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <a href="/en/verifier.html" style="color:inherit">Verify a certificate</a> · <a href="/mentions-legales.html" style="color:inherit">Legal notice &amp; privacy (FR)</a></div>
+</div>
+</footer>
+<script src="/assets/qrcode.js"></script>
+<script src="/assets/content.en.js"></script>
+<script>
+  const T=CONTENT.ui, L=CONTENT.lang;
+  const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+  const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  // Menu mobile
+  const menuBtn=document.getElementById('menu-btn'), navLinks=document.getElementById('nav-links');
+  if(menuBtn){
+    menuBtn.addEventListener('click',()=>{const o=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o);});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  }
+
+  // Formulaires -> Netlify Forms, sans quitter la page
+  async function postForm(form){
+    const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+  }
+  function lock(form,on){const b=form.querySelector('[type=submit]');if(b){b.disabled=on;b.dataset.t=b.dataset.t||b.textContent;b.textContent=on?T.sending:b.dataset.t;}}
+  const rdvForm=document.getElementById('rdv-form');
+  if(rdvForm){
+    rdvForm.addEventListener('submit',async(e)=>{
+      e.preventDefault();lock(rdvForm,true);
+      try{
+        await postForm(rdvForm);
+        rdvForm.style.display='none';
+        document.getElementById('rdv-success').style.display='block';
+        document.getElementById('rdv-success').scrollIntoView({behavior:'smooth',block:'center'});
+      }catch(err){const m=rdvForm.querySelector('.form-msg');m.className='form-msg err';m.textContent=T.sendError;}
+      finally{lock(rdvForm,false);}
+    });
+  }
+  document.querySelectorAll('form.js-form').forEach(f=>{
+    f.addEventListener('submit',async(e)=>{
+      e.preventDefault();lock(f,true);const m=f.querySelector('.form-msg');
+      try{await postForm(f);f.reset();m.className='form-msg ok';m.textContent=T.formOk;}
+      catch(err){m.className='form-msg err';m.textContent=T.sendError;}
+      finally{lock(f,false);}
+    });
+  });
+
+  /* ===== EXPLORER : niveau d'études + ODD ===== */
+  const C={canopee:'#13402b',feuille:'#2f7d4f',pousse:'#8cc63f',sol:'#b8743a',ciel:'#bfe3f5',cielGris:'#9aa7a0',terre:'#caa46a'};
+
+  // Scènes illustrées (SVG) pour les tout-petits
+  const SVG={
+    bambou:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><rect y="110" width="200" height="40" fill="${C.feuille}"/><rect x="60" y="70" width="80" height="50" fill="${C.terre}"/><polygon points="55,70 100,40 145,70" fill="${C.sol}"/><rect x="70" y="40" width="6" height="40" fill="#6b8f3a"/><rect x="124" y="40" width="6" height="40" fill="#6b8f3a"/><circle cx="73" cy="36" r="9" fill="${C.pousse}"/><circle cx="127" cy="36" r="9" fill="${C.pousse}"/><rect x="92" y="92" width="16" height="28" fill="#5b3b1e"/></svg>`,
+    tole:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.cielGris}"/><rect y="110" width="200" height="40" fill="#9c8f6a"/><rect x="60" y="70" width="80" height="50" fill="#b0b6bb"/><polygon points="55,70 100,45 145,70" fill="#7d8488"/><rect x="60" y="70" width="80" height="50" fill="none" stroke="#8a9094" stroke-width="2"/><line x1="80" y1="70" x2="80" y2="120" stroke="#8a9094"/><line x1="100" y1="70" x2="100" y2="120" stroke="#8a9094"/><line x1="120" y1="70" x2="120" y2="120" stroke="#8a9094"/><rect x="92" y="92" width="16" height="28" fill="#555"/></svg>`,
+    feu:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#3a2a22"/><rect y="120" width="200" height="30" fill="#5a3a22"/><rect x="40" y="60" width="10" height="60" fill="#4a3020"/><rect x="150" y="55" width="10" height="65" fill="#4a3020"/><path d="M100 120 q-25 -30 0 -55 q10 20 18 8 q12 25 -18 47" fill="#ff7a1a"/><path d="M100 120 q-12 -18 0 -34 q6 12 10 4 q6 14 -10 30" fill="#ffd23f"/><circle cx="70" cy="105" r="6" fill="#e0a030"/><circle cx="135" cy="108" r="6" fill="#e0a030"/></svg>`,
+    foret:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><rect y="115" width="200" height="35" fill="${C.feuille}"/><circle cx="55" cy="80" r="30" fill="${C.feuille}"/><circle cx="100" cy="65" r="34" fill="${C.canopee}"/><circle cx="150" cy="82" r="28" fill="${C.feuille}"/><rect x="52" y="100" width="6" height="20" fill="#5b3b1e"/><rect x="97" y="92" width="7" height="28" fill="#5b3b1e"/><rect x="147" y="104" width="6" height="18" fill="#5b3b1e"/><circle cx="40" cy="120" r="7" fill="#ffcf4d"/><path d="M150 118 l4 -8 4 8z" fill="${C.sol}"/></svg>`,
+    desert:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#f4d29a"/><circle cx="160" cy="35" r="18" fill="#ffb02e"/><path d="M0 120 q50 -15 100 0 t100 0 v30 H0z" fill="#d9a85f"/><path d="M40 120 l6 -16 6 16z" fill="#a9763a"/><path d="M120 122 l5 -12 5 12z" fill="#a9763a"/><rect x="44" y="116" width="3" height="8" fill="#7a5224"/></svg>`,
+    planter:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><path d="M150 25 q14 0 14 12 q12 2 8 12 H132 q-6 -10 6 -12 q-2 -12 12 -12z" fill="#eaf4fb"/><line x1="140" y1="50" x2="138" y2="62" stroke="#7fc4e8" stroke-width="2"/><line x1="150" y1="50" x2="148" y2="62" stroke="#7fc4e8" stroke-width="2"/><rect y="115" width="200" height="35" fill="${C.feuille}"/><rect x="58" y="88" width="6" height="28" fill="#5b3b1e"/><circle cx="61" cy="82" r="14" fill="${C.pousse}"/><rect x="118" y="92" width="5" height="24" fill="#5b3b1e"/><circle cx="120" cy="86" r="11" fill="${C.pousse}"/><path d="M95 116 q5 -14 12 -2" fill="none" stroke="${C.pousse}" stroke-width="4" stroke-linecap="round"/></svg>`,
+    plastiqueEau:`<svg viewBox="0 0 200 150"><rect width="200" height="90" fill="${C.ciel}"/><rect y="90" width="200" height="60" fill="#5aa0c4"/><path d="M0 96 q25 6 50 0 t50 0 t50 0 t50 0" fill="none" stroke="#cbe6f2" stroke-width="3"/><rect x="60" y="100" width="10" height="22" rx="3" fill="#e94f4f"/><rect x="120" y="112" width="9" height="20" rx="3" fill="#f4d03f"/><circle cx="95" cy="125" r="5" fill="#fff" opacity=".7"/><path d="M40 132 q8 -10 16 0" fill="none" stroke="#3a7fa0" stroke-width="3"/></svg>`,
+    poubelle:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><rect y="118" width="200" height="32" fill="${C.feuille}"/><rect x="78" y="60" width="44" height="60" rx="5" fill="${C.feuille}"/><rect x="72" y="50" width="56" height="12" rx="4" fill="${C.canopee}"/><rect x="94" y="44" width="12" height="8" rx="2" fill="${C.canopee}"/><path d="M92 72 l8 8 12 -16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="100" width="8" height="18" rx="2" fill="#e94f4f"/><rect x="150" y="104" width="8" height="14" rx="2" fill="#f4d03f"/></svg>`
+  };
+
+  const SCENARIOS=CONTENT.scenarios, EXOS=CONTENT.exos, GOALS=CONTENT.goals;
+  const ODD_COLORS=['#E5243B','#DDA63A','#4C9F38','#C5192D','#FF3A21','#26BDE2','#FCC30B','#A21942','#FD6925','#DD1367','#FD9D24','#BF8B2E','#3F7E44','#0A97D9','#56C02B','#00689D','#19486A'];
+  const DARK_TEXT=new Set([2,7,11]); // jaunes/oranges clairs : texte foncé pour le contraste
+  const BAND={maternelle:'kid',primaire:'kid',secondaire:'teen',licence:'uni',master:'uni',doctorat:'research',recherche:'research'};
+  let gScore=0,gIndex=0,curLevel='maternelle',curGoal=0;
+  const moduleEl=document.getElementById('module');
+
+  function chime(){try{const x=new(window.AudioContext||window.webkitAudioContext)(),o=x.createOscillator(),g=x.createGain();o.connect(g);g.connect(x.destination);o.type='sine';o.frequency.value=660;g.gain.setValueAtTime(.0001,x.currentTime);g.gain.exponentialRampToValueAtTime(.18,x.currentTime+.02);o.frequency.exponentialRampToValueAtTime(990,x.currentTime+.15);g.gain.exponentialRampToValueAtTime(.0001,x.currentTime+.4);o.start();o.stop(x.currentTime+.42);}catch(e){}}
+
+  function renderGame(){
+    if(gIndex>=SCENARIOS.length){renderReward();return;}
+    const s=SCENARIOS[gIndex], pct=(gIndex/SCENARIOS.length)*100;
+    moduleEl.innerHTML=`
+      <div class="game-top"><div class="game-q">${s.q}</div><div class="score-pill">⭐ ${gScore} ${T.points}</div></div>
+      <div class="progress"><i style="width:${pct}%"></i></div>
+      <div class="choices">${s.opts.map((o,i)=>`<div class="choice" data-i="${i}" data-ok="${o.ok}" role="button" tabindex="0" aria-label="${o.label}">${SVG[o.svg]}<div class="clabel">${o.label}</div></div>`).join('')}</div>
+      <div class="feedback" id="fb"></div>`;
+    moduleEl.querySelectorAll('.choice').forEach(c=>{
+      const pick=()=>handlePick(c);
+      c.addEventListener('click',pick);
+      c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});
+    });
+  }
+  function handlePick(card){
+    const fb=document.getElementById('fb');
+    if(card.dataset.ok==='true'){
+      card.classList.add('correct');gScore+=10;chime();
+      fb.textContent=SCENARIOS[gIndex].good;fb.className='feedback good';
+      moduleEl.querySelectorAll('.choice').forEach(c=>c.style.pointerEvents='none');
+      setTimeout(()=>{gIndex++;renderGame();},1400);
+    }else{
+      card.classList.add('wrong');fb.textContent=T.tryAgain;fb.className='feedback nudge';
+      setTimeout(()=>card.classList.remove('wrong'),500);
+    }
+  }
+  function renderReward(){
+    const max=SCENARIOS.length*10, stars=gScore>=max?'⭐⭐⭐':gScore>=max*0.6?'⭐⭐':'⭐';
+    moduleEl.innerHTML=`<div class="reward"><div class="stars">${stars}</div><h3>${T.rewardTitle}</h3><p>${T.rewardText(gScore)}</p><button class="replay" id="replay">${T.replay}</button></div>`;
+    document.getElementById('replay').addEventListener('click',()=>{gScore=0;gIndex=0;renderGame();});
+  }
+  function renderExo(level){
+    const e=EXOS[level];
+    moduleEl.innerHTML=`<div class="exo"><span class="badge">${e.badge}</span><h3>${e.titre}</h3><div class="prompt">${e.prompt}</div>
+      <h4>${T.resources}</h4>
+      <ul class="res-list">${e.res.map(r=>`<li><a href="${r[3]}" target="_blank" rel="noopener"><span class="ic">${r[0]}</span><span>${r[1]}<small>${r[2]}</small></span></a></li>`).join('')}</ul></div>`;
+  }
+  function renderGoal(n,level){
+    const g=GOALS[n-1], band=BAND[level], O=T.odd, col=ODD_COLORS[n-1], fg=DARK_TEXT.has(n)?'#1b2620':'#fff';
+    const lvlName=document.querySelector(`.lvl[data-level="${level}"]`)?.textContent||'';
+    const blocks = band==='kid'
+      ? [[O.meaning,g.kidExplain],[O.yourAction,g.kidAct]]
+      : [[O.understand,g.brief],[band==='teen'?O.project:band==='uni'?O.caseStudy:O.researchQ,g[band]]];
+    moduleEl.innerHTML=`<div class="odd-card">
+      <div class="odd-head" style="background:${col};color:${fg}"><span class="odd-num">${n}</span><div><small>${O.goal} ${n} · ${O.levelLabel}${L==='fr'?' :':':'} ${esc(lvlName)}</small><h3>${g.title}</h3></div></div>
+      <div class="odd-body">
+        ${blocks.map(([h,t])=>`<div class="odd-block"><h4>${h}</h4><p>${t}</p></div>`).join('')}
+        <div class="odd-block lead"><h4>${O.leader}</h4><p>${CONTENT.leadership[band]}</p></div>
+        <div class="odd-links"><a href="https://sdgs.un.org/goals/goal${n}" target="_blank" rel="noopener">${O.learnMore} ↗</a>
+        <button type="button" class="odd-cta" id="odd-cta">${O.takeModule}</button></div>
+      </div></div>`;
+    document.getElementById('odd-cta').addEventListener('click',()=>startCourse('odd'));
+  }
+  function render(){
+    if(curGoal) return renderGoal(curGoal,curLevel);
+    if(BAND[curLevel]==='kid'){gScore=0;gIndex=0;renderGame();} else renderExo(curLevel);
+    moduleEl.insertAdjacentHTML('afterbegin',`<p class="odd-hint">${T.odd.pickHint}</p>`);
+  }
+
+  const picker=document.getElementById('level-picker'), oddPicker=document.getElementById('odd-picker');
+  if(oddPicker){
+    oddPicker.innerHTML=`<button class="oddc active" data-goal="0" aria-pressed="true">${T.odd.discover}</button>`+
+      GOALS.map(g=>`<button class="oddc" data-goal="${g.n}" aria-pressed="false" title="${esc(g.title)}" style="--c:${ODD_COLORS[g.n-1]};--fg:${DARK_TEXT.has(g.n)?'#1b2620':'#fff'}"><b>${g.n}</b><span>${esc(g.title)}</span></button>`).join('');
+    oddPicker.addEventListener('click',e=>{
+      const b=e.target.closest('.oddc');if(!b)return;
+      oddPicker.querySelectorAll('.oddc').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false');});
+      b.classList.add('active');b.setAttribute('aria-pressed','true');
+      curGoal=+b.dataset.goal;render();
+    });
+  }
+  if(picker){
+    picker.addEventListener('click',e=>{
+      const b=e.target.closest('.lvl');if(!b)return;
+      picker.querySelectorAll('.lvl').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');curLevel=b.dataset.level;render();
+    });
+    render();
+  }
+
+  /* ===== COMPTEURS ANIMÉS ===== */
+  function animateCount(el){
+    const target=parseFloat(el.dataset.count), suf=el.dataset.suffix||'', dur=1600, t0=performance.now();
+    const nice=n=>target>=1000000?Math.round(n/100000)/10+' M':target>=1000?Math.round(n).toLocaleString(CONTENT.locale):Math.round(n);
+    function step(now){const p=Math.min((now-t0)/dur,1),eased=1-Math.pow(1-p,3);el.textContent=nice(target*eased)+suf;if(p<1)requestAnimationFrame(step);else el.textContent=nice(target)+suf;}
+    requestAnimationFrame(step);
+  }
+  const countObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);countObs.unobserve(e.target);}})},{threshold:.4});
+  document.querySelectorAll('[data-count]').forEach(el=>countObs.observe(el));
+
+  /* ===== MODULES EN LIGNE + ATTESTATIONS (correction côté serveur) ===== */
+  const COURSES=CONTENT.courses;
+  let curCourse=null, curKey=null, learnerName="";
+  const need=()=>Math.ceil(curCourse.quiz.length*0.8);
+  const panel=document.getElementById('course-panel');
+
+  window.startCourse=function(key){
+    curCourse=COURSES[key];curKey=key;
+    panel.style.display='block';
+    panel.scrollIntoView({behavior:'smooth',block:'start'});
+    renderName();
+  };
+  window.renderName=function(){
+    panel.innerHTML=`<h3>${curCourse.titre}</h3>
+      <p style="opacity:.8;margin-bottom:8px">${T.nameIntro}</p>
+      <div class="cp-step"><input class="quiz-input" id="learner" placeholder="${T.namePh}" value="${esc(learnerName)}" maxlength="60" autocomplete="name"></div>
+      <div class="cp-actions"><button class="btn-primary" onclick="goLesson()">${T.cont}</button>
+      <button class="btn-ghost" onclick="closeCourse()">${T.close}</button></div>`;
+  };
+  window.goLesson=function(){
+    const v=document.getElementById('learner').value.trim();
+    if(!/^[\p{L}][\p{L}\p{M} '’.\-]{1,59}$/u.test(v.replace(/\s+/g,' '))){alert(T.nameError);return;}
+    learnerName=v;
+    panel.innerHTML=`<h3>${curCourse.titre} — ${T.lesson}</h3>
+      <div class="lesson">${curCourse.html||'<ul>'+curCourse.lecon.map(l=>`<li>${l}</li>`).join('')+'</ul>'}</div>
+      <div class="cp-actions"><button class="btn-primary" onclick="goQuiz()">${T.takeTest}</button>
+      <button class="btn-ghost" onclick="renderName()">${T.back}</button></div>`;
+  };
+  window.goQuiz=function(){
+    panel.innerHTML=`<h3>${curCourse.titre} — ${T.test}</h3>
+      <p style="opacity:.8;margin-bottom:6px">${T.testIntro(curCourse.quiz.length,need())}</p>
+      <div id="quizbox">${curCourse.quiz.map((q,i)=>`
+        <div class="quiz-q"><p>${i+1}. ${q.q}</p>
+          ${q.opts.map((o,j)=>`<label class="quiz-opt"><input type="radio" name="q${i}" value="${j}">${o}</label>`).join('')}
+        </div>`).join('')}</div>
+      <div class="cp-actions"><button class="btn-primary" onclick="gradeQuiz()">${T.seeResult}</button>
+      <button class="btn-ghost" onclick="goLesson()">${T.reviewLesson}</button></div>`;
+    panel.querySelectorAll('.quiz-opt').forEach(l=>l.addEventListener('click',()=>{
+      l.parentNode.querySelectorAll('.quiz-opt').forEach(x=>x.classList.remove('sel'));l.classList.add('sel');
+    }));
+  };
+  window.gradeQuiz=async function(){
+    const answers=curCourse.quiz.map((q,i)=>{const sel=panel.querySelector(`input[name="q${i}"]:checked`);return sel?+sel.value:-1;});
+    if(answers.includes(-1)&&!confirm(T.unanswered))return;
+    const btn=panel.querySelector('.btn-primary');if(btn){btn.disabled=true;btn.textContent=T.grading;}
+    let d;
+    try{
+      const r=await fetch('/api/attestation',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({module:curKey,name:learnerName,answers,lang:L})});
+      d=await r.json();
+      if(!r.ok&&!('passed' in d))throw new Error(d.error||'Error');
+    }catch(err){
+      alert((err&&err.message&&err.message!=='Failed to fetch'&&!(err instanceof SyntaxError))?err.message:T.serviceDown);
+      if(btn){btn.disabled=false;btn.textContent=T.seeResult;}
+      return;
+    }
+    if(d.passed){
+      const verifyUrl=location.origin+CONTENT.verifyPath+'?id='+d.id;
+      panel.innerHTML=`<div class="cert-wrap">
+        <h3 style="color:var(--feuille)">${T.congrats(esc(d.name.split(' ')[0]))}</h3>
+        <p style="opacity:.85;margin-bottom:6px">${T.scoreOfficial(d.score,d.total)}</p>
+        <p style="opacity:.85;margin-bottom:18px;font-size:.92rem">${T.refLine(esc(d.id),esc(verifyUrl))}</p>
+        <canvas id="cert" width="1200" height="850" style="max-width:100%;height:auto"></canvas>
+        <div class="cp-actions" style="justify-content:center">
+          <button class="btn-primary" onclick="downloadCert()">${T.download}</button>
+          <button class="btn-ghost" onclick="closeCourse()">${T.finish}</button>
+        </div></div>`;
+      drawCert(d,curCourse.titre,verifyUrl);
+    }else{
+      panel.innerHTML=`<h3>${T.almost}</h3>
+        <p style="opacity:.85;margin:10px 0 4px">${T.scoreNeed(d.score,d.total,d.need)}</p>
+        <p style="opacity:.85;margin-bottom:8px">${T.encourage}</p>
+        <div class="cp-actions"><button class="btn-primary" onclick="goLesson()">${T.reviewLesson}</button>
+        <button class="btn-ghost" onclick="goQuiz()">${T.retry}</button></div>`;
+    }
+  };
+  window.closeCourse=function(){panel.style.display='none';panel.innerHTML='';};
+
+  function drawCert(rec,course,verifyUrl){
+    const K=T.cert, name=rec.name, c=document.getElementById('cert'), x=c.getContext('2d');
+    x.fillStyle='#f6f1e7';x.fillRect(0,0,1200,850);
+    x.strokeStyle='#13402b';x.lineWidth=14;x.strokeRect(30,30,1140,790);
+    x.strokeStyle='#8cc63f';x.lineWidth=3;x.strokeRect(54,54,1092,742);
+    x.textAlign='center';
+    x.fillStyle='#13402b';x.font='700 30px Georgia';x.fillText('ÉcoGénération',600,140);
+    x.fillStyle='#b8743a';x.font='italic 20px Georgia';x.fillText(K.tagline,600,172);
+    x.fillStyle='#1b2620';x.font='600 26px Arial';x.fillText(K.title,600,260);
+    x.fillStyle='#555';x.font='20px Arial';x.fillText(K.awarded,600,330);
+    x.fillStyle='#13402b';x.font='700 58px Georgia';x.fillText(name,600,410);
+    x.strokeStyle='#8cc63f';x.lineWidth=2;x.beginPath();x.moveTo(380,432);x.lineTo(820,432);x.stroke();
+    x.fillStyle='#555';x.font='20px Arial';x.fillText(K.passed,600,480);
+    const q1=L==='fr'?'« ':'“', q2=L==='fr'?' »':'”';
+    x.fillStyle='#2f7d4f';let fs=34;do{x.font='700 '+fs+'px Arial';fs-=2}while(x.measureText(q1+course+q2).width>1000&&fs>18);x.fillText(q1+course+q2,600,530);
+    const d=new Date(rec.issuedAt).toLocaleDateString(CONTENT.locale,{day:'numeric',month:'long',year:'numeric'});
+    x.fillStyle='#1b2620';x.font='18px Arial';
+    x.textAlign='left';x.fillText(K.issued+d,150,720);
+    x.font='15px Arial';x.fillStyle='#555';x.fillText(K.ref+rec.id,150,748);x.font='13px Arial';x.fillStyle='#777';x.fillText(K.verify+location.host+CONTENT.verifyPath,150,770);x.fillStyle='#1b2620';x.font='18px Arial';
+    x.textAlign='right';x.fillText(K.signer,1050,710);
+    x.strokeStyle='#1b2620';x.lineWidth=1;x.beginPath();x.moveTo(830,720);x.lineTo(1050,720);x.stroke();
+    if(window.qrcode){
+      const q=qrcode(0,'M');q.addData(verifyUrl);q.make();
+      const n=q.getModuleCount(),size=130,cell=size/n,ox=600-size/2,oy=600;
+      x.fillStyle='#fff';x.fillRect(ox-8,oy-8,size+16,size+16);x.fillStyle='#13402b';
+      for(let r=0;r<n;r++)for(let cc=0;cc<n;cc++)if(q.isDark(r,cc))x.fillRect(ox+cc*cell,oy+r*cell,Math.ceil(cell),Math.ceil(cell));
+      x.fillStyle='#777';x.font='12px Arial';x.textAlign='center';x.fillText(K.scan,600,oy+size+24);
+    }
+  }
+  window.downloadCert=function(){
+    const c=document.getElementById('cert'),a=document.createElement('a');
+    a.download=T.certFile+learnerName.replace(/\s+/g,'-')+'.png';
+    a.href=c.toDataURL('image/png');a.click();
+  };
+
+  /* ===== PARTAGE SOCIAL ===== */
+  (function(){
+    const url=encodeURIComponent(location.href), txt=encodeURIComponent(T.shareText);
+    const wa=document.getElementById('share-wa'),li=document.getElementById('share-li'),xx=document.getElementById('share-x'),cp=document.getElementById('share-copy');
+    if(wa)wa.href='https://wa.me/?text='+txt+'%20'+url;
+    if(li)li.href='https://www.linkedin.com/sharing/share-offsite/?url='+url;
+    if(xx)xx.href='https://twitter.com/intent/tweet?text='+txt+'&url='+url;
+    if(cp)cp.addEventListener('click',()=>{navigator.clipboard?.writeText(location.href).then(()=>{cp.title=T.copied;cp.style.background='#8cc63f';cp.style.color='#13402b';setTimeout(()=>{cp.style.background='';cp.style.color='';cp.title=T.copy;},1500);});});
+  })();
+
+  /* ===== NEWSLETTER ===== */
+  const newsForm=document.getElementById('news-form');
+  if(newsForm){
+    newsForm.addEventListener('submit',async(e)=>{
+      e.preventDefault();lock(newsForm,true);
+      try{await postForm(newsForm);newsForm.style.display='none';document.getElementById('news-ok').style.display='block';}
+      catch(err){alert(T.sendError);}
+      finally{lock(newsForm,false);}
+    });
+  }
+</script>
+</body>
+</html>
