@@ -1193,8 +1193,8 @@
   </div>
 </footer>
 
-<script src="assets/qrcode.js"></script>
-<script src="assets/content.fr.js"></script>
+<script src="assets/qrcode.js?v=2"></script>
+<script src="assets/content.fr.js?v=3"></script>
 <script>
   const T=CONTENT.ui, L=CONTENT.lang;
   const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -1352,7 +1352,7 @@
 
   /* ===== MODULES EN LIGNE + ATTESTATIONS (correction côté serveur) ===== */
   const COURSES=CONTENT.courses;
-  const SIGNATURE=new Image(); SIGNATURE.src='/assets/signature.png';
+  const SIGNATURE=new Image(); SIGNATURE.src='/assets/signature.png?v=1';
   const sigReady=new Promise(res=>{if(SIGNATURE.complete&&SIGNATURE.naturalWidth)res();else{SIGNATURE.onload=res;SIGNATURE.onerror=res;}});
 
   // Cachet ÉcoGénération (dessiné, pas une image)

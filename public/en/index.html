@@ -1149,8 +1149,8 @@
 <div class="foot-bottom">© 2026 ÉcoGénération · Educating today, protecting tomorrow. · <a href="/" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <a href="/en/verifier.html" style="color:inherit">Verify a certificate</a> · <a href="/mentions-legales.html" style="color:inherit">Legal notice &amp; privacy (FR)</a></div>
 </div>
 </footer>
-<script src="/assets/qrcode.js"></script>
-<script src="/assets/content.en.js"></script>
+<script src="/assets/qrcode.js?v=2"></script>
+<script src="/assets/content.en.js?v=3"></script>
 <script>
   const T=CONTENT.ui, L=CONTENT.lang;
   const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -1308,7 +1308,7 @@
 
   /* ===== MODULES EN LIGNE + ATTESTATIONS (correction côté serveur) ===== */
   const COURSES=CONTENT.courses;
-  const SIGNATURE=new Image(); SIGNATURE.src='/assets/signature.png';
+  const SIGNATURE=new Image(); SIGNATURE.src='/assets/signature.png?v=1';
   const sigReady=new Promise(res=>{if(SIGNATURE.complete&&SIGNATURE.naturalWidth)res();else{SIGNATURE.onload=res;SIGNATURE.onerror=res;}});
 
   // Cachet ÉcoGénération (dessiné, pas une image)
