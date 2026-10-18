@@ -6,6 +6,8 @@
 <title>Vérifier une attestation — ÉcoGénération</title>
 <meta name="description" content="Vérifiez l'authenticité d'une attestation de réussite délivrée par ÉcoGénération.">
 <link rel="canonical" href="https://ecogeneration.netlify.app/verifier.html">
+<link rel="alternate" hreflang="fr" href="https://ecogeneration.netlify.app/verifier.html">
+<link rel="alternate" hreflang="en" href="https://ecogeneration.netlify.app/en/verifier.html">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <meta name="theme-color" content="#13402b">
 <style>
@@ -46,32 +48,39 @@
     <button type="submit">Vérifier</button>
   </form>
   <div id="r" class="result" role="status" aria-live="polite"></div>
-  <p class="foot">Les attestations ÉcoGénération sont délivrées après réussite d'un test corrigé sur nos serveurs. <a href="/#formations">Suivre un module</a> · <a href="/mentions-legales.html#confidentialite">Confidentialité</a></p>
+  <p class="foot">Les attestations ÉcoGénération sont délivrées après réussite d'un test corrigé sur nos serveurs. <a href="/#formations">Suivre un module</a> · <a href="/mentions-legales.html#confidentialite">Confidentialité</a> · <a href="/en/verifier.html" hreflang="en" lang="en">English</a></p>
 </main>
 <script>
+  const EN=document.documentElement.lang==='en';
+  const T=EN?{checking:'Checking…',ok:'Authentic certificate',holder:'Holder',module:'Module',score:'Score',issued:'Issued on',ref:'Reference',
+      notFound:'<strong>No certificate matches this number.</strong><br>Check what you typed. A certificate that cannot be found was not issued by ÉcoGénération.',
+      invalid:'Invalid number.',down:'Service temporarily unavailable. Please try again later.',locale:'en-GB'}
+    :{checking:'Vérification…',ok:'Attestation authentique',holder:'Titulaire',module:'Module',score:'Score',issued:'Délivrée le',ref:'Référence',
+      notFound:'<strong>Aucune attestation ne correspond à ce numéro.</strong><br>Vérifiez la saisie. Une attestation introuvable n\'a pas été délivrée par ÉcoGénération.',
+      invalid:'Numéro invalide.',down:'Service momentanément indisponible. Réessayez plus tard.',locale:'fr-FR'};
   const f=document.getElementById('f'), input=document.getElementById('id'), r=document.getElementById('r');
   const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   function show(cls,html){r.className='result show '+cls;r.innerHTML=html;}
   async function check(id){
     id=id.trim().toUpperCase();
-    show('', 'Vérification…');
+    show('',T.checking);
     try{
       const res=await fetch('/api/verify?id='+encodeURIComponent(id));
       const d=await res.json();
       if(d.valid){
-        const date=new Date(d.issuedAt).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
-        show('ok',`<div class="badge"><i>✓</i> Attestation authentique</div>
-          <dl><dt>Titulaire</dt><dd>${esc(d.name)}</dd>
-          <dt>Module</dt><dd>${esc(d.title)}</dd>
-          <dt>Score</dt><dd>${d.score}/${d.total}</dd>
-          <dt>Délivrée le</dt><dd>${date}</dd>
-          <dt>Référence</dt><dd>${esc(d.id)}</dd></dl>`);
+        const date=new Date(d.issuedAt).toLocaleDateString(T.locale,{day:'numeric',month:'long',year:'numeric'});
+        show('ok',`<div class="badge"><i>✓</i> ${T.ok}</div>
+          <dl><dt>${T.holder}</dt><dd>${esc(d.name)}</dd>
+          <dt>${T.module}</dt><dd>${esc(EN?(d.titleEn||d.title):d.title)}</dd>
+          <dt>${T.score}</dt><dd>${d.score}/${d.total}</dd>
+          <dt>${T.issued}</dt><dd>${date}</dd>
+          <dt>${T.ref}</dt><dd>${esc(d.id)}</dd></dl>`);
       }else if(res.status===404){
-        show('ko','<strong>Aucune attestation ne correspond à ce numéro.</strong><br>Vérifiez la saisie. Une attestation introuvable n\'a pas été délivrée par ÉcoGénération.');
+        show('ko',T.notFound);
       }else{
-        show('ko',esc(d.error||'Numéro invalide.'));
+        show('ko',esc(EN?T.invalid:(d.error||T.invalid)));
       }
-    }catch(e){show('ko','Service momentanément indisponible. Réessayez plus tard.');}
+    }catch(e){show('ko',T.down);}
   }
   f.addEventListener('submit',e=>{e.preventDefault();history.replaceState(null,'','?id='+encodeURIComponent(input.value.trim().toUpperCase()));check(input.value);});
   const q=new URLSearchParams(location.search).get('id');
