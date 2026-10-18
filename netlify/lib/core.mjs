@@ -5,9 +5,9 @@ import { randomBytes } from "node:crypto";
 // d'environnement secrète QUIZ_ANSWERS, définie dans Netlify (Project configuration →
 // Environment variables). Format JSON : {"odd":[i,i,...],"leadership":[i,...]} (index 0-based de la bonne option)
 // Le dépôt peut ainsi être public sans révéler les réponses.
-const TITLES = {
-  odd: "Les 17 Objectifs de développement durable",
-  leadership: "Leadership climatique",
+export const TITLES = {
+  odd: { fr: "Les 17 Objectifs de développement durable", en: "The 17 Sustainable Development Goals" },
+  leadership: { fr: "Leadership pour le développement durable", en: "Leadership for Sustainable Development" },
 };
 
 export function loadModules(raw = globalThis.Netlify?.env?.get?.("QUIZ_ANSWERS") ?? process.env.QUIZ_ANSWERS) {
@@ -16,7 +16,7 @@ export function loadModules(raw = globalThis.Netlify?.env?.get?.("QUIZ_ANSWERS")
   const out = {};
   for (const [id, title] of Object.entries(TITLES)) {
     const a = keys[id];
-    if (Array.isArray(a) && a.length && a.every(Number.isInteger)) out[id] = { title, answers: a };
+    if (Array.isArray(a) && a.length && a.every(Number.isInteger)) out[id] = { title: title.fr, titleEn: title.en, answers: a };
   }
   return out;
 }
