@@ -2,7 +2,7 @@
   "name": "ecogeneration",
   "private": true,
   "type": "module",
-  "description": "ÉcoGénération — plateforme d'éducation climatique (site statique + fonctions Netlify)",
-  "scripts": { "test": "node --experimental-test-module-mocks --test tests/*.test.mjs" },
+  "description": "ÉcoGénération — ODD, leadership et climat — site bilingue + fonctions Netlify",
+  "scripts": { "build:en": "python3 tools/build_en.py --strict", "test": "node --experimental-test-module-mocks --test tests/*.test.mjs" },
   "dependencies": { "@netlify/blobs": "^11.1.4" }
 }
