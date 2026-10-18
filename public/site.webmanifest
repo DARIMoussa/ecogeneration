@@ -1,0 +1,14 @@
+{
+  "name": "ÉcoGénération",
+  "short_name": "ÉcoGénération",
+  "description": "Éducation climatique pour l'Afrique subsaharienne, du primaire à l'université.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f1e7",
+  "theme_color": "#13402b",
+  "lang": "fr",
+  "icons": [
+    { "src": "/assets/logo-icon.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

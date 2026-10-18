@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://ecogeneration.netlify.app/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Moussa DARI">
+<title>ÉcoGénération — Éduquer aujourd'hui, protéger demain</title>
+<meta name="description" content="ÉcoGénération déploie l'éducation climatique en Afrique subsaharienne, du primaire à l'université, pour former une génération gardienne de l'environnement.">
+<!-- Partage social (Open Graph / Twitter) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ecogeneration.netlify.app/">
+<meta property="og:site_name" content="ÉcoGénération">
+<meta property="og:title" content="ÉcoGénération — Éduquer aujourd'hui, protéger demain">
+<meta property="og:description" content="L'éducation climatique pour l'Afrique subsaharienne, du primaire à l'université. Formez la génération qui protégera la planète.">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ÉcoGénération — Éduquer aujourd'hui, protéger demain">
+<meta name="twitter:description" content="L'éducation climatique pour l'Afrique subsaharienne, du primaire à l'université.">
+<meta name="theme-color" content="#13402b">
+<meta property="og:image" content="https://ecogeneration.netlify.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ÉcoGénération — éducation climatique pour l'Afrique subsaharienne">
+<meta name="twitter:image" content="https://ecogeneration.netlify.app/assets/og-image.png">
+<!-- Favicon & icônes -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" href="assets/logo-icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ÉcoGénération","url":"https://ecogeneration.netlify.app/","logo":"https://ecogeneration.netlify.app/assets/logo-icon.png","description":"Initiative d'éducation climatique pour l'Afrique subsaharienne, du primaire à l'université.","email":"darimoussa5@gmail.com","telephone":"+229 01 91 62 35 28","address":{"@type":"PostalAddress","addressLocality":"Abomey-Calavi","addressCountry":"BJ"},"founder":{"@type":"Person","name":"Moussa DARI","jobTitle":"Fondateur","sameAs":["https://www.instagram.com/darimoussa8/","https://www.tiktok.com/@modar_17","https://x.com/moussa_dari_17","https://www.facebook.com/share/1Du69CdSTn/"]}}
+</script>
+<style>
+  :root{
+    --canopee:#13402b;      /* vert profond de la canopée */
+    --feuille:#2f7d4f;      /* vert feuille */
+    --pousse:#8cc63f;       /* jeune pousse */
+    --sol:#b8743a;          /* ocre du sol */
+    --sable:#f6f1e7;        /* blanc cassé / sable */
+    --sable-fonce:#ebe3d2;
+    --encre:#1b2620;
+    --display:"Fraunces", Georgia, serif;
+    --corps:"Inter", system-ui, sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--corps);
+    background:var(--sable);
+    color:var(--encre);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;letter-spacing:-0.02em}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,241,231,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--sable-fonce);
+  }
+  .nav-in{position:relative;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto}
+  .logo{font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--canopee);display:flex;align-items:center;gap:10px}
+  .logo .leaf{width:26px;height:26px;flex:none}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--encre);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.8;transition:opacity .2s}
+  .nav-links a:hover{opacity:1}
+  .nav-links a.btn{color:var(--sable);opacity:1}
+  .btn{
+    display:inline-block;background:var(--canopee);color:var(--sable);
+    padding:11px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;
+    transition:transform .15s, background .2s;
+  }
+  .btn:hover{background:var(--feuille);transform:translateY(-1px)}
+  .btn-ocre{background:var(--sol)}
+  .btn-ocre:hover{background:#a0632f}
+  .menu-btn{display:none;background:none;border:1px solid var(--sable-fonce);border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--canopee)}
+  @media(max-width:760px){
+    .menu-btn{display:inline-flex}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--sable);border-bottom:1px solid var(--sable-fonce);padding:8px 24px 16px}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:12px 0;border-bottom:1px solid var(--sable-fonce)}
+    .nav-links a.btn{margin-top:12px;text-align:center;border:0}
+  }
+  a.logo{text-decoration:none}
+  :focus-visible{outline:3px solid var(--pousse);outline-offset:2px}
+  .form-msg{display:none;margin-top:14px;padding:12px 14px;border-radius:12px;font-weight:500}
+  .form-msg.ok{display:block;background:#e6f2dc;color:var(--canopee)}
+  .form-msg.err{display:block;background:#fbe4dc;color:#7a2a12}
+  .consent{font-size:.82rem;opacity:.75;margin:6px 0 12px}
+  .consent a{color:inherit}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
+
+  /* HERO */
+  header.hero{
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(140,198,63,.25), transparent 60%),
+      linear-gradient(160deg,var(--canopee),#0d2e1f 70%);
+    color:var(--sable);
+    padding:88px 0 0;
+    overflow:hidden;
+    position:relative;
+  }
+  .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);max-width:18ch}
+  .hero .eyebrow{
+    text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:600;
+    color:var(--pousse);margin-bottom:20px;
+  }
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);max-width:46ch;margin:24px 0 32px;opacity:.9}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{
+    display:flex;gap:40px;flex-wrap:wrap;margin-top:64px;padding:30px 0;
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  .stat .num{font-family:var(--display);font-size:2.1rem;font-weight:600;color:var(--pousse)}
+  .stat .lbl{font-size:.85rem;opacity:.8;max-width:20ch}
+  /* growth path illustration */
+  .growth{display:block;width:100%;height:auto;margin-top:56px}
+
+  /* SECTIONS */
+  section{padding:80px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:600;color:var(--sol);margin-bottom:14px}
+  h2.section-title{font-size:clamp(1.9rem,4vw,2.8rem);max-width:20ch;margin-bottom:18px;color:var(--canopee)}
+  .section-intro{font-size:1.12rem;max-width:58ch;opacity:.85}
+
+  /* PROBLEME */
+  .probleme{background:var(--sable-fonce)}
+  .pq{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:500;color:var(--canopee);max-width:24ch;line-height:1.25}
+  .pq span{color:var(--sol)}
+
+  /* PARCOURS */
+  .levels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+  .level{
+    background:#fff;border-radius:18px;padding:28px 22px;
+    border:1px solid var(--sable-fonce);
+    position:relative;overflow:hidden;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .level:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(19,64,43,.12)}
+  .level .stage{font-family:var(--display);font-size:.85rem;font-weight:700;color:var(--sol);letter-spacing:.04em}
+  .level h3{font-size:1.25rem;margin:8px 0 10px;color:var(--canopee)}
+  .level p{font-size:.94rem;opacity:.82}
+  .level .dot{
+    width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;font-weight:700;color:#fff;font-family:var(--display)
+  }
+  .level:nth-child(1) .dot{background:var(--pousse)}
+  .level:nth-child(2) .dot{background:var(--feuille)}
+  .level:nth-child(3) .dot{background:var(--canopee)}
+  .level:nth-child(4) .dot{background:var(--sol)}
+  @media(max-width:860px){.levels{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.levels{grid-template-columns:1fr}}
+
+  /* APPROCHE / PILIERS */
+  .approche{background:var(--canopee);color:var(--sable)}
+  .approche h2.section-title{color:#fff}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .pillar{padding:28px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+  .pillar h3{font-size:1.2rem;color:var(--pousse);margin-bottom:10px}
+  .pillar p{font-size:.95rem;opacity:.88}
+  @media(max-width:780px){.pillars{grid-template-columns:1fr}}
+
+  /* VISION / CITATION */
+  .vision{background:var(--sol);color:#fff;text-align:center}
+  .vision blockquote{font-family:var(--display);font-size:clamp(1.5rem,3.6vw,2.4rem);font-weight:500;max-width:24ch;margin:0 auto;line-height:1.25}
+  .vision .by{margin-top:24px;font-size:.95rem;opacity:.9;letter-spacing:.04em}
+
+  /* CTA FINAL */
+  .cta-final{text-align:center;background:var(--sable-fonce)}
+  .cta-final h2{font-size:clamp(2rem,4.5vw,3rem);color:var(--canopee);max-width:18ch;margin:0 auto 18px}
+  .cta-final p{max-width:50ch;margin:0 auto 30px;font-size:1.1rem;opacity:.85}
+
+  /* FOOTER */
+  footer{background:var(--canopee);color:var(--sable);padding:54px 0 30px}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px}
+  footer .logo{color:#fff}
+  footer a{color:var(--pousse);text-decoration:none}
+  .foot-contact p{font-size:.92rem;opacity:.85;margin:4px 0}
+  .foot-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:.82rem;opacity:.7}
+
+  /* RDV / FORMULAIRE */
+  .rdv{background:var(--sable)}
+  .rdv .head{text-align:center;max-width:60ch;margin:0 auto 10px}
+  .rdv h2.section-title{color:var(--canopee);margin:0 auto 18px}
+  .steps{display:grid;grid-template-columns:1.3fr .9fr;gap:26px;margin-top:50px;align-items:start}
+  @media(max-width:880px){.steps{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--sable-fonce);border-radius:20px;padding:34px}
+  .card .step-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;color:var(--sol);font-size:.9rem;letter-spacing:.03em;margin-bottom:6px}
+  .card .step-tag .n{width:24px;height:24px;border-radius:50%;background:var(--sol);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem}
+  .card h3{font-size:1.4rem;color:var(--canopee);margin-bottom:6px}
+  .card .sub{font-size:.96rem;opacity:.8;margin-bottom:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--encre)}
+  .field .req{color:var(--sol)}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;border:1px solid #d8d2c2;border-radius:11px;
+    font-family:var(--corps);font-size:.97rem;background:var(--sable);color:var(--encre);
+    transition:border .2s, box-shadow .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--feuille);box-shadow:0 0 0 3px rgba(47,125,79,.15);background:#fff;
+  }
+  .field textarea{resize:vertical;min-height:90px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.row2{grid-template-columns:1fr}}
+  .submit{width:100%;border:none;cursor:pointer;background:var(--canopee);color:var(--sable);padding:15px;border-radius:11px;font-family:var(--corps);font-weight:600;font-size:1rem;transition:background .2s,transform .15s;margin-top:6px}
+  .submit:hover{background:var(--feuille);transform:translateY(-1px)}
+  .hp{position:absolute;left:-9999px}
+  #rdv-success{display:none;text-align:center;padding:30px 10px}
+  #rdv-success .check{width:56px;height:56px;border-radius:50%;background:var(--pousse);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 16px}
+  #rdv-success h3{color:var(--canopee);margin-bottom:8px}
+  /* calendly card */
+  .cal{background:var(--canopee);color:var(--sable);position:sticky;top:90px}
+  .cal h3{color:#fff}
+  .cal .sub{opacity:.85;color:var(--sable)}
+  .cal ul{list-style:none;margin:18px 0 24px}
+  .cal li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;opacity:.9;margin-bottom:10px}
+  .cal li svg{flex:none;margin-top:3px}
+  .cal .btn-cal{display:block;text-align:center;background:var(--pousse);color:var(--canopee);padding:15px;border-radius:11px;text-decoration:none;font-weight:700;transition:transform .15s,background .2s}
+  .cal .btn-cal:hover{background:#a0d850;transform:translateY(-1px)}
+
+  /* ===== PLATEFORME APPRENDRE ===== */
+  .apprendre{background:linear-gradient(180deg,#fff,var(--sable))}
+  .apprendre .head{text-align:center;max-width:60ch;margin:0 auto}
+  .apprendre h2.section-title{color:var(--canopee);margin:0 auto 18px}
+  .level-picker{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:40px 0 14px}
+  .lvl{border:1.5px solid var(--sable-fonce);background:#fff;color:var(--encre);padding:10px 18px;border-radius:999px;font-family:var(--corps);font-weight:600;font-size:.92rem;cursor:pointer;transition:all .18s}
+  .lvl:hover{border-color:var(--feuille)}
+  .lvl.active{background:var(--canopee);color:var(--sable);border-color:var(--canopee)}
+  .module{margin-top:30px;background:#fff;border:1px solid var(--sable-fonce);border-radius:24px;padding:34px;min-height:300px}
+  @media(max-width:560px){.module{padding:22px 16px}}
+
+  /* jeu enfants */
+  .game-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:8px}
+  .game-q{font-family:var(--display);font-size:clamp(1.3rem,3.4vw,1.9rem);color:var(--canopee);font-weight:600;max-width:24ch}
+  .score-pill{background:var(--pousse);color:var(--canopee);font-weight:700;padding:8px 16px;border-radius:999px;font-size:1rem;white-space:nowrap}
+  .progress{height:8px;background:var(--sable-fonce);border-radius:999px;overflow:hidden;margin:16px 0 24px}
+  .progress > i{display:block;height:100%;background:var(--feuille);width:0;transition:width .4s}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:560px){.choices{grid-template-columns:1fr}}
+  .choice{border:3px solid var(--sable-fonce);border-radius:20px;padding:14px;cursor:pointer;background:var(--sable);transition:transform .15s,border-color .2s,box-shadow .2s;text-align:center}
+  .choice:hover{transform:translateY(-4px);border-color:var(--feuille);box-shadow:0 12px 28px rgba(19,64,43,.12)}
+  .choice svg{width:100%;height:auto;border-radius:12px;display:block}
+  .choice .clabel{margin-top:12px;font-weight:700;font-size:1.1rem;color:var(--canopee)}
+  .choice.correct{border-color:var(--pousse);background:#f0f9e2}
+  .choice.wrong{border-color:#d98a5a;animation:shake .4s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+  .feedback{margin-top:22px;text-align:center;font-size:1.15rem;font-weight:600;min-height:30px}
+  .feedback.good{color:var(--feuille)}
+  .feedback.nudge{color:#c4702f}
+  .reward{text-align:center;padding:20px 10px}
+  .reward .stars{font-size:2.6rem;letter-spacing:6px;margin-bottom:10px}
+  .reward h3{font-family:var(--display);color:var(--canopee);font-size:2rem;margin-bottom:8px}
+  .reward p{opacity:.85;margin-bottom:22px}
+  .replay{border:none;cursor:pointer;background:var(--sol);color:#fff;padding:13px 28px;border-radius:999px;font-family:var(--corps);font-weight:700;font-size:1rem;transition:background .2s,transform .15s}
+  .replay:hover{background:#a0632f;transform:translateY(-1px)}
+
+  /* exercices niveaux supérieurs */
+  .exo .badge{display:inline-block;background:var(--sable-fonce);color:var(--canopee);font-weight:700;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.04em;margin-bottom:14px}
+  .exo h3{font-family:var(--display);color:var(--canopee);font-size:1.5rem;margin-bottom:12px}
+  .exo .prompt{background:var(--sable);border-left:4px solid var(--feuille);padding:18px 20px;border-radius:0 12px 12px 0;margin-bottom:22px;font-size:1.02rem}
+  .exo h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--sol);margin-bottom:12px}
+  .res-list{list-style:none;display:grid;gap:10px;margin-bottom:8px}
+  .res-list a{display:flex;gap:12px;align-items:center;padding:14px 16px;background:var(--sable);border:1px solid var(--sable-fonce);border-radius:12px;text-decoration:none;color:var(--encre);font-weight:600;font-size:.95rem;transition:border-color .2s,transform .15s}
+  .res-list a:hover{border-color:var(--feuille);transform:translateX(3px)}
+  .res-list a span.ic{flex:none;width:34px;height:34px;border-radius:9px;background:var(--canopee);color:var(--pousse);display:flex;align-items:center;justify-content:center;font-weight:800}
+  .res-list a small{display:block;font-weight:400;opacity:.7;font-size:.85rem;margin-top:2px}
+
+  /* ===== BIBLIOTHEQUE ===== */
+  .biblio{background:var(--sable-fonce)}
+  .biblio h2.section-title{color:var(--canopee)}
+  .shelf{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+  @media(max-width:780px){.shelf{grid-template-columns:1fr}}
+  .shelf-card{background:#fff;border-radius:18px;padding:28px;border:1px solid #e5ddcb}
+  .shelf-card h3{font-family:var(--display);color:var(--canopee);font-size:1.3rem;margin-bottom:4px}
+  .shelf-card .who{font-size:.85rem;color:var(--sol);font-weight:600;margin-bottom:16px}
+
+  /* ===== OPPORTUNITES ===== */
+  .opp{background:var(--canopee);color:var(--sable)}
+  .opp h2.section-title{color:#fff}
+  .opp .section-intro{opacity:.85}
+  .opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  @media(max-width:840px){.opp-grid{grid-template-columns:1fr}}
+  .opp-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:30px}
+  .opp-card h3{font-family:var(--display);color:var(--pousse);font-size:1.4rem;margin-bottom:6px}
+  .opp-card p.lead2{opacity:.85;font-size:.96rem;margin-bottom:20px}
+  .opp-card .field label{color:var(--sable)}
+  .opp-card .field input,.opp-card .field select,.opp-card .field textarea{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff}
+  .opp-card .field input::placeholder,.opp-card .field textarea::placeholder{color:rgba(255,255,255,.5)}
+  .opp-card .field input:focus,.opp-card .field select:focus,.opp-card .field textarea:focus{background:rgba(255,255,255,.14);border-color:var(--pousse);box-shadow:0 0 0 3px rgba(140,198,63,.2)}
+  .opp-card .field select option{color:#1b2620}
+  .opp-card .submit{background:var(--pousse);color:var(--canopee)}
+  .opp-card .submit:hover{background:#a0d850}
+
+  /* ===== POURQUOI MAINTENANT (stats) ===== */
+  .stats-sec{background:var(--canopee);color:var(--sable)}
+  .stats-sec h2.section-title{color:#fff}
+  .stats-sec .section-intro{opacity:.85}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
+  @media(max-width:880px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.stat-grid{grid-template-columns:1fr}}
+  .stat-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:26px 22px}
+  .stat-box .big{font-family:var(--display);font-size:2.6rem;font-weight:700;color:var(--pousse);line-height:1}
+  .stat-box .desc{font-size:.95rem;opacity:.9;margin-top:10px}
+  .stat-box .src{font-size:.72rem;opacity:.55;margin-top:12px}
+
+  /* ===== FORMATIONS CERTIFIANTES ===== */
+  .formations{background:var(--sable)}
+  .formations h2.section-title{color:var(--canopee)}
+  .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+  @media(max-width:880px){.course-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.course-grid{grid-template-columns:1fr}}
+  .course{background:#fff;border:1px solid var(--sable-fonce);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+  .course .tag{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+  .course .tag.on{background:#eaf6da;color:var(--feuille)}
+  .course .tag.soon{background:var(--sable-fonce);color:var(--sol)}
+  .course h3{font-family:var(--display);color:var(--canopee);font-size:1.25rem;margin-bottom:8px}
+  .course p{font-size:.93rem;opacity:.82;flex-grow:1;margin-bottom:18px}
+  .course button{border:none;cursor:pointer;background:var(--canopee);color:var(--sable);padding:12px;border-radius:10px;font-family:var(--corps);font-weight:600;font-size:.95rem;transition:background .2s}
+  .course button:hover{background:var(--feuille)}
+  .course button:disabled{background:var(--sable-fonce);color:#9a9384;cursor:not-allowed}
+  /* panneau du cours */
+  #course-panel{display:none;margin-top:30px;background:#fff;border:2px solid var(--feuille);border-radius:22px;padding:34px}
+  @media(max-width:560px){#course-panel{padding:22px 16px}}
+  #course-panel h3{font-family:var(--display);color:var(--canopee);font-size:1.5rem;margin-bottom:6px}
+  .cp-step{margin-top:14px}
+  .lesson{background:var(--sable);border-radius:14px;padding:20px;margin:16px 0}
+  .lesson li{margin:0 0 10px 18px;font-size:.97rem}
+  .lesson h4{font-family:var(--display);color:var(--canopee);font-size:1.05rem;margin:18px 0 8px}
+  .lesson p{font-size:.97rem;margin-bottom:10px}
+  .odd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin:10px 0 6px;padding:0;list-style:none}
+  .odd-grid li{margin:0;background:#fff;border:1px solid var(--sable-fonce);border-radius:10px;padding:10px 12px;font-size:.88rem;line-height:1.35}
+  .odd-grid b{display:inline-block;min-width:26px;color:var(--feuille)}
+  .odd-grid small{display:block;opacity:.7;margin-top:3px}
+  .quiz-q{margin:18px 0;padding-bottom:8px;border-bottom:1px solid var(--sable-fonce)}
+  .quiz-q p{font-weight:600;margin-bottom:10px;color:var(--canopee)}
+  .quiz-opt{display:block;padding:10px 14px;border:1.5px solid var(--sable-fonce);border-radius:10px;margin-bottom:8px;cursor:pointer;font-size:.94rem;transition:border-color .15s,background .15s}
+  .quiz-opt:hover{border-color:var(--feuille)}
+  .quiz-opt input{margin-right:10px}
+  .quiz-opt.sel{border-color:var(--feuille);background:#f0f9e2}
+  .cp-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+  .cp-actions button{border:none;cursor:pointer;padding:13px 24px;border-radius:10px;font-family:var(--corps);font-weight:700;font-size:.97rem;transition:transform .15s,background .2s}
+  .btn-primary{background:var(--sol);color:#fff}.btn-primary:hover{background:#a0632f;transform:translateY(-1px)}
+  .btn-ghost{background:var(--sable-fonce);color:var(--encre)}.btn-ghost:hover{background:#ded5c2}
+  .cert-wrap{text-align:center}
+  .cert-wrap canvas{max-width:100%;height:auto;border:1px solid var(--sable-fonce);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+  .quiz-input{width:100%;max-width:340px;padding:12px 14px;border:1.5px solid var(--sable-fonce);border-radius:10px;font-family:var(--corps);font-size:1rem;margin-top:6px}
+
+  /* ===== FONDATEUR ===== */
+  .founder{background:var(--sable-fonce)}
+  .founder-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;margin-top:20px}
+  @media(max-width:820px){.founder-grid{grid-template-columns:1fr}}
+  .founder-portrait{background:var(--canopee);border-radius:24px;padding:0;overflow:hidden;aspect-ratio:1/1;display:flex;align-items:flex-end;justify-content:center;position:relative}
+  .founder-portrait .initials{font-family:var(--display);font-size:6rem;font-weight:700;color:var(--pousse);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+  .founder-portrait .cap{position:relative;z-index:2;background:rgba(19,64,43,.85);color:var(--sable);width:100%;text-align:center;padding:14px;font-size:.9rem}
+  .founder-body h2{font-family:var(--display);color:var(--canopee);font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:6px}
+  .founder-body .role{color:var(--sol);font-weight:600;margin-bottom:18px}
+  .founder-body p{margin-bottom:14px;font-size:1.02rem}
+  .creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .cred{background:#fff;border:1px solid #e2d9c7;border-radius:999px;padding:7px 15px;font-size:.85rem;font-weight:600;color:var(--canopee)}
+
+  /* ===== OBJECTIFS (compteurs) ===== */
+  .goals{background:var(--feuille);color:#fff;text-align:center}
+  .goals h2.section-title{color:#fff;margin:0 auto 10px}
+  .goal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}
+  @media(max-width:820px){.goal-grid{grid-template-columns:1fr 1fr}}
+  .goal .gnum{font-family:var(--display);font-size:2.8rem;font-weight:700;line-height:1}
+  .goal .glbl{opacity:.92;font-size:.95rem;margin-top:8px}
+
+  /* ===== CTA SEGMENTÉS ===== */
+  .join{background:var(--sable)}
+  .join h2.section-title{color:var(--canopee)}
+  .join-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  @media(max-width:880px){.join-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.join-grid{grid-template-columns:1fr}}
+  .join-card{background:#fff;border:1px solid var(--sable-fonce);border-radius:18px;padding:26px;text-align:center;transition:transform .2s,box-shadow .2s}
+  .join-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(19,64,43,.1)}
+  .join-card .emoji{font-size:2rem}
+  .join-card h3{font-family:var(--display);color:var(--canopee);font-size:1.2rem;margin:10px 0 8px}
+  .join-card p{font-size:.9rem;opacity:.82;margin-bottom:16px;min-height:54px}
+  .join-card a{display:inline-block;background:var(--canopee);color:var(--sable);padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;transition:background .2s}
+  .join-card a:hover{background:var(--feuille)}
+
+  /* ===== NEWSLETTER + PARTAGE (footer) ===== */
+  .news{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:26px;margin-bottom:34px}
+  .news h3{color:#fff;font-family:var(--display);font-size:1.3rem;margin-bottom:6px}
+  .news p{opacity:.82;font-size:.94rem;margin-bottom:16px}
+  .news form{display:flex;gap:10px;flex-wrap:wrap}
+  .news input{flex:1;min-width:200px;padding:13px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;font-family:var(--corps);font-size:.97rem}
+  .news input::placeholder{color:rgba(255,255,255,.55)}
+  .news button{border:none;cursor:pointer;background:var(--pousse);color:var(--canopee);font-weight:700;padding:13px 24px;border-radius:10px;font-family:var(--corps);transition:background .2s}
+  .news button:hover{background:#a0d850}
+  .news .ok{color:var(--pousse);font-weight:600;margin-top:10px;display:none}
+  .share{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:8px}
+  .share span{font-size:.88rem;opacity:.8}
+  .share a,.share button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:var(--sable);display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;transition:background .2s,transform .15s}
+  .share a:hover,.share button:hover{background:var(--pousse);color:var(--canopee);transform:translateY(-2px)}
+
+  /* ===== AFFILIATIONS (logos ronds) ===== */
+  .affil{background:#fff}
+  .affil h2.section-title{color:var(--canopee)}
+  .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:32px}
+  .logo-badge{display:flex;align-items:center;gap:13px;background:var(--sable);border:1px solid var(--sable-fonce);border-radius:14px;padding:12px 14px}
+  .logo-badge .circle{width:48px;height:48px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:.9rem;color:#fff;letter-spacing:.02em}
+  .logo-badge .nm{font-size:.9rem;font-weight:600;color:var(--encre);line-height:1.2}
+  .logo-badge .nm small{display:block;font-weight:400;opacity:.62;font-size:.77rem;margin-top:2px}
+  .affil .note{text-align:center;font-size:.85rem;opacity:.6;margin-top:24px;max-width:60ch;margin-left:auto;margin-right:auto}
+
+  /* ===== APPELS A CANDIDATURE ===== */
+  .appels{background:var(--sable-fonce)}
+  .appels h2.section-title{color:var(--canopee)}
+  .appels .deadline-note{text-align:center;font-size:.9rem;background:#fff;border:1px solid #e5ddcb;border-radius:12px;padding:12px 18px;max-width:64ch;margin:22px auto 0;color:var(--sol);font-weight:600}
+  .appels .sub-head{font-family:var(--display);color:var(--canopee);font-size:1.4rem;margin:42px 0 4px}
+  .appels .sub-desc{font-size:.95rem;opacity:.78;margin-bottom:18px}
+  .res-na{display:flex;gap:12px;align-items:center;padding:14px 16px;background:var(--sable);border:1px dashed #c9bfa8;border-radius:12px;color:#8a8474;font-size:.9rem;font-weight:500}
+  .res-na .ic{flex:none;width:34px;height:34px;border-radius:9px;background:#ded5c2;color:#8a8474;display:flex;align-items:center;justify-content:center;font-weight:800}
+
+  .logo-badge img.logo-img{width:48px;height:48px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--sable-fonce);flex:none;padding:4px}
+  .affil .note code{background:var(--sable-fonce);padding:2px 6px;border-radius:5px;font-size:.85em;color:var(--canopee)}
+  .follow{margin-top:14px}
+  .follow .lbl{font-size:.88rem;opacity:.8;margin-bottom:8px;display:block}
+  .follow .row{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  :focus-visible{outline:3px solid var(--pousse);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<nav id="top" aria-label="Navigation principale">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="ÉcoGénération — accueil">
+      <img class="leaf" src="assets/logo-icon.png" alt="" width="30" height="30">
+      ÉcoGénération
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <div class="nav-links" id="nav-links">
+      <a href="#apprendre">Apprendre</a>
+      <a href="#formations">Formations</a>
+      <a href="#fondateur">Le fondateur</a>
+      <a href="#opportunites">Opportunités</a>
+      <a href="#contact" class="btn">Nous rejoindre</a>
+    </div>
+  </div>
+</nav>
+
+<main id="contenu">
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Éducation climatique · Afrique subsaharienne</p>
+    <h1>Une génération formée à protéger la planète.</h1>
+    <p class="lead">ÉcoGénération intègre l'éducation à l'environnement et à la durabilité dans les écoles, du primaire à l'université. Parce qu'un enfant averti tôt devient un adulte qui agit.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-ocre">Soutenir le projet</a>
+      <a href="#mission" class="btn" style="background:rgba(255,255,255,.12)">Découvrir la mission</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><div class="num">4</div><div class="lbl">niveaux scolaires couverts, du primaire au supérieur</div></div>
+      <div class="stat"><div class="num">7</div><div class="lbl">parcours d'apprentissage, de la maternelle à la recherche</div></div>
+      <div class="stat"><div class="num">100&nbsp;%</div><div class="lbl">gratuit et accessible depuis un téléphone</div></div>
+    </div>
+
+    <!-- Growth path signature -->
+    <svg class="growth" viewBox="0 0 1140 150" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <path d="M0 130 C 200 130, 250 90, 400 88 S 650 60, 760 48 S 1000 24, 1140 18" stroke="#8cc63f" stroke-width="2.5" stroke-dasharray="6 6" opacity=".6"/>
+      <g>
+        <circle cx="120" cy="128" r="7" fill="#8cc63f"/><text x="120" y="112" fill="#cfe8a8" font-size="13" text-anchor="middle" font-family="Inter">Primaire</text>
+        <circle cx="430" cy="88" r="7" fill="#2f7d4f"/><text x="430" y="72" fill="#cfe8a8" font-size="13" text-anchor="middle" font-family="Inter">Collège</text>
+        <circle cx="760" cy="48" r="7" fill="#b8743a"/><text x="760" y="32" fill="#e8c9aa" font-size="13" text-anchor="middle" font-family="Inter">Lycée</text>
+        <circle cx="1080" cy="18" r="9" fill="#f6f1e7"/><text x="1060" y="44" fill="#f6f1e7" font-size="13" text-anchor="middle" font-family="Inter">Université</text>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<section id="mission" class="probleme">
+  <div class="wrap reveal">
+    <p class="eyebrow">Le constat</p>
+    <p class="pq">Le changement climatique est avant tout une <span>question de comportement humain</span>. Et le comportement se forge dès l'enfance.</p>
+    <p class="section-intro" style="margin-top:28px">
+      Former un adulte déjà installé dans ses habitudes est difficile. Mais éduquer un enfant à respecter son environnement, c'est planter une graine qui grandira toute sa vie — et qui se transmettra. Maîtriser l'éducation d'une, deux, trois générations, c'est transformer durablement une société entière.
+    </p>
+  </div>
+</section>
+
+<!-- ===== POURQUOI MAINTENANT ===== -->
+<section id="pourquoi" class="stats-sec">
+  <div class="wrap">
+    <div class="head reveal" style="text-align:center;max-width:60ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center;color:var(--pousse)">Pourquoi maintenant</p>
+      <h2 class="section-title" style="margin:0 auto 18px">L'urgence est double : climat et éducation</h2>
+      <p class="section-intro" style="margin:0 auto">L'Afrique subsaharienne est la plus exposée au changement climatique alors qu'elle y contribue le moins — et c'est aussi là que le plus d'enfants sont privés d'école. Éduquer cette génération, c'est agir à la racine.</p>
+    </div>
+    <div class="stat-grid reveal">
+      <div class="stat-box"><div class="big" data-count="4" data-suffix="%">4%</div><div class="desc">des émissions mondiales de gaz à effet de serre viennent d'Afrique, pourtant le continent le plus vulnérable.</div><div class="src">Source : UNEP, OMM</div></div>
+      <div class="stat-box"><div class="big" data-count="50" data-suffix="%+">50%+</div><div class="desc">des enfants non scolarisés dans le monde vivent en Afrique subsaharienne.</div><div class="src">Source : UNESCO GEM 2024</div></div>
+      <div class="stat-box"><div class="big" data-count="60" data-suffix="%">60%</div><div class="desc">de la population africaine a moins de 25 ans : le continent le plus jeune du monde.</div><div class="src">Source : Banque mondiale, ONU</div></div>
+      <div class="stat-box"><div class="big" data-count="110" data-suffix="M">110M</div><div class="desc">d'Africains directement touchés par des catastrophes climatiques en une seule année.</div><div class="src">Source : OMM, 2022</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Un parcours continu</p>
+      <h2 class="section-title">Apprendre la durabilité à chaque âge</h2>
+      <p class="section-intro">Un programme progressif, adapté à chaque niveau, qui accompagne l'élève de ses premières années jusqu'à l'enseignement supérieur.</p>
+    </div>
+    <div class="levels reveal">
+      <div class="level">
+        <div class="dot">1</div>
+        <div class="stage">PRIMAIRE</div>
+        <h3>Éveil</h3>
+        <p>Découvrir la nature, les déchets, l'eau et le vivant à travers le jeu, le jardinage et les histoires.</p>
+      </div>
+      <div class="level">
+        <div class="dot">2</div>
+        <div class="stage">COLLÈGE</div>
+        <h3>Comprendre</h3>
+        <p>Saisir les causes du changement climatique, le cycle des ressources et les gestes qui comptent.</p>
+      </div>
+      <div class="level">
+        <div class="dot">3</div>
+        <div class="stage">LYCÉE</div>
+        <h3>Agir</h3>
+        <p>Mener des projets concrets : reboisement, gestion des déchets, clubs verts et solutions locales.</p>
+      </div>
+      <div class="level">
+        <div class="dot">4</div>
+        <div class="stage">UNIVERSITÉ</div>
+        <h3>Innover</h3>
+        <p>Concevoir des solutions durables, entreprendre et porter le changement à l'échelle du continent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLATEFORME APPRENDRE ===== -->
+<section id="apprendre" class="apprendre">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" style="text-align:center">La plateforme</p>
+      <h2 class="section-title">Apprendre la durabilité, à chaque niveau</h2>
+      <p class="section-intro" style="margin:0 auto">Choisis ton niveau d'études : le tout-petit apprend en images et en jouant, l'étudiant et le chercheur travaillent sur des cas réels avec des ressources à consulter.</p>
+    </div>
+
+    <div class="level-picker reveal" id="level-picker">
+      <button class="lvl active" data-level="maternelle">Maternelle 1–2</button>
+      <button class="lvl" data-level="primaire">Primaire (CI–CM2)</button>
+      <button class="lvl" data-level="secondaire">Collège &amp; Lycée (6e–Tle)</button>
+      <button class="lvl" data-level="licence">Licence (L1–L3)</button>
+      <button class="lvl" data-level="master">Master (M1–M2)</button>
+      <button class="lvl" data-level="doctorat">Doctorat (1–3)</button>
+      <button class="lvl" data-level="recherche">Recherche &amp; Innovation</button>
+    </div>
+
+    <div class="module reveal" id="module"><!-- contenu injecté par JS --></div>
+  </div>
+</section>
+
+<!-- ===== FORMATIONS CERTIFIANTES ===== -->
+<section id="formations" class="formations">
+  <div class="wrap">
+    <div class="head reveal" style="text-align:center;max-width:62ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center">Modules en ligne</p>
+      <h2 class="section-title" style="margin:0 auto 18px">Apprends, passe le test, obtiens ton attestation</h2>
+      <p class="section-intro" style="margin:0 auto">Des modules ouverts à tous, partout dans le monde. Suis la leçon, réussis le quiz et télécharge une attestation de réussite à ton nom, vérifiable en ligne grâce à son QR code. Deux modules sont disponibles dès maintenant.</p>
+    </div>
+
+    <div class="course-grid reveal">
+      <div class="course">
+        <span class="tag on">Disponible</span>
+        <h3>Les 17 Objectifs de développement durable</h3>
+        <p>Comprends l'Agenda 2030 des Nations Unies : les 17 ODD, leurs liens entre eux et comment agir pour eux depuis ton école ou ta communauté.</p>
+        <button onclick="startCourse('odd')">Commencer le module</button>
+      </div>
+      <div class="course">
+        <span class="tag on">Disponible</span>
+        <h3>Leadership climatique</h3>
+        <p>Comprends ton rôle de leader face au changement climatique : agir, mobiliser et porter le changement dans ta communauté.</p>
+        <button onclick="startCourse('leadership')">Commencer le module</button>
+      </div>
+      <div class="course">
+        <span class="tag soon">Bientôt</span>
+        <h3>Agriculture régénératrice</h3>
+        <p>Restaurer les sols, l'eau et la biodiversité tout en nourrissant les communautés.</p>
+        <button disabled>Bientôt disponible</button>
+      </div>
+      <div class="course">
+        <span class="tag soon">Bientôt</span>
+        <h3>Énergies renouvelables</h3>
+        <p>Solaire, éolien, hydro : l'énergie propre au service de l'accès et du climat.</p>
+        <button disabled>Bientôt disponible</button>
+      </div>
+      <div class="course">
+        <span class="tag soon">Bientôt</span>
+        <h3>Adaptation &amp; résilience</h3>
+        <p>Se préparer aux inondations, sécheresses et chaleurs extrêmes.</p>
+        <button disabled>Bientôt disponible</button>
+      </div>
+      <div class="course">
+        <span class="tag soon">Bientôt</span>
+        <h3>Plaidoyer &amp; politiques climat</h3>
+        <p>Influencer les décisions et intégrer le climat dans les politiques publiques.</p>
+        <button disabled>Bientôt disponible</button>
+      </div>
+      <div class="course">
+        <span class="tag soon">Bientôt</span>
+        <h3>Justice climatique</h3>
+        <p>Équité, voix des communautés et transition juste pour tous.</p>
+        <button disabled>Bientôt disponible</button>
+      </div>
+    </div>
+
+    <div id="course-panel"><!-- injecté par JS --></div>
+  </div>
+</section>
+
+<!-- ===== BIBLIOTHEQUE ===== -->
+<section id="bibliotheque" class="biblio">
+  <div class="wrap">
+    <div class="head reveal" style="text-align:center;max-width:60ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center">Ressources libres</p>
+      <h2 class="section-title" style="margin:0 auto 18px">La bibliothèque climat, par niveau</h2>
+      <p class="section-intro" style="margin:0 auto">Des ressources gratuites et reconnues pour apprendre, enseigner et approfondir — des tout-petits aux chercheurs.</p>
+    </div>
+    <div class="shelf reveal">
+      <div class="shelf-card">
+        <h3>Tout-petits &amp; primaire</h3>
+        <p class="who">À lire avec un parent ou un enseignant</p>
+        <ul class="res-list">
+          <li><a href="https://climatekids.nasa.gov/" target="_blank" rel="noopener"><span class="ic">N</span><span>NASA Climate Kids<small>Jeux et explications simples sur le climat</small></span></a></li>
+          <li><a href="https://www.oce.global/fr" target="_blank" rel="noopener"><span class="ic">O</span><span>Office for Climate Education<small>Activités pédagogiques pour les plus jeunes</small></span></a></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Collège &amp; lycée</h3>
+        <p class="who">Comprendre les causes et les solutions</p>
+        <ul class="res-list">
+          <li><a href="https://www.unesco.org/en/climate-change-education" target="_blank" rel="noopener"><span class="ic">U</span><span>UNESCO — Éducation au climat<small>Le cadre mondial de référence</small></span></a></li>
+          <li><a href="https://education.nationalgeographic.org/" target="_blank" rel="noopener"><span class="ic">N</span><span>National Geographic Education<small>Ressources et cartes interactives</small></span></a></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Licence &amp; master</h3>
+        <p class="who">Approfondir science et politiques</p>
+        <ul class="res-list">
+          <li><a href="https://unccelearn.org/" target="_blank" rel="noopener"><span class="ic">L</span><span>UN CC:Learn<small>Cours en ligne gratuits et certifiants</small></span></a></li>
+          <li><a href="https://elearning.fao.org/" target="_blank" rel="noopener"><span class="ic">F</span><span>FAO eLearning Academy<small>Agriculture, climat et durabilité</small></span></a></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Doctorat, recherche &amp; enseignants</h3>
+        <p class="who">Sources scientifiques et pédagogiques</p>
+        <ul class="res-list">
+          <li><a href="https://www.ipcc.ch/" target="_blank" rel="noopener"><span class="ic">G</span><span>GIEC / IPCC<small>Rapports scientifiques de référence</small></span></a></li>
+          <li><a href="https://scholar.google.com/" target="_blank" rel="noopener"><span class="ic">S</span><span>Google Scholar<small>Articles et publications en accès libre</small></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OPPORTUNITES ===== -->
+<section id="opportunites" class="opp">
+  <div class="wrap">
+    <div class="head reveal" style="text-align:center;max-width:62ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center;color:var(--pousse)">Opportunités</p>
+      <h2 class="section-title">Stages, missions &amp; enseignement</h2>
+      <p class="section-intro">Experts, organisations et enseignants du monde entier : rejoignez le mouvement. Chaque demande est lue par notre équipe, qui vous répond par email.</p>
+    </div>
+
+    <div class="opp-grid reveal">
+      <!-- Bourse de stages / missions -->
+      <div class="opp-card">
+        <h3>Proposer un stage ou une mission</h3>
+        <p class="lead2">Vous avez de l'expérience ? Recrutez des stagiaires ou proposez vos services (gratuits ou payants) partout dans le monde.</p>
+        <form class="js-form" name="mission" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="mission">
+          <p class="hp"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <div class="field"><label for="m-nom">Nom <span class="req">*</span></label><input id="m-nom" name="nom" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="m-org">Organisation</label><input id="m-org" name="organisation" type="text" autocomplete="organization"></div>
+          <div class="row2">
+            <div class="field"><label for="m-email">Email <span class="req">*</span></label><input id="m-email" name="email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="m-type">Type</label>
+              <select id="m-type" name="type">
+                <option>Stage</option><option>Mission courte</option><option>Mentorat</option><option>Consultation</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="m-rem">Gratuit ou payant ?</label>
+            <select id="m-rem" name="remuneration"><option>Gratuit / bénévole</option><option>Payant</option></select>
+          </div>
+          <div class="field"><label for="m-desc">Décrivez la mission <span class="req">*</span></label><textarea id="m-desc" name="description" required placeholder="Profil recherché, durée, lieu, objectifs…"></textarea></div>
+          <p class="consent">En envoyant ce formulaire, vous acceptez que vos données soient utilisées uniquement pour vous répondre. <a href="mentions-legales.html#confidentialite">Confidentialité</a></p>
+          <button type="submit" class="submit">Envoyer ma proposition</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <!-- Recrutement enseignants -->
+      <div class="opp-card">
+        <h3>Devenir enseignant climat</h3>
+        <p class="lead2">Vous voulez enseigner le changement climatique, ses enjeux et ses solutions dans les écoles ? Rejoignez notre réseau d'enseignants.</p>
+        <form class="js-form" name="enseignant" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="enseignant">
+          <p class="hp"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <div class="field"><label for="e-nom">Nom complet <span class="req">*</span></label><input id="e-nom" name="nom" type="text" required autocomplete="name"></div>
+          <div class="row2">
+            <div class="field"><label for="e-email">Email <span class="req">*</span></label><input id="e-email" name="email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="e-pays">Pays <span class="req">*</span></label><input id="e-pays" name="pays" type="text" required autocomplete="country-name"></div>
+          </div>
+          <div class="field"><label for="e-niv">Niveau que vous pouvez enseigner</label>
+            <select id="e-niv" name="niveau">
+              <option>Maternelle / Primaire</option><option>Collège / Lycée</option><option>Université</option><option>Tous niveaux</option>
+            </select>
+          </div>
+          <div class="field"><label for="e-exp">Votre expérience <span class="req">*</span></label><textarea id="e-exp" name="experience" required placeholder="Formation, expérience d'enseignement ou de terrain en climat / environnement…"></textarea></div>
+          <p class="consent">En envoyant ce formulaire, vous acceptez que vos données soient utilisées uniquement pour vous répondre. <a href="mentions-legales.html#confidentialite">Confidentialité</a></p>
+          <button type="submit" class="submit">Rejoindre le réseau</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPELS A CANDIDATURE ===== -->
+<section id="appels" class="appels">
+  <div class="wrap">
+    <div class="head reveal" style="text-align:center;max-width:64ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center">Opportunités</p>
+      <h2 class="section-title" style="margin:0 auto 18px">Appels à candidature climat</h2>
+      <p class="section-intro" style="margin:0 auto">Bourses, prix, fellowships et conférences pour passer à l'action — sélectionnés pour les jeunes et les entrepreneurs du climat, en Afrique et dans le monde.</p>
+      <p class="deadline-note">⏳ Les dates limites changent chaque année. Vérifiez toujours sur le site officiel avant de candidater.</p>
+    </div>
+
+    <h3 class="sub-head reveal">Petites bourses &amp; prix, par tranche d'âge</h3>
+    <p class="sub-desc reveal">Là où aucune bourse directe n'existe encore, c'est indiqué « N/A » — un espace qu'ÉcoGénération compte combler.</p>
+    <div class="shelf reveal">
+      <div class="shelf-card">
+        <h3>Enfance · 3–11 ans</h3>
+        <p class="who">Sensibilisation, pas encore de financement direct</p>
+        <ul class="res-list">
+          <li><div class="res-na"><span class="ic">—</span><span>N/A — pas de bourse directe à cet âge.<br>Participation via l'école et nos modules. Une bourse junior est à l'étude.</span></div></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Adolescents · 12–17 ans</h3>
+        <p class="who">Prix et accélérateurs jeunes</p>
+        <ul class="res-list">
+          <li><a href="https://childrensclimateprize.org/" target="_blank" rel="noopener"><span class="ic">C</span><span>Children's Climate Prize<small>12–17 ans · prix international</small></span></a></li>
+          <li><a href="https://theworldaround.org/young-climate-prize" target="_blank" rel="noopener"><span class="ic">Y</span><span>Young Climate Prize<small>13–25 ans · mentorat &amp; visibilité</small></span></a></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Jeunes · 18–25 ans</h3>
+        <p class="who">Concours, fellowships et sommets</p>
+        <ul class="res-list">
+          <li><a href="https://anzishaprize.org/" target="_blank" rel="noopener"><span class="ic">A</span><span>Anzisha Prize<small>15–22 ans · entrepreneurs africains</small></span></a></li>
+          <li><a href="https://climatelaunchpad.org/" target="_blank" rel="noopener"><span class="ic">C</span><span>ClimateLaunchpad<small>Concours mondial d'idées vertes</small></span></a></li>
+          <li><a href="https://www.oneyoungworld.com/" target="_blank" rel="noopener"><span class="ic">O</span><span>One Young World<small>Sommet mondial des jeunes leaders</small></span></a></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Jeunes pros · 25–35 ans</h3>
+        <p class="who">Bourses de leadership et d'impact</p>
+        <ul class="res-list">
+          <li><a href="https://yali.state.gov/" target="_blank" rel="noopener"><span class="ic">Y</span><span>Mandela Washington Fellowship (YALI)<small>Leaders africains</small></span></a></li>
+          <li><a href="https://acumenacademy.org/" target="_blank" rel="noopener"><span class="ic">G</span><span>Green RISE Africa (Acumen)<small>Entrepreneurs climat africains</small></span></a></li>
+          <li><a href="https://www.tonyelumelufoundation.org/" target="_blank" rel="noopener"><span class="ic">T</span><span>Tony Elumelu Foundation<small>Capital d'amorçage entrepreneurs</small></span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head reveal">Entrepreneuriat climatique — profit &amp; non-profit</h3>
+    <p class="sub-desc reveal">Pour les startups vertes comme pour les organisations à but social.</p>
+    <div class="shelf reveal">
+      <div class="shelf-card">
+        <h3>Startups &amp; entreprises vertes</h3>
+        <p class="who">À but lucratif</p>
+        <ul class="res-list">
+          <li><a href="https://climatelaunchpad.org/" target="_blank" rel="noopener"><span class="ic">C</span><span>ClimateLaunchpad<small>Idées cleantech early-stage</small></span></a></li>
+          <li><a href="https://earthshotprize.org/" target="_blank" rel="noopener"><span class="ic">E</span><span>The Earthshot Prize<small>1 M£ par solution lauréate</small></span></a></li>
+          <li><a href="https://www.tonyelumelufoundation.org/" target="_blank" rel="noopener"><span class="ic">T</span><span>Tony Elumelu Foundation<small>5 000 $ d'amorçage + formation</small></span></a></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Impact social &amp; non-profit</h3>
+        <p class="who">À but non lucratif</p>
+        <ul class="res-list">
+          <li><a href="https://echoinggreen.org/" target="_blank" rel="noopener"><span class="ic">E</span><span>Echoing Green<small>Fellowships entrepreneurs sociaux</small></span></a></li>
+          <li><a href="https://acumenacademy.org/" target="_blank" rel="noopener"><span class="ic">A</span><span>Acumen Academy<small>Leaders du changement social</small></span></a></li>
+          <li><a href="https://www.cartierwomensinitiative.com/" target="_blank" rel="noopener"><span class="ic">C</span><span>Cartier Women's Initiative<small>Femmes à impact (climat inclus)</small></span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head reveal">Conférences &amp; voyages — national et international</h3>
+    <p class="sub-desc reveal">Pour représenter, négocier et apprendre sur la scène mondiale.</p>
+    <div class="shelf reveal">
+      <div class="shelf-card">
+        <h3>Climat &amp; négociations</h3>
+        <p class="who">Voix des jeunes</p>
+        <ul class="res-list">
+          <li><a href="https://youngo.uno/" target="_blank" rel="noopener"><span class="ic">Y</span><span>YOUNGO &amp; COY/LCOY<small>Jeunesse officielle de la CCNUCC</small></span></a></li>
+          <li><a href="https://www.peoplepowered.org/" target="_blank" rel="noopener"><span class="ic">P</span><span>Climate Democracy Accelerator<small>People Powered · démocratie climat</small></span></a></li>
+        </ul>
+      </div>
+      <div class="shelf-card">
+        <h3>Leadership &amp; sommets</h3>
+        <p class="who">Réseaux mondiaux</p>
+        <ul class="res-list">
+          <li><a href="https://www.oneyoungworld.com/" target="_blank" rel="noopener"><span class="ic">O</span><span>One Young World Summit<small>Bourses de participation disponibles</small></span></a></li>
+          <li><a href="https://www.obama.org/programs/leaders/" target="_blank" rel="noopener"><span class="ic">O</span><span>Obama Foundation Leaders<small>Programme Afrique</small></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FONDATEUR ===== -->
+<section id="fondateur" class="founder">
+  <div class="wrap">
+    <div class="head reveal" style="max-width:60ch;margin-bottom:10px">
+      <p class="eyebrow">Le fondateur</p>
+    </div>
+    <div class="founder-grid reveal">
+      <div class="founder-portrait">
+        <span class="initials">MD</span>
+        <div class="cap">Moussa DARI · Fondateur &amp; CEO</div>
+      </div>
+      <div class="founder-body">
+        <h2>Moussa DARI</h2>
+        <p class="role">Entrepreneur social &amp; défenseur du climat · Abomey-Calavi, Bénin</p>
+        <p>Étudiant en sécurité informatique et en énergies renouvelables, Moussa est le fondateur d'<strong>ECOFEED</strong>, une entreprise sociale agroalimentaire qui forme les femmes rurales et promeut une alimentation durable en Afrique de l'Ouest.</p>
+        <p>Convaincu que le changement climatique est avant tout une question d'éducation et de comportement, il a créé <strong>ÉcoGénération</strong> pour ancrer la protection de l'environnement dans les écoles, dès le plus jeune âge — et transformer durablement toute une société.</p>
+        <p>Son parcours, marqué par l'excellence académique et un engagement communautaire constant, l'a conduit à rejoindre plusieurs réseaux internationaux de jeunes leaders du climat et de l'entrepreneuriat.</p>
+        <div class="creds">
+          <span class="cred">Mastercard Foundation Scholar</span>
+          <span class="cred">Sciences Po Paris Fellow</span>
+          <span class="cred">Tony Elumelu Foundation Alumni 2024</span>
+          <span class="cred">ODON Vallet Scholar</span>
+          <span class="cred">Kofi Annan Changemaker 2026</span>
+          <span class="cred">YOUNGO</span>
+          <span class="cred">Fondateur d'ECOFEED</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AFFILIATIONS / RECONNAISSANCE ===== -->
+<section id="affiliations" class="affil">
+  <div class="wrap">
+    <div class="head reveal" style="text-align:center;max-width:62ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center">Parcours, formations &amp; reconnaissance</p>
+      <h2 class="section-title" style="margin:0 auto 18px">Formé et reconnu par des institutions de référence</h2>
+      <p class="section-intro" style="margin:0 auto">Le fondateur d'ÉcoGénération a été formé, accompagné ou distingué par les organisations suivantes.</p>
+    </div>
+    <div class="logos reveal">
+      <div class="logo-badge" data-logo="mastercard"><span class="circle" style="background:#2f7d4f">MCF</span><span class="nm">Mastercard Foundation<small>Scholar &amp; FAST Alumnus</small></span></div>
+      <div class="logo-badge" data-logo="sciencespo"><span class="circle" style="background:#13402b">SP</span><span class="nm">Sciences Po Paris<small>Summer School Fellow</small></span></div>
+      <div class="logo-badge" data-logo="tef"><span class="circle" style="background:#b8743a">TEF</span><span class="nm">Tony Elumelu Foundation<small>Entrepreneurship Programme · Alumni 2024</small></span></div>
+      <div class="logo-badge" data-logo="odonvallet"><span class="circle" style="background:#2f7d4f">OV</span><span class="nm">Fondation ODON Vallet<small>Excellence académique</small></span></div>
+      <div class="logo-badge" data-logo="kofiannan"><span class="circle" style="background:#13402b">KA</span><span class="nm">Kofi Annan Foundation<small>Changemaker 2026</small></span></div>
+      <div class="logo-badge" data-logo="johnmaxwell"><span class="circle" style="background:#b8743a">JM</span><span class="nm">John Maxwell Leadership<small>Values-Based Leadership</small></span></div>
+      <div class="logo-badge" data-logo="fxb"><span class="circle" style="background:#2f7d4f">FXB</span><span class="nm">FXB Global (USA)<small>Climate Advocates Program 2025</small></span></div>
+      <div class="logo-badge" data-logo="gmi"><span class="circle" style="background:#13402b">GMI</span><span class="nm">Global Mentorship Initiative<small>Mentor certifié 2026</small></span></div>
+      <div class="logo-badge" data-logo="millennium"><span class="circle" style="background:#b8743a">MIL</span><span class="nm">Millennium Fellowship<small>UNAI &amp; MCN</small></span></div>
+      <div class="logo-badge" data-logo="climatesmart"><span class="circle" style="background:#2f7d4f">CSF</span><span class="nm">Climate Smart Fellowship<small>2026</small></span></div>
+      <div class="logo-badge" data-logo="qsimpact"><span class="circle" style="background:#13402b">QS</span><span class="nm">QS ImpACT<small>Ambassadeur GDA</small></span></div>
+      <div class="logo-badge" data-logo="ycm"><span class="circle" style="background:#b8743a">YCM</span><span class="nm">YCM<small>Fellow</small></span></div>
+      <div class="logo-badge" data-logo="aspire"><span class="circle" style="background:#2f7d4f">AL</span><span class="nm">Aspire Institute<small>Aspire Leaders Program · 2026</small></span></div>
+      <div class="logo-badge" data-logo="youngo"><span class="circle" style="background:#13402b">YG</span><span class="nm">YOUNGO<small>Youth Constituency UNFCCC · Youth for COP 2026</small></span></div>
+      <div class="logo-badge" data-logo="cambridge"><span class="circle" style="background:#b8743a">UC</span><span class="nm">University of Cambridge<small>CEDAW &amp; Law (cours en ligne)</small></span></div>
+      <div class="logo-badge" data-logo="ylf"><span class="circle" style="background:#2f7d4f">YLF</span><span class="nm">Youth Leadership, Climate &amp; Digital Empowerment<small>Fellowship 2026</small></span></div>
+      <div class="logo-badge" data-logo="unitar"><span class="circle" style="background:#13402b">UN</span><span class="nm">UNITAR<small>SDGs &amp; Développement durable</small></span></div>
+      <div class="logo-badge" data-logo="yali"><span class="circle" style="background:#b8743a">YALI</span><span class="nm">YALI Network<small>Leadership &amp; Clean Energy</small></span></div>
+      <div class="logo-badge" data-logo="gcm"><span class="circle" style="background:#2f7d4f">GCM</span><span class="nm">Global Centre for Climate Mobility<small>Masterclass</small></span></div>
+      <div class="logo-badge"><span class="circle" style="background:#b8743a">CA</span><span class="nm">Climate Alpha<small>Fellow &amp; Challenge Winner</small></span></div>
+      <div class="logo-badge"><span class="circle" style="background:#2f7d4f">COFP</span><span class="nm">Cardinal Onaiyekan Foundation for Peace<small>Fellow 2026/2027</small></span></div>
+      <div class="logo-badge" data-logo="oneworldbenin"><span class="circle" style="background:#13402b">OWB</span><span class="nm">One World Bénin / ACN<small>1er Prix Business Challenge</small></span></div>
+    </div>
+    <p class="note">Ces programmes reflètent le parcours personnel du fondateur. Ils n'impliquent ni partenariat ni parrainage de ces institutions envers ÉcoGénération.</p>
+  </div>
+</section>
+
+<!-- ===== OBJECTIFS / AMBITION ===== -->
+<section id="ambition" class="goals">
+  <div class="wrap">
+    <div class="head reveal" style="max-width:56ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center;color:rgba(255,255,255,.8)">Notre ambition</p>
+      <h2 class="section-title">À l'horizon 2030</h2>
+      <p class="section-intro" style="margin:0 auto;opacity:.92">Des objectifs à la hauteur de l'enjeu, pour faire de l'éducation climatique une norme et non une exception.</p>
+    </div>
+    <div class="goal-grid reveal">
+      <div class="goal"><div class="gnum" data-count="1000000" data-suffix="+">1 M+</div><div class="glbl">enfants &amp; jeunes à sensibiliser</div></div>
+      <div class="goal"><div class="gnum" data-count="500" data-suffix="+">500+</div><div class="glbl">écoles partenaires</div></div>
+      <div class="goal"><div class="gnum" data-count="15" data-suffix="">15</div><div class="glbl">pays d'Afrique subsaharienne</div></div>
+      <div class="goal"><div class="gnum" data-count="7" data-suffix="">7</div><div class="glbl">parcours, de la maternelle à la recherche</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="approche" class="approche">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow" style="color:var(--pousse)">Notre approche</p>
+      <h2 class="section-title">Convaincre, intégrer, transmettre</h2>
+      <p class="section-intro" style="opacity:.85">Nous travaillons main dans la main avec les États et les institutions pour ancrer l'éducation climatique dans les programmes officiels.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <h3>Plaidoyer institutionnel</h3>
+        <p>Convaincre les ministères d'intégrer l'éducation à l'environnement dès le primaire, dans le curriculum national.</p>
+      </div>
+      <div class="pillar">
+        <h3>Programmes &amp; outils</h3>
+        <p>Concevoir des contenus pédagogiques adaptés à chaque niveau et former les enseignants à les transmettre.</p>
+      </div>
+      <div class="pillar">
+        <h3>Communautés actives</h3>
+        <p>Créer des clubs verts, des projets de terrain et des réseaux d'élèves engagés dans toute l'Afrique subsaharienne.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vision">
+  <div class="wrap reveal">
+    <blockquote>« Éduquer un enfant aujourd'hui, c'est protéger la planète de demain. »</blockquote>
+    <p class="by">— La vision d'ÉcoGénération</p>
+  </div>
+</section>
+
+<!-- ===== COMMENT NOUS REJOINDRE (CTA segmentés) ===== -->
+<section id="rejoindre" class="join">
+  <div class="wrap">
+    <div class="head reveal" style="text-align:center;max-width:58ch;margin:0 auto">
+      <p class="eyebrow" style="text-align:center">Comment nous rejoindre</p>
+      <h2 class="section-title" style="margin:0 auto 18px">Chacun a un rôle à jouer</h2>
+      <p class="section-intro" style="margin:0 auto">Que vous soyez une école, un État, un partenaire ou un citoyen engagé, il existe une façon de contribuer.</p>
+    </div>
+    <div class="join-grid reveal">
+      <div class="join-card">
+        <div class="emoji">🏫</div>
+        <h3>Vous êtes une école</h3>
+        <p>Intégrez nos modules et formez vos élèves à la durabilité.</p>
+        <a href="#contact">Devenir école pilote</a>
+      </div>
+      <div class="join-card">
+        <div class="emoji">🏛️</div>
+        <h3>Vous êtes un État</h3>
+        <p>Ancrez l'éducation climatique dans le programme national.</p>
+        <a href="#contact">Construire un partenariat</a>
+      </div>
+      <div class="join-card">
+        <div class="emoji">🤝</div>
+        <h3>Vous êtes un partenaire</h3>
+        <p>Soutenez le déploiement et démultipliez l'impact.</p>
+        <a href="#contact">Soutenir le projet</a>
+      </div>
+      <div class="join-card">
+        <div class="emoji">🌱</div>
+        <h3>Vous êtes un citoyen</h3>
+        <p>Enseignez, faites du bénévolat ou partagez la mission.</p>
+        <a href="#opportunites">M'engager</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="rdv">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" style="text-align:center">Rencontrons-nous</p>
+      <h2 class="section-title">Prenez rendez-vous avec ÉcoGénération</h2>
+      <p class="section-intro" style="margin:0 auto">Dites-nous qui vous êtes et ce que vous attendez de nous. Nous arriverons préparés, avec vos questions déjà en main.</p>
+    </div>
+
+    <div class="steps reveal">
+      <!-- ÉTAPE 1 : formulaire (Netlify Forms envoie un email à chaque demande) -->
+      <div class="card">
+        <span class="step-tag"><span class="n">1</span> Parlez-nous de votre projet</span>
+        <h3>Votre demande</h3>
+        <p class="sub">Tout est transmis directement à notre équipe par email.</p>
+
+        <form id="rdv-form" name="rdv" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="rdv">
+          <p class="hp"><label>Ne pas remplir : <input name="bot-field"></label></p>
+
+          <div class="row2">
+            <div class="field">
+              <label for="nom">Nom complet <span class="req">*</span></label>
+              <input id="nom" name="nom" type="text" required>
+            </div>
+            <div class="field">
+              <label for="org">Organisation / structure</label>
+              <input id="org" name="organisation" type="text">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="tel">Téléphone</label>
+              <input id="tel" name="telephone" type="tel">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label for="profil">Vous êtes <span class="req">*</span></label>
+              <select id="profil" name="profil" required>
+                <option value="" selected disabled>Choisir…</option>
+                <option>École / établissement scolaire</option>
+                <option>Ministère / institution publique</option>
+                <option>ONG / association</option>
+                <option>Partenaire financier / bailleur</option>
+                <option>Enseignant·e</option>
+                <option>Bénévole</option>
+                <option>Presse / média</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="objet">Objet du rendez-vous <span class="req">*</span></label>
+              <select id="objet" name="objet" required>
+                <option value="" selected disabled>Choisir…</option>
+                <option>Partenariat</option>
+                <option>Intégrer le programme dans une école</option>
+                <option>Plaidoyer / intégration au curriculum national</option>
+                <option>Financement / soutien</option>
+                <option>Bénévolat</option>
+                <option>Presse / interview</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="questions">Quelles questions souhaitez-vous nous poser ? <span class="req">*</span></label>
+            <textarea id="questions" name="questions" required placeholder="Listez ici les points que vous voulez aborder. Nous y répondrons en rendez-vous."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="message">Message complémentaire</label>
+            <textarea id="message" name="message" placeholder="Contexte, attentes, disponibilités…"></textarea>
+          </div>
+
+          <p class="consent">En envoyant ce formulaire, vous acceptez que vos données soient utilisées uniquement pour vous répondre. <a href="mentions-legales.html#confidentialite">Confidentialité</a></p>
+
+          <button type="submit" class="submit">Envoyer ma demande</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+
+        <div id="rdv-success">
+          <div class="check">✓</div>
+          <h3>Demande envoyée&nbsp;!</h3>
+          <p class="sub">Merci. Nous avons bien reçu votre demande et vos questions. Nous revenons vers vous sous 48&nbsp;h ouvrées pour fixer le créneau.</p>
+        </div>
+      </div>
+
+      <!-- ÉTAPE 2 : Calendly -->
+      <div class="card cal">
+        <span class="step-tag" style="color:var(--pousse)"><span class="n" style="background:var(--pousse);color:var(--canopee)">2</span> Convenons d'un créneau</span>
+        <h3>Fixons un créneau</h3>
+        <p class="sub">Après réception de votre demande, nous vous proposons un créneau sous 48&nbsp;h ouvrées. Pour aller plus vite, écrivez-nous directement.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#8cc63f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Réponse sous 48&nbsp;h ouvrées</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#8cc63f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Confirmation par email</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#8cc63f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> En visio ou en présentiel à Abomey-Calavi</li>
+        </ul>
+        <a class="btn-cal" href="https://wa.me/2290191623528?text=Bonjour%20%C3%89coG%C3%A9n%C3%A9ration%2C%20je%20souhaite%20convenir%20d%27un%20rendez-vous." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a class="btn-cal" href="mailto:darimoussa5@gmail.com?subject=Rendez-vous%20%C3%89coG%C3%A9n%C3%A9ration" style="margin-top:10px;background:transparent;border:1px solid rgba(255,255,255,.35);color:var(--sable)">Écrire par email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <!-- Newsletter -->
+    <div class="news reveal">
+      <h3>Restez informé</h3>
+      <p>Recevez nos avancées, ressources et opportunités. Pas de spam, désinscription en un clic.</p>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="news-form">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p class="hp"><label>Ne pas remplir : <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="votre@email.com" required aria-label="Votre email">
+        <button type="submit">S'abonner</button>
+      </form>
+      <p class="ok" id="news-ok">Merci ! Vous êtes bien inscrit.</p>
+      <p class="consent" style="margin-top:8px">Votre email sert uniquement à l'envoi de nos nouvelles. <a href="mentions-legales.html#confidentialite">Confidentialité</a></p>
+    </div>
+
+    <div class="foot-grid">
+      <div>
+        <div class="logo">
+          <img class="leaf" src="assets/logo-icon.png" alt="" width="28" height="28" style="background:#f6f1e7;border-radius:7px;padding:2px">
+          ÉcoGénération
+        </div>
+        <p style="opacity:.8;margin-top:12px;max-width:30ch;font-size:.92rem">Éducation climatique pour l'Afrique subsaharienne, du primaire à l'université.</p>
+        <div class="share">
+          <span>Partager :</span>
+          <a id="share-wa" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp" title="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.3 7.3 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 6.7 10a5 5 0 0 0 1 2.6 11.3 11.3 0 0 0 4.4 3.9c.6.3 1.1.4 1.5.5a3.6 3.6 0 0 0 1.6.1c.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.3-.2-.5-.3Z"/></svg></a>
+          <a id="share-li" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2 1.4-2 2.9V21H9V9Z"/></svg></a>
+          <a id="share-x" target="_blank" rel="noopener" aria-label="Partager sur X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7 8 8.3 12h-6.5l-5-7.3L9 22H5.9l7.5-8.6L5 2h6.6l4.6 6.8L18.9 2Zm-1.1 18h1.8L7.3 4H5.4l12.4 16Z"/></svg></a>
+          <button id="share-copy" aria-label="Copier le lien" title="Copier le lien"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+        </div>
+
+        <div class="follow">
+          <span class="lbl">Suivez le fondateur :</span>
+          <div class="row">
+            <a href="https://www.facebook.com/share/1Du69CdSTn/" target="_blank" rel="noopener me" aria-label="Facebook" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.3C16.7.2 15.8 0 14.7 0 12.3 0 11 1.4 11 4v2H8v3h3v9h3V9Z"/></svg></a>
+            <a href="https://www.instagram.com/darimoussa8/" target="_blank" rel="noopener me" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.tiktok.com/@modar_17" target="_blank" rel="noopener me" aria-label="TikTok" title="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.9 7.9 0 0 0 4.4 1.4V6.7a4.6 4.6 0 0 1-4.4-4.7Z"/></svg></a>
+            <a href="https://x.com/moussa_dari_17" target="_blank" rel="noopener me" aria-label="X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7 8 8.3 12h-6.5l-5-7.3L9 22H5.9l7.5-8.6L5 2h6.6l4.6 6.8L18.9 2Zm-1.1 18h1.8L7.3 4H5.4l12.4 16Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-contact">
+        <p style="font-weight:600;color:#fff;margin-bottom:8px">Contact</p>
+        <p><a href="mailto:darimoussa5@gmail.com">darimoussa5@gmail.com</a></p>
+        <p>+229 01 91 62 35 28</p>
+        <p>Abomey-Calavi, Bénin</p>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 ÉcoGénération · Éduquer aujourd'hui, protéger demain. · <a href="verifier.html" style="color:inherit">Vérifier une attestation</a> · <a href="mentions-legales.html" style="color:inherit">Mentions légales &amp; confidentialité</a></div>
+  </div>
+</footer>
+
+<script src="assets/qrcode.js"></script>
+<script>
+  const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  // Menu mobile
+  const menuBtn=document.getElementById('menu-btn'), navLinks=document.getElementById('nav-links');
+  if(menuBtn){
+    menuBtn.addEventListener('click',()=>{const o=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o);});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  }
+
+  // Envoi des formulaires vers Netlify Forms sans quitter la page
+  async function postForm(form){
+    const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+  }
+  function lock(form,on){const b=form.querySelector('[type=submit]');if(b){b.disabled=on;b.dataset.t=b.dataset.t||b.textContent;b.textContent=on?'Envoi…':b.dataset.t;}}
+  const ERR="L'envoi a échoué. Réessayez, ou écrivez-nous à darimoussa5@gmail.com.";
+
+  const rdvForm=document.getElementById('rdv-form');
+  if(rdvForm){
+    rdvForm.addEventListener('submit',async(e)=>{
+      e.preventDefault();lock(rdvForm,true);
+      try{
+        await postForm(rdvForm);
+        rdvForm.style.display='none';
+        document.getElementById('rdv-success').style.display='block';
+        document.getElementById('rdv-success').scrollIntoView({behavior:'smooth',block:'center'});
+      }catch(err){const m=rdvForm.querySelector('.form-msg');m.className='form-msg err';m.textContent=ERR;}
+      finally{lock(rdvForm,false);}
+    });
+  }
+  document.querySelectorAll('form.js-form').forEach(f=>{
+    f.addEventListener('submit',async(e)=>{
+      e.preventDefault();lock(f,true);const m=f.querySelector('.form-msg');
+      try{await postForm(f);f.reset();m.className='form-msg ok';m.textContent="Merci ! Votre demande a bien été reçue. Nous vous répondons par email.";}
+      catch(err){m.className='form-msg err';m.textContent=ERR;}
+      finally{lock(f,false);}
+    });
+  });
+
+  /* ===== PLATEFORME APPRENDRE : jeu + niveaux ===== */
+  const C={canopee:'#13402b',feuille:'#2f7d4f',pousse:'#8cc63f',sol:'#b8743a',ciel:'#bfe3f5',cielGris:'#9aa7a0',terre:'#caa46a'};
+
+  // Scènes illustrées (SVG) pour les tout-petits
+  const SVG={
+    bambou:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><rect y="110" width="200" height="40" fill="${C.feuille}"/><rect x="60" y="70" width="80" height="50" fill="${C.terre}"/><polygon points="55,70 100,40 145,70" fill="${C.sol}"/><rect x="70" y="40" width="6" height="40" fill="#6b8f3a"/><rect x="124" y="40" width="6" height="40" fill="#6b8f3a"/><circle cx="73" cy="36" r="9" fill="${C.pousse}"/><circle cx="127" cy="36" r="9" fill="${C.pousse}"/><rect x="92" y="92" width="16" height="28" fill="#5b3b1e"/></svg>`,
+    tole:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.cielGris}"/><rect y="110" width="200" height="40" fill="#9c8f6a"/><rect x="60" y="70" width="80" height="50" fill="#b0b6bb"/><polygon points="55,70 100,45 145,70" fill="#7d8488"/><rect x="60" y="70" width="80" height="50" fill="none" stroke="#8a9094" stroke-width="2"/><line x1="80" y1="70" x2="80" y2="120" stroke="#8a9094"/><line x1="100" y1="70" x2="100" y2="120" stroke="#8a9094"/><line x1="120" y1="70" x2="120" y2="120" stroke="#8a9094"/><rect x="92" y="92" width="16" height="28" fill="#555"/></svg>`,
+    feu:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#3a2a22"/><rect y="120" width="200" height="30" fill="#5a3a22"/><rect x="40" y="60" width="10" height="60" fill="#4a3020"/><rect x="150" y="55" width="10" height="65" fill="#4a3020"/><path d="M100 120 q-25 -30 0 -55 q10 20 18 8 q12 25 -18 47" fill="#ff7a1a"/><path d="M100 120 q-12 -18 0 -34 q6 12 10 4 q6 14 -10 30" fill="#ffd23f"/><circle cx="70" cy="105" r="6" fill="#e0a030"/><circle cx="135" cy="108" r="6" fill="#e0a030"/></svg>`,
+    foret:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><rect y="115" width="200" height="35" fill="${C.feuille}"/><circle cx="55" cy="80" r="30" fill="${C.feuille}"/><circle cx="100" cy="65" r="34" fill="${C.canopee}"/><circle cx="150" cy="82" r="28" fill="${C.feuille}"/><rect x="52" y="100" width="6" height="20" fill="#5b3b1e"/><rect x="97" y="92" width="7" height="28" fill="#5b3b1e"/><rect x="147" y="104" width="6" height="18" fill="#5b3b1e"/><circle cx="40" cy="120" r="7" fill="#ffcf4d"/><path d="M150 118 l4 -8 4 8z" fill="${C.sol}"/></svg>`,
+    desert:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="#f4d29a"/><circle cx="160" cy="35" r="18" fill="#ffb02e"/><path d="M0 120 q50 -15 100 0 t100 0 v30 H0z" fill="#d9a85f"/><path d="M40 120 l6 -16 6 16z" fill="#a9763a"/><path d="M120 122 l5 -12 5 12z" fill="#a9763a"/><rect x="44" y="116" width="3" height="8" fill="#7a5224"/></svg>`,
+    planter:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><path d="M150 25 q14 0 14 12 q12 2 8 12 H132 q-6 -10 6 -12 q-2 -12 12 -12z" fill="#eaf4fb"/><line x1="140" y1="50" x2="138" y2="62" stroke="#7fc4e8" stroke-width="2"/><line x1="150" y1="50" x2="148" y2="62" stroke="#7fc4e8" stroke-width="2"/><rect y="115" width="200" height="35" fill="${C.feuille}"/><rect x="58" y="88" width="6" height="28" fill="#5b3b1e"/><circle cx="61" cy="82" r="14" fill="${C.pousse}"/><rect x="118" y="92" width="5" height="24" fill="#5b3b1e"/><circle cx="120" cy="86" r="11" fill="${C.pousse}"/><path d="M95 116 q5 -14 12 -2" fill="none" stroke="${C.pousse}" stroke-width="4" stroke-linecap="round"/></svg>`,
+    plastiqueEau:`<svg viewBox="0 0 200 150"><rect width="200" height="90" fill="${C.ciel}"/><rect y="90" width="200" height="60" fill="#5aa0c4"/><path d="M0 96 q25 6 50 0 t50 0 t50 0 t50 0" fill="none" stroke="#cbe6f2" stroke-width="3"/><rect x="60" y="100" width="10" height="22" rx="3" fill="#e94f4f"/><rect x="120" y="112" width="9" height="20" rx="3" fill="#f4d03f"/><circle cx="95" cy="125" r="5" fill="#fff" opacity=".7"/><path d="M40 132 q8 -10 16 0" fill="none" stroke="#3a7fa0" stroke-width="3"/></svg>`,
+    poubelle:`<svg viewBox="0 0 200 150"><rect width="200" height="150" fill="${C.ciel}"/><rect y="118" width="200" height="32" fill="${C.feuille}"/><rect x="78" y="60" width="44" height="60" rx="5" fill="${C.feuille}"/><rect x="72" y="50" width="56" height="12" rx="4" fill="${C.canopee}"/><rect x="94" y="44" width="12" height="8" rx="2" fill="${C.canopee}"/><path d="M92 72 l8 8 12 -16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="100" width="8" height="18" rx="2" fill="#e94f4f"/><rect x="150" y="104" width="8" height="14" rx="2" fill="#f4d03f"/></svg>`
+  };
+
+  const SCENARIOS=[
+    {q:"Quelle maison protège le mieux la nature\u00a0?",opts:[{svg:'bambou',label:"Maison en bambou",ok:true},{svg:'tole',label:"Maison en t\u00f4le",ok:false}],good:"Bravo\u00a0! Le bambou pousse vite et respecte la nature \ud83c\udf31"},
+    {q:"Que choisis-tu pour les animaux\u00a0?",opts:[{svg:'feu',label:"Br\u00fbler la for\u00eat",ok:false},{svg:'foret',label:"Prot\u00e9ger la for\u00eat",ok:true}],good:"Super\u00a0! Tu sauves les animaux \ud83e\udd8b"},
+    {q:"Comment avoir de la pluie et de la fra\u00eecheur\u00a0?",opts:[{svg:'desert',label:"Couper les arbres",ok:false},{svg:'planter',label:"Planter des arbres",ok:true}],good:"Oui\u00a0! Les arbres ram\u00e8nent la pluie \ud83c\udf27\ufe0f"},
+    {q:"O\u00f9 met-on le plastique\u00a0?",opts:[{svg:'plastiqueEau',label:"Dans l'eau",ok:false},{svg:'poubelle',label:"\u00c0 la poubelle",ok:true}],good:"G\u00e9nial\u00a0! Une eau propre, des poissons heureux \ud83d\udc1f"}
+  ];
+
+  // Exercices niveaux supérieurs
+  const EXOS={
+    secondaire:{badge:"Collège & Lycée",titre:"Étude de cas : ma ville face au climat",prompt:"Choisis un problème climatique visible près de chez toi (inondation, chaleur, déchets, érosion côtière). Décris ses causes et propose 3 solutions concrètes que ta communauté pourrait appliquer.",res:[["U","UNESCO — Éducation au climat","Cadre et notions clés","https://www.unesco.org/en/climate-change-education"],["N","National Geographic Education","Cartes et données","https://education.nationalgeographic.org/"],["L","UN CC:Learn","Cours d'introduction gratuits","https://unccelearn.org/"]]},
+    licence:{badge:"Licence (L1–L3)",titre:"Énergie & empreinte carbone",prompt:"Compare deux sources d'énergie (ex. solaire vs groupe électrogène diesel) pour un village. Évalue coût, impact carbone et accès. Recommande la meilleure option et justifie.",res:[["L","UN CC:Learn","Modules climat & énergie","https://unccelearn.org/"],["G","GIEC / IPCC","Résumés pour décideurs","https://www.ipcc.ch/"],["O","Office for Climate Education","Ressources scientifiques","https://www.oce.global/fr"]]},
+    master:{badge:"Master (M1–M2)",titre:"Conception d'une politique publique",prompt:"Rédige une note de politique (2 pages) pour intégrer l'éducation climatique au programme scolaire national. Inclus objectifs, parties prenantes, budget indicatif et indicateurs de suivi.",res:[["G","GIEC / IPCC","Base scientifique","https://www.ipcc.ch/"],["F","FAO eLearning Academy","Climat & systèmes alimentaires","https://elearning.fao.org/"],["U","UNFCCC","Cadre international","https://unfccc.int/"]]},
+    doctorat:{badge:"Doctorat (1–3)",titre:"Formuler une question de recherche",prompt:"Identifie un manque dans la littérature sur l'éducation climatique en Afrique subsaharienne. Formule une question de recherche, une hypothèse et une méthodologie de collecte de données.",res:[["G","GIEC / IPCC","Rapports complets","https://www.ipcc.ch/"],["S","Google Scholar","Littérature en accès libre","https://scholar.google.com/"],["O","Office for Climate Education","Recherche pédagogique","https://www.oce.global/fr"]]},
+    recherche:{badge:"Recherche & Innovation",titre:"Défi innovation",prompt:"Conçois une solution (technologique, sociale ou pédagogique) qui rend l'éducation climatique accessible hors ligne dans les zones rurales. Décris le prototype, les utilisateurs et l'impact attendu.",res:[["F","FAO eLearning Academy","Innovation & durabilité","https://elearning.fao.org/"],["G","GIEC / IPCC","Données de référence","https://www.ipcc.ch/"],["S","Google Scholar","État de l'art","https://scholar.google.com/"]]}
+  };
+
+  let gScore=0,gIndex=0;
+  const moduleEl=document.getElementById('module');
+
+  function chime(){try{const x=new(window.AudioContext||window.webkitAudioContext)(),o=x.createOscillator(),g=x.createGain();o.connect(g);g.connect(x.destination);o.type='sine';o.frequency.value=660;g.gain.setValueAtTime(.0001,x.currentTime);g.gain.exponentialRampToValueAtTime(.18,x.currentTime+.02);o.frequency.exponentialRampToValueAtTime(990,x.currentTime+.15);g.gain.exponentialRampToValueAtTime(.0001,x.currentTime+.4);o.start();o.stop(x.currentTime+.42);}catch(e){}}
+
+  function renderGame(){
+    if(gIndex>=SCENARIOS.length){renderReward();return;}
+    const s=SCENARIOS[gIndex];
+    const pct=(gIndex/SCENARIOS.length)*100;
+    moduleEl.innerHTML=`
+      <div class="game-top">
+        <div class="game-q">${s.q}</div>
+        <div class="score-pill">\u2b50 ${gScore} points</div>
+      </div>
+      <div class="progress"><i style="width:${pct}%"></i></div>
+      <div class="choices">
+        ${s.opts.map((o,i)=>`<div class="choice" data-i="${i}" data-ok="${o.ok}" role="button" tabindex="0" aria-label="${o.label}">${SVG[o.svg]}<div class="clabel">${o.label}</div></div>`).join('')}
+      </div>
+      <div class="feedback" id="fb"></div>`;
+    moduleEl.querySelectorAll('.choice').forEach(c=>{
+      const pick=()=>handlePick(c);
+      c.addEventListener('click',pick);
+      c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});
+    });
+  }
+
+  function handlePick(card){
+    const ok=card.dataset.ok==='true';
+    const fb=document.getElementById('fb');
+    if(ok){
+      card.classList.add('correct');gScore+=10;chime();
+      fb.textContent=SCENARIOS[gIndex].good;fb.className='feedback good';
+      moduleEl.querySelectorAll('.choice').forEach(c=>c.style.pointerEvents='none');
+      setTimeout(()=>{gIndex++;renderGame();},1400);
+    }else{
+      card.classList.add('wrong');
+      fb.textContent="Regarde encore\u2026 choisis ce qui protège la nature \ud83c\udf31";fb.className='feedback nudge';
+      setTimeout(()=>card.classList.remove('wrong'),500);
+    }
+  }
+
+  function renderReward(){
+    const max=SCENARIOS.length*10;
+    const stars=gScore>=max?'\u2b50\u2b50\u2b50':gScore>=max*0.6?'\u2b50\u2b50':'\u2b50';
+    moduleEl.innerHTML=`<div class="reward">
+      <div class="stars">${stars}</div>
+      <h3>Bravo, petit gardien de la Terre\u00a0!</h3>
+      <p>Tu as gagné <strong>${gScore} points</strong>. Tu sais déjà comment protéger la planète\u00a0!</p>
+      <button class="replay" id="replay">Rejouer</button>
+    </div>`;
+    document.getElementById('replay').addEventListener('click',()=>{gScore=0;gIndex=0;renderGame();});
+  }
+
+  function renderExo(level){
+    const e=EXOS[level];
+    moduleEl.innerHTML=`<div class="exo">
+      <span class="badge">${e.badge}</span>
+      <h3>${e.titre}</h3>
+      <div class="prompt">${e.prompt}</div>
+      <h4>Ressources à consulter pour répondre</h4>
+      <ul class="res-list">
+        ${e.res.map(r=>`<li><a href="${r[3]}" target="_blank" rel="noopener"><span class="ic">${r[0]}</span><span>${r[1]}<small>${r[2]}</small></span></a></li>`).join('')}
+      </ul>
+    </div>`;
+  }
+
+  function loadLevel(level){
+    if(level==='maternelle'||level==='primaire'){gScore=0;gIndex=0;renderGame();}
+    else{renderExo(level);}
+  }
+
+  const picker=document.getElementById('level-picker');
+  if(picker){
+    picker.addEventListener('click',e=>{
+      const b=e.target.closest('.lvl');if(!b)return;
+      picker.querySelectorAll('.lvl').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      loadLevel(b.dataset.level);
+    });
+    loadLevel('maternelle');
+  }
+
+  /* ===== COMPTEURS ANIMÉS ===== */
+  function animateCount(el){
+    const target=parseFloat(el.dataset.count), suf=el.dataset.suffix||'';
+    const dur=1600, t0=performance.now();
+    function fmt(n){return n>=1000000?(n/1000000).toFixed(n%1000000?1:0)+' M':n>=1000?Math.round(n/1000)+' '+ (n%1000?'':'')+(n>=1000?'k'.replace('k','000'):''):Math.round(n);}
+    function nice(n){ if(target>=1000000) return Math.round(n/100000)/10+' M'; if(target>=1000) return Math.round(n).toLocaleString('fr-FR'); return Math.round(n); }
+    function step(now){
+      const p=Math.min((now-t0)/dur,1), eased=1-Math.pow(1-p,3);
+      el.textContent=nice(target*eased)+suf;
+      if(p<1)requestAnimationFrame(step); else el.textContent=nice(target)+suf;
+    }
+    requestAnimationFrame(step);
+  }
+  const countObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);countObs.unobserve(e.target);}})},{threshold:.4});
+  document.querySelectorAll('[data-count]').forEach(el=>countObs.observe(el));
+
+  /* ===== FORMATION CERTIFIANTE ===== */
+  const COURSES={
+    odd:{
+      titre:"Les 17 Objectifs de développement durable",
+      html:`<p>En <strong>septembre 2015</strong>, les <strong>193 États membres de l'ONU</strong> ont adopté le <strong>Programme de développement durable à l'horizon 2030</strong> (Agenda 2030). Il fixe <strong>17 objectifs</strong>, déclinés en <strong>169 cibles</strong>, à atteindre d'ici <strong>2030</strong>. Ils succèdent aux 8 Objectifs du Millénaire pour le développement (2000–2015).</p>
+        <p>Les ODD sont <strong>universels</strong> (ils concernent tous les pays, riches comme pauvres) et <strong>indivisibles</strong> : progresser sur l'un aide souvent les autres. Leur principe central : <em>« ne laisser personne de côté »</em>.</p>
+        <h4>Les 17 objectifs</h4>
+        <ul class="odd-grid">
+          <li><b>1</b>Pas de pauvreté<small>Éliminer la pauvreté sous toutes ses formes</small></li>
+          <li><b>2</b>Faim « zéro »<small>Sécurité alimentaire, agriculture durable</small></li>
+          <li><b>3</b>Bonne santé et bien-être<small>Vie saine pour tous, à tout âge</small></li>
+          <li><b>4</b>Éducation de qualité<small>Éducation inclusive et équitable</small></li>
+          <li><b>5</b>Égalité entre les sexes<small>Autonomiser les femmes et les filles</small></li>
+          <li><b>6</b>Eau propre et assainissement<small>Accès à l'eau et gestion durable</small></li>
+          <li><b>7</b>Énergie propre et d'un coût abordable<small>Énergie fiable, durable et moderne</small></li>
+          <li><b>8</b>Travail décent et croissance économique<small>Emploi productif pour tous</small></li>
+          <li><b>9</b>Industrie, innovation et infrastructure<small>Infrastructures résilientes</small></li>
+          <li><b>10</b>Inégalités réduites<small>Dans les pays et entre eux</small></li>
+          <li><b>11</b>Villes et communautés durables<small>Villes sûres, résilientes, inclusives</small></li>
+          <li><b>12</b>Consommation et production responsables<small>Moins de gaspillage et de déchets</small></li>
+          <li><b>13</b>Mesures relatives à la lutte contre les changements climatiques<small>Agir d'urgence pour le climat</small></li>
+          <li><b>14</b>Vie aquatique<small>Océans, mers et ressources marines</small></li>
+          <li><b>15</b>Vie terrestre<small>Forêts, sols, biodiversité</small></li>
+          <li><b>16</b>Paix, justice et institutions efficaces<small>Sociétés pacifiques et justes</small></li>
+          <li><b>17</b>Partenariats pour la réalisation des objectifs<small>Coopération et financement</small></li>
+        </ul>
+        <h4>Les « 5 P »</h4>
+        <p>On regroupe souvent les ODD en cinq dimensions : <strong>Population</strong>, <strong>Planète</strong>, <strong>Prospérité</strong>, <strong>Paix</strong> et <strong>Partenariats</strong>.</p>
+        <h4>Tout est lié : un exemple</h4>
+        <p>Une école qui installe des panneaux solaires (ODD 7) réduit ses émissions (ODD 13), permet d'étudier le soir (ODD 4) et économise de l'argent pour d'autres besoins (ODD 1). Une seule action peut faire avancer plusieurs objectifs.</p>
+        <h4>Agir à ton échelle</h4>
+        <ul>
+          <li>Trier et réduire tes déchets (ODD 12), économiser l'eau (ODD 6) et l'énergie (ODD 7).</li>
+          <li>Planter et protéger les arbres de ton école ou de ton quartier (ODD 13 et 15).</li>
+          <li>Défendre l'accès des filles à l'école (ODD 4 et 5).</li>
+          <li>Créer un club ODD et monter des projets avec d'autres écoles ou associations (ODD 17).</li>
+        </ul>
+        <p style="opacity:.75;font-size:.88rem">Source officielle : <a href="https://www.un.org/sustainabledevelopment/fr/objectifs-de-developpement-durable/" target="_blank" rel="noopener">un.org — Objectifs de développement durable</a></p>`,
+      quiz:[
+        {q:"En quelle année les ODD ont-ils été adoptés par l'ONU ?",opts:["2000","2015","2020"]},
+        {q:"Combien d'objectifs compte l'Agenda 2030 ?",opts:["8","17","169"]},
+        {q:"Combien de cibles précisent ces objectifs ?",opts:["17","100","169"]},
+        {q:"Quelle est l'échéance fixée pour atteindre les ODD ?",opts:["2025","2030","2050"]},
+        {q:"Quel ODD porte sur l'action pour le climat ?",opts:["ODD 7","ODD 13","ODD 15"]},
+        {q:"L'ODD 4 concerne…",opts:["L'éducation de qualité","L'eau propre","La vie aquatique"]},
+        {q:"Protéger les forêts et la biodiversité relève surtout de…",opts:["L'ODD 14 — Vie aquatique","L'ODD 15 — Vie terrestre","L'ODD 9 — Industrie"]},
+        {q:"Quel est le principe central de l'Agenda 2030 ?",opts:["Ne laisser personne de côté","Croissance avant tout","Chaque pays pour soi"]},
+        {q:"Les ODD s'appliquent…",opts:["Seulement aux pays en développement","À tous les pays","Seulement aux pays riches"]},
+        {q:"Une école installe des panneaux solaires. Quels ODD avance-t-elle directement ?",opts:["ODD 7 et 13","ODD 14 et 16","ODD 2 et 10"]}
+      ]
+    },
+    leadership:{
+      titre:"Leadership climatique",
+      lecon:[
+        "Un leader climatique comprend que le changement climatique est d'abord une question de comportement humain.",
+        "Agir localement : commencer par sa communauté, son école, son quartier, avec des actions concrètes et mesurables.",
+        "Mobiliser : informer, inspirer et fédérer les autres autour d'objectifs communs.",
+        "L'éducation est le levier le plus durable : sensibiliser tôt forme des citoyens responsables pour toute la vie.",
+        "Une transition juste n'oublie personne : elle inclut les femmes, les jeunes et les communautés les plus vulnérables."
+      ],
+      quiz:[
+        {q:"Selon ce module, le changement climatique est avant tout une question de…",opts:["Technologie uniquement","Comportement humain","Chance"]},
+        {q:"Par où un leader climatique devrait-il commencer ?",opts:["Par sa communauté locale","Par un autre continent","Par rien"]},
+        {q:"Quel est le levier le plus durable contre le changement climatique ?",opts:["Ignorer le problème","L'éducation","La déforestation"]},
+        {q:"Une transition juste doit inclure…",opts:["Seulement les riches","Les communautés vulnérables","Personne"]},
+        {q:"Mobiliser, c'est…",opts:["Décourager les autres","Fédérer autour d'objectifs communs","Agir seul"]}
+      ]
+    }
+  };
+  let curCourse=null, curKey=null, learnerName="";
+  const need=()=>Math.ceil(curCourse.quiz.length*0.8);
+  const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const panel=document.getElementById('course-panel');
+
+  window.startCourse=function(key){
+    curCourse=COURSES[key];curKey=key;
+    panel.style.display='block';
+    panel.scrollIntoView({behavior:'smooth',block:'start'});
+    renderName();
+  };
+  function renderName(){
+    panel.innerHTML=`<h3>${curCourse.titre}</h3>
+      <p style="opacity:.8;margin-bottom:8px">Entre ton nom complet : il figurera sur ton attestation.</p>
+      <div class="cp-step"><input class="quiz-input" id="learner" placeholder="Prénom NOM" value="${esc(learnerName)}" maxlength="60" autocomplete="name"></div>
+      <div class="cp-actions"><button class="btn-primary" onclick="goLesson()">Continuer</button>
+      <button class="btn-ghost" onclick="closeCourse()">Fermer</button></div>`;
+  }
+  window.goLesson=function(){
+    const v=document.getElementById('learner').value.trim();
+    if(!/^[\p{L}][\p{L}\p{M} '’.\-]{1,59}$/u.test(v.replace(/\s+/g,' '))){alert("Entre ton nom avec des lettres uniquement (espaces, apostrophes et traits d'union acceptés).");return;}
+    learnerName=v;
+    panel.innerHTML=`<h3>${curCourse.titre} — la leçon</h3>
+      <div class="lesson">${curCourse.html||'<ul>'+curCourse.lecon.map(l=>`<li>${l}</li>`).join('')+'</ul>'}</div>
+      <div class="cp-actions"><button class="btn-primary" onclick="goQuiz()">Passer le test</button>
+      <button class="btn-ghost" onclick="renderName()">Retour</button></div>`;
+  };
+  window.goQuiz=function(){
+    panel.innerHTML=`<h3>${curCourse.titre} — le test</h3>
+      <p style="opacity:.8;margin-bottom:6px">Réponds aux ${curCourse.quiz.length} questions. Il faut au moins ${need()} bonnes réponses pour réussir.</p>
+      <div id="quizbox">${curCourse.quiz.map((q,i)=>`
+        <div class="quiz-q"><p>${i+1}. ${q.q}</p>
+          ${q.opts.map((o,j)=>`<label class="quiz-opt"><input type="radio" name="q${i}" value="${j}">${o}</label>`).join('')}
+        </div>`).join('')}</div>
+      <div class="cp-actions"><button class="btn-primary" onclick="gradeQuiz()">Voir mon résultat</button>
+      <button class="btn-ghost" onclick="goLesson()">Revoir la leçon</button></div>`;
+    panel.querySelectorAll('.quiz-opt').forEach(l=>l.addEventListener('click',()=>{
+      l.parentNode.querySelectorAll('.quiz-opt').forEach(x=>x.classList.remove('sel'));l.classList.add('sel');
+    }));
+  };
+  window.gradeQuiz=async function(){
+    const answers=curCourse.quiz.map((q,i)=>{const sel=panel.querySelector(`input[name="q${i}"]:checked`);return sel?+sel.value:-1;});
+    if(answers.includes(-1)&&!confirm("Tu n'as pas répondu à toutes les questions. Valider quand même ?"))return;
+    const btn=panel.querySelector('.btn-primary');if(btn){btn.disabled=true;btn.textContent='Correction…';}
+    let d;
+    try{
+      const r=await fetch('/api/attestation',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({module:curKey,name:learnerName,answers})});
+      d=await r.json();
+      if(!r.ok&&!('passed' in d))throw new Error(d.error||'Erreur');
+    }catch(err){
+      alert((err&&err.message&&err.message!=='Failed to fetch')?err.message:"Le service de correction est momentanément indisponible. Réessaie dans quelques minutes.");
+      if(btn){btn.disabled=false;btn.textContent='Voir mon résultat';}
+      return;
+    }
+    if(d.passed){
+      const verifyUrl=location.origin+'/verifier.html?id='+d.id;
+      panel.innerHTML=`<div class="cert-wrap">
+        <h3 style="color:var(--feuille)">Félicitations, ${esc(d.name.split(' ')[0])} ! 🎉</h3>
+        <p style="opacity:.85;margin-bottom:6px">Score : ${d.score}/${d.total}. Voici ton attestation officielle.</p>
+        <p style="opacity:.85;margin-bottom:18px;font-size:.92rem">Référence <strong>${esc(d.id)}</strong> — vérifiable par tous sur <a href="${esc(verifyUrl)}" target="_blank" rel="noopener">la page de vérification</a>.</p>
+        <canvas id="cert" width="1200" height="850" style="max-width:100%;height:auto"></canvas>
+        <div class="cp-actions" style="justify-content:center">
+          <button class="btn-primary" onclick="downloadCert()">Télécharger mon attestation</button>
+          <button class="btn-ghost" onclick="closeCourse()">Terminer</button>
+        </div></div>`;
+      drawCert(d,verifyUrl);
+    }else{
+      panel.innerHTML=`<h3>Presque !</h3>
+        <p style="opacity:.85;margin:10px 0 4px">Score : ${d.score}/${d.total}. Il faut au moins ${d.need} bonnes réponses.</p>
+        <p style="opacity:.85;margin-bottom:8px">Revois la leçon et réessaie — tu vas y arriver.</p>
+        <div class="cp-actions"><button class="btn-primary" onclick="goLesson()">Revoir la leçon</button>
+        <button class="btn-ghost" onclick="goQuiz()">Réessayer le test</button></div>`;
+    }
+  };
+  window.closeCourse=function(){panel.style.display='none';panel.innerHTML='';};
+
+  function drawCert(rec,verifyUrl){
+    const course=rec.title,name=rec.name;
+    const c=document.getElementById('cert'),x=c.getContext('2d');
+    x.fillStyle='#f6f1e7';x.fillRect(0,0,1200,850);
+    x.strokeStyle='#13402b';x.lineWidth=14;x.strokeRect(30,30,1140,790);
+    x.strokeStyle='#8cc63f';x.lineWidth=3;x.strokeRect(54,54,1092,742);
+    x.textAlign='center';
+    x.fillStyle='#13402b';x.font='700 30px Georgia';x.fillText('ÉcoGénération',600,140);
+    x.fillStyle='#b8743a';x.font='italic 20px Georgia';x.fillText("Éduquer aujourd'hui, protéger demain",600,172);
+    x.fillStyle='#1b2620';x.font='600 26px Arial';x.fillText('ATTESTATION DE RÉUSSITE',600,260);
+    x.fillStyle='#555';x.font='20px Arial';x.fillText('Cette attestation est décernée à',600,330);
+    x.fillStyle='#13402b';x.font='700 58px Georgia';x.fillText(name,600,410);
+    x.strokeStyle='#8cc63f';x.lineWidth=2;x.beginPath();x.moveTo(380,432);x.lineTo(820,432);x.stroke();
+    x.fillStyle='#555';x.font='20px Arial';x.fillText('pour avoir réussi le module de formation',600,480);
+    x.fillStyle='#2f7d4f';let fs=34;do{x.font='700 '+fs+'px Arial';fs-=2}while(x.measureText('« '+course+' »').width>1000&&fs>18);x.fillText('« '+course+' »',600,530);
+    const d=new Date(rec.issuedAt).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
+    x.fillStyle='#1b2620';x.font='18px Arial';
+    x.textAlign='left';x.fillText('Délivré le '+d,150,720);
+    x.font='15px Arial';x.fillStyle='#555';x.fillText('Réf. '+rec.id,150,748);x.font='13px Arial';x.fillStyle='#777';x.fillText('Vérifier : '+location.host+'/verifier.html',150,770);x.fillStyle='#1b2620';x.font='18px Arial';
+    x.textAlign='right';x.fillText('Moussa DARI · Fondateur',1050,710);
+    x.strokeStyle='#1b2620';x.lineWidth=1;x.beginPath();x.moveTo(830,720);x.lineTo(1050,720);x.stroke();
+    if(window.qrcode){
+      const q=qrcode(0,'M');q.addData(verifyUrl);q.make();
+      const n=q.getModuleCount(),size=130,cell=size/n,ox=600-size/2,oy=600;
+      x.fillStyle='#fff';x.fillRect(ox-8,oy-8,size+16,size+16);x.fillStyle='#13402b';
+      for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(q.isDark(r,c))x.fillRect(ox+c*cell,oy+r*cell,Math.ceil(cell),Math.ceil(cell));
+      x.fillStyle='#777';x.font='12px Arial';x.textAlign='center';x.fillText('Scanner pour vérifier',600,oy+size+24);
+    }
+  }
+  window.downloadCert=function(){
+    const c=document.getElementById('cert');const a=document.createElement('a');
+    a.download='Attestation-EcoGeneration-'+learnerName.replace(/\s+/g,'-')+'.png';
+    a.href=c.toDataURL('image/png');a.click();
+  };
+
+  /* ===== PARTAGE SOCIAL ===== */
+  (function(){
+    const url=encodeURIComponent(location.href);
+    const txt=encodeURIComponent("ÉcoGénération — l'éducation climatique pour l'Afrique subsaharienne, du primaire à l'université.");
+    const wa=document.getElementById('share-wa'),li=document.getElementById('share-li'),xx=document.getElementById('share-x'),cp=document.getElementById('share-copy');
+    if(wa)wa.href='https://wa.me/?text='+txt+'%20'+url;
+    if(li)li.href='https://www.linkedin.com/sharing/share-offsite/?url='+url;
+    if(xx)xx.href='https://twitter.com/intent/tweet?text='+txt+'&url='+url;
+    if(cp)cp.addEventListener('click',()=>{navigator.clipboard?.writeText(location.href).then(()=>{cp.title='Lien copié !';cp.style.background='#8cc63f';cp.style.color='#13402b';setTimeout(()=>{cp.style.background='';cp.style.color='';cp.title='Copier le lien';},1500);});});
+  })();
+
+  /* ===== NEWSLETTER ===== */
+  const newsForm=document.getElementById('news-form');
+  if(newsForm){
+    newsForm.addEventListener('submit',async(e)=>{
+      e.preventDefault();lock(newsForm,true);
+      try{await postForm(newsForm);newsForm.style.display='none';document.getElementById('news-ok').style.display='block';}
+      catch(err){alert(ERR);}
+      finally{lock(newsForm,false);}
+    });
+  }
+</script>
+</body>
+</html>

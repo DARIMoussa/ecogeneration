@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vérifier une attestation — ÉcoGénération</title>
+<meta name="description" content="Vérifiez l'authenticité d'une attestation de réussite délivrée par ÉcoGénération.">
+<link rel="canonical" href="https://ecogeneration.netlify.app/verifier.html">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<meta name="theme-color" content="#13402b">
+<style>
+  :root{--canopee:#13402b;--feuille:#2f7d4f;--pousse:#8cc63f;--sol:#b8743a;--sable:#f6f1e7;--sable-fonce:#ebe3d2;--encre:#1b2620}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--sable);color:var(--encre);line-height:1.6;min-height:100vh}
+  .wrap{max-width:620px;margin:0 auto;padding:40px 18px 64px}
+  .top{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--canopee);font-family:Georgia,serif;font-weight:700;font-size:1.25rem;margin-bottom:32px}
+  .top img{width:30px;height:30px}
+  h1{font-family:Georgia,serif;color:var(--canopee);font-size:1.9rem;line-height:1.2;margin-bottom:8px}
+  .intro{opacity:.8;margin-bottom:24px}
+  form{display:flex;gap:10px;flex-wrap:wrap}
+  input{flex:1 1 220px;padding:13px 14px;border:1px solid var(--sable-fonce);border-radius:12px;font:inherit;font-size:1rem;background:#fff;text-transform:uppercase;letter-spacing:.06em}
+  button{padding:13px 22px;border:0;border-radius:12px;background:var(--canopee);color:var(--sable);font:inherit;font-weight:600;cursor:pointer}
+  button:hover{background:var(--feuille)}
+  :focus-visible{outline:3px solid var(--pousse);outline-offset:2px}
+  .result{margin-top:28px;border-radius:16px;padding:22px;display:none}
+  .result.show{display:block}
+  .ok{background:#fff;border:2px solid var(--pousse)}
+  .ko{background:#fbe4dc;border:2px solid #e3a58c;color:#7a2a12}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--feuille);margin-bottom:14px}
+  .badge i{display:inline-flex;width:28px;height:28px;border-radius:50%;background:var(--pousse);color:#fff;align-items:center;justify-content:center;font-style:normal}
+  dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px}
+  dt{opacity:.65}
+  dd{font-weight:600}
+  .foot{margin-top:36px;font-size:.88rem;opacity:.7}
+  .foot a{color:var(--feuille)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="top" href="/"><img src="/assets/logo-icon.png" alt="">ÉcoGénération</a>
+  <h1>Vérifier une attestation</h1>
+  <p class="intro">Saisissez le numéro de référence imprimé sur l'attestation (format EG-XXXX-XXXX), ou scannez son QR code.</p>
+  <form id="f">
+    <label for="id" style="position:absolute;left:-9999px">Numéro de référence</label>
+    <input id="id" name="id" placeholder="EG-XXXX-XXXX" maxlength="12" autocomplete="off" required pattern="[Ee][Gg]-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}">
+    <button type="submit">Vérifier</button>
+  </form>
+  <div id="r" class="result" role="status" aria-live="polite"></div>
+  <p class="foot">Les attestations ÉcoGénération sont délivrées après réussite d'un test corrigé sur nos serveurs. <a href="/#formations">Suivre un module</a> · <a href="/mentions-legales.html#confidentialite">Confidentialité</a></p>
+</main>
+<script>
+  const f=document.getElementById('f'), input=document.getElementById('id'), r=document.getElementById('r');
+  const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  function show(cls,html){r.className='result show '+cls;r.innerHTML=html;}
+  async function check(id){
+    id=id.trim().toUpperCase();
+    show('', 'Vérification…');
+    try{
+      const res=await fetch('/api/verify?id='+encodeURIComponent(id));
+      const d=await res.json();
+      if(d.valid){
+        const date=new Date(d.issuedAt).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
+        show('ok',`<div class="badge"><i>✓</i> Attestation authentique</div>
+          <dl><dt>Titulaire</dt><dd>${esc(d.name)}</dd>
+          <dt>Module</dt><dd>${esc(d.title)}</dd>
+          <dt>Score</dt><dd>${d.score}/${d.total}</dd>
+          <dt>Délivrée le</dt><dd>${date}</dd>
+          <dt>Référence</dt><dd>${esc(d.id)}</dd></dl>`);
+      }else if(res.status===404){
+        show('ko','<strong>Aucune attestation ne correspond à ce numéro.</strong><br>Vérifiez la saisie. Une attestation introuvable n\'a pas été délivrée par ÉcoGénération.');
+      }else{
+        show('ko',esc(d.error||'Numéro invalide.'));
+      }
+    }catch(e){show('ko','Service momentanément indisponible. Réessayez plus tard.');}
+  }
+  f.addEventListener('submit',e=>{e.preventDefault();history.replaceState(null,'','?id='+encodeURIComponent(input.value.trim().toUpperCase()));check(input.value);});
+  const q=new URLSearchParams(location.search).get('id');
+  if(q){input.value=q.toUpperCase();check(q);}
+</script>
+</body>
+</html>
