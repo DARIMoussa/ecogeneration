@@ -1,5 +1,5 @@
 // Barèmes FICTIFS pour les tests (les vrais sont uniquement dans Netlify).
-process.env.QUIZ_ANSWERS = JSON.stringify({ odd: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], leadership: [2, 2, 2, 2, 2] });
+process.env.QUIZ_ANSWERS = JSON.stringify({ odd: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], leadership: [2, 2, 2, 2, 2], odd5: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
 import { test } from "node:test";
 import assert from "node:assert/strict";
 const { MODULES, cleanName, validateSubmission, grade, newId, ID_RE, passMark, loadModules } = await import("../netlify/lib/core.mjs");

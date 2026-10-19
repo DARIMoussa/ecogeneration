@@ -1,5 +1,5 @@
 // Barèmes FICTIFS pour les tests (les vrais sont uniquement dans Netlify).
-process.env.QUIZ_ANSWERS = JSON.stringify({ odd: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], leadership: [2, 2, 2, 2, 2] });
+process.env.QUIZ_ANSWERS = JSON.stringify({ odd: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], leadership: [2, 2, 2, 2, 2], odd5: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
 // Tests d'intégration des fonctions avec un stockage Netlify Blobs simulé en mémoire.
 import { test, mock } from "node:test";
 import assert from "node:assert/strict";
@@ -35,7 +35,7 @@ test("réussite → attestation enregistrée puis vérifiable", async () => {
   const d = await r.json();
   assert.equal(d.passed, true);
   const v = await (await verify(new Request(URL0 + "/api/verify?id=" + d.id.toLowerCase()))).json();
-  assert.deepEqual([v.valid, v.name, v.score, v.titleEn], [true, "Awa KOFFI", 10, "The 17 Sustainable Development Goals"]);
+  assert.deepEqual([v.valid, v.name, v.score, v.titleEn], [true, "Awa KOFFI", 10, "Introduction to the 17 SDGs"]);
   assert.equal("answers" in v, false);
 });
 
@@ -55,7 +55,7 @@ test("requêtes malveillantes refusées", async () => {
   assert.equal((await post({ module: "odd", name: "<script>", answers: ODD })).status, 400);
   assert.equal((await attest(new Request(URL0 + "/api/attestation"), {})).status, 405);
   assert.equal((await verify(new Request(URL0 + "/api/verify?id=../../etc"))).status, 400);
-  assert.equal((await verify(new Request(URL0 + "/api/verify?id=EG-2222-2222"))).status, 404);
+  assert.equal((await verify(new Request(URL0 + "/api/verify?id=RS-2222-2222"))).status, 404);
 });
 
 test("limitation : 20 tentatives par heure et par IP", async () => {
@@ -72,4 +72,12 @@ test("statistiques sans données personnelles", async () => {
   assert.equal(d.total, 1);
   assert.equal(d.byModule.odd, 1);
   assert.equal(JSON.stringify(d).includes("Awa"), false);
+});
+
+test("module certifiant d'un ODD (ODD 5) : titre du module sur l'attestation, FR et EN", async () => {
+  const d = await (await post({ module: "odd5", name: "Mariam SANNI", answers: Array(10).fill(1) }, {}, "5.5.5.5")).json();
+  assert.equal(d.passed, true);
+  assert.match(d.id, /^RS-/);
+  const v = await (await verify(new Request(URL0 + "/api/verify?id=" + d.id))).json();
+  assert.deepEqual([v.title, v.titleEn], ["ODD 5 — Égalité entre les sexes", "SDG 5 — Gender Equality"]);
 });
