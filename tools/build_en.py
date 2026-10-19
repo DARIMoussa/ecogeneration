@@ -77,6 +77,7 @@ def build_index(missing):
         ('<a href="/en/" hreflang="en" style="color:inherit">English</a>',
          '<a href="/" hreflang="fr" lang="fr" style="color:inherit">Français</a>'),
         ('href="verifier.html"', 'href="/en/verifier.html"'),
+        ('href="parcours.html', 'href="/en/parcours.html'),
         ('href="mentions-legales.html', 'href="/mentions-legales.html'),
         ('100&nbsp;%', '100%'),
         ("?text=Bonjour%20Root%20Solution%2C%20je%20souhaite%20convenir%20d%27un%20rendez-vous.",
@@ -95,21 +96,42 @@ def build_verifier(missing):
     html = fix(html, COMMON + [
         (f'<link rel="canonical" href="{SITE}/verifier.html">', f'<link rel="canonical" href="{SITE}/en/verifier.html">'),
         ('<a class="top" href="/">', '<a class="top" href="/en/">'),
-        ('href="/#formations"', 'href="/en/#formations"'),
+        ('href="/parcours.html"', 'href="/en/parcours.html"'),
         ('<a href="/en/verifier.html" hreflang="en" lang="en">English</a>', '<a href="/verifier.html" hreflang="fr" lang="fr">Français</a>'),
     ])
     out = translate(html, d, missing)
     (PUB / "en/verifier.html").write_text(out, encoding="utf-8")
 
 
+def build_parcours():
+    html = (PUB / "parcours.html").read_text(encoding="utf-8")
+    html = fix(html, COMMON + [
+        ("<title>Parcours 17 ODD — Root Solution</title>", "<title>17 SDGs Pathway — Root Solution</title>"),
+        ('content="Parcours certifiant gratuit sur les 17 Objectifs de développement durable : 17 modules par ODD, 3 cours par module, des mentors illustrés et des attestations vérifiables en français et en anglais."',
+         'content="Free certified pathway on the 17 Sustainable Development Goals: 17 modules per SDG, 3 courses per module, illustrated mentors and verifiable certificates in French and English."'),
+        (f'<link rel="canonical" href="{SITE}/parcours.html">', f'<link rel="canonical" href="{SITE}/en/parcours.html">'),
+        ('<meta property="og:title" content="Parcours 17 ODD — Root Solution">', '<meta property="og:title" content="17 SDGs Pathway — Root Solution">'),
+        ('content="17 modules par ODD, 3 cours par module, des attestations vérifiables en français et en anglais."',
+         'content="17 modules per SDG, 3 courses per module, verifiable certificates in French and English."'),
+        ('<a class="brand" href="/">', '<a class="brand" href="/en/">'),
+        ('<a href="/#formations" class="hide-s">Formations</a><a href="/verifier.html">Vérifier</a><a href="/en/parcours.html" hreflang="en" lang="en">EN</a>',
+         '<a href="/en/#formations" class="hide-s">Courses</a><a href="/en/verifier.html">Verify</a><a href="/parcours.html" hreflang="fr" lang="fr">FR</a>'),
+        ('<p class="eyebrow" id="t-eyebrow">Parcours certifiant</p>', '<p class="eyebrow" id="t-eyebrow">Certified pathway</p>'),
+        ('<h1 id="t-h1">17 ODD · 17 modules par ODD · 3 cours par module</h1>', '<h1 id="t-h1">17 SDGs · 17 modules per SDG · 3 courses per module</h1>'),
+        ("JavaScript est nécessaire pour suivre les cours.", "JavaScript is required to take the courses."),
+    ])
+    (PUB / "en/parcours.html").write_text(html, encoding="utf-8")
+
+
 if __name__ == "__main__":
     missing = set()
     build_index(missing)
     build_verifier(missing)
+    build_parcours()
     if missing:
         print("Chaînes non traduites :")
         for m in sorted(missing):
             print("  -", m)
         if "--strict" in sys.argv:
             sys.exit(1)
-    print("OK : public/en/index.html et public/en/verifier.html générés.")
+    print("OK : public/en/index.html, verifier.html et parcours.html générés.")
