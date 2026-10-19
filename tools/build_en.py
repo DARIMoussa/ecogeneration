@@ -79,9 +79,10 @@ def build_index(missing):
         ('href="verifier.html"', 'href="/en/verifier.html"'),
         ('href="mentions-legales.html', 'href="/mentions-legales.html'),
         ('100&nbsp;%', '100%'),
-        ("?text=Bonjour%20%C3%89coG%C3%A9n%C3%A9ration%2C%20je%20souhaite%20convenir%20d%27un%20rendez-vous.",
-         "?text=Hello%20%C3%89coG%C3%A9n%C3%A9ration%2C%20I%20would%20like%20to%20arrange%20a%20meeting."),
-        ("?subject=Rendez-vous%20%C3%89coG%C3%A9n%C3%A9ration", "?subject=Meeting%20%E2%80%94%20%C3%89coG%C3%A9n%C3%A9ration"),
+        ("?text=Bonjour%20Root%20Solution%2C%20je%20souhaite%20convenir%20d%27un%20rendez-vous.",
+         "?text=Hello%20Root%20Solution%2C%20I%20would%20like%20to%20arrange%20a%20meeting."),
+        ("?subject=Rendez-vous%20Root%20Solution", "?subject=Meeting%20%E2%80%94%20Root%20Solution"),
+        ('/assets/modules.fr.js', '/assets/modules.en.js'),
     ])
     out = translate(html, d, missing)
     (PUB / "en").mkdir(exist_ok=True)
