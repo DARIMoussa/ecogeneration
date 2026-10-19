@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Verify a certificate — ÉcoGénération</title>
-<meta content="Check that a certificate of achievement issued by ÉcoGénération is authentic." name="description"/>
+<title>Verify a certificate — Root Solution</title>
+<meta content="Check that a certificate of achievement issued by Root Solution for Sustainable Future through Human Education on 17 SDGs is authentic." name="description"/>
 <link href="https://ecogeneration.netlify.app/en/verifier.html" rel="canonical"/>
 <link href="https://ecogeneration.netlify.app/verifier.html" hreflang="fr" rel="alternate"/>
 <link href="https://ecogeneration.netlify.app/en/verifier.html" hreflang="en" rel="alternate"/>
@@ -40,24 +40,24 @@
 </head>
 <body>
 <main class="wrap">
-<a class="top" href="/en/"><img alt="" src="/assets/logo-icon.png"/>ÉcoGénération</a>
+<a class="top" href="/en/"><img alt="" src="/assets/favicon.svg?v=2"/>Root Solution</a>
 <h1>Verify a certificate</h1>
-<p class="intro">Enter the reference number printed on the certificate (format EG-XXXX-XXXX), or scan its QR code.</p>
+<p class="intro">Enter the reference number printed on the certificate (format RS-XXXX-XXXX), or scan its QR code.</p>
 <form id="f">
 <label for="id" style="position:absolute;left:-9999px">Reference number</label>
-<input autocomplete="off" id="id" maxlength="12" name="id" pattern="[Ee][Gg]-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}" placeholder="EG-XXXX-XXXX" required=""/>
+<input autocomplete="off" id="id" maxlength="12" name="id" pattern="[Rr][Ss]-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}" placeholder="RS-XXXX-XXXX" required=""/>
 <button type="submit">Verify</button>
 </form>
 <div aria-live="polite" class="result" id="r" role="status"></div>
-<p class="foot">ÉcoGénération certificates are issued after passing a test graded on our servers. <a href="/en/#formations">Take a module</a> · <a href="/mentions-legales.html#confidentialite">Privacy (FR)</a> · <a href="/verifier.html" hreflang="fr" lang="fr">Français</a></p>
+<p class="foot">Root Solution certificates are issued after passing a test graded on our servers. <a href="/en/#formations">Take a module</a> · <a href="/mentions-legales.html#confidentialite">Privacy (FR)</a> · <a href="/verifier.html" hreflang="fr" lang="fr">Français</a></p>
 </main>
 <script>
   const EN=document.documentElement.lang==='en';
   const T=EN?{checking:'Checking…',ok:'Authentic certificate',holder:'Holder',module:'Module',score:'Score',issued:'Issued on',ref:'Reference',
-      notFound:'<strong>No certificate matches this number.</strong><br>Check what you typed. A certificate that cannot be found was not issued by ÉcoGénération.',
+      notFound:'<strong>No certificate matches this number.</strong><br>Check what you typed. A certificate that cannot be found was not issued by Root Solution.',
       invalid:'Invalid number.',down:'Service temporarily unavailable. Please try again later.',locale:'en-GB'}
     :{checking:'Vérification…',ok:'Attestation authentique',holder:'Titulaire',module:'Module',score:'Score',issued:'Délivrée le',ref:'Référence',
-      notFound:'<strong>Aucune attestation ne correspond à ce numéro.</strong><br>Vérifiez la saisie. Une attestation introuvable n\'a pas été délivrée par ÉcoGénération.',
+      notFound:'<strong>Aucune attestation ne correspond à ce numéro.</strong><br>Vérifiez la saisie. Une attestation introuvable n\'a pas été délivrée par Root Solution.',
       invalid:'Numéro invalide.',down:'Service momentanément indisponible. Réessayez plus tard.',locale:'fr-FR'};
   const f=document.getElementById('f'), input=document.getElementById('id'), r=document.getElementById('r');
   const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
