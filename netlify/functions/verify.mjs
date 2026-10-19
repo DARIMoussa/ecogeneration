@@ -1,4 +1,4 @@
-// GET /api/verify?id=EG-XXXX-XXXX — vérifie l'authenticité d'une attestation.
+// GET /api/verify?id=RS-XXXX-XXXX — vérifie l'authenticité d'une attestation.
 import { getStore } from "@netlify/blobs";
 import { ID_RE, TITLES, json } from "../lib/core.mjs";
 
