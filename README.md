@@ -7,6 +7,7 @@
 
 - **Explorateur niveau + ODD** : chaque visiteur choisit son niveau d'études (7 niveaux) et l'un des 17 ODD, et reçoit une explication, un défi adapté à son âge et une piste de leadership
 - Jeu interactif pour les tout-petits, études de cas pour les niveaux supérieurs
+- **Parcours 17 ODD** (`/parcours.html`) : 17 modules par ODD, 3 cours de 5 questions par module, un mentor illustré original par ODD (personnages inventés, citations réelles attribuées). Attestation par cours, attestation de module automatique après ses 3 cours, certificat de parcours complet après les 17 modules d'un ODD. Design unique pour chaque cours (bordure, coins, fond, couleurs), même signataire. Progression liée à un code de reprise (pas de compte). Contenu publié : ODD 1 (51 cours) ; les autres ODD ont leur programme et sont « en préparation ».
 - **19 modules en ligne** : introduction aux ODD, leadership, et **un module certifiant par ODD (17)** — leçon, vidéo adaptée au niveau, test de 10 questions corrigé sur le serveur
 - **Attestations vérifiables en deux exemplaires (français + anglais)** : nom du module suivi, QR code, cachet et signature, page `/verifier.html`
 - **Vidéos officielles intégrées** (lecteurs YouTube en mode sans cookies) : Fondation Eduki (FR), Smile and Learn (dessins animés, EN), Rotterdam School of Management (EN, niveau universitaire)
@@ -29,11 +30,13 @@ netlify/functions/      API serverless (Netlify Functions)
   attestation.mjs       POST /api/attestation — corrige le test côté serveur, délivre l'attestation
   verify.mjs            GET  /api/verify?id=  — vérifie une attestation
   stats.mjs             GET  /api/stats       — nombre d'attestations (sans données personnelles)
+  cours.mjs             POST /api/cours       — corrige un cours du parcours, délivre les attestations cours / module / ODD
+  progress.mjs          POST /api/progress    — progression liée à un code de reprise (seule son empreinte est stockée)
 netlify/lib/core.mjs    Logique métier pure (validation, correction, identifiants)
 tests/                  Tests unitaires et d'intégration (stockage simulé)
 ```
 
-Stockage : **Netlify Blobs** (stores `attestations` et `ratelimit`).
+Stockage : **Netlify Blobs** (stores `attestations`, `progress` et `ratelimit`).
 
 ## Sécurité
 
@@ -54,6 +57,8 @@ Dans Netlify → *Project configuration* → *Environment variables*, créer `QU
 ```
 
 (index 0-based de la bonne option pour chaque question, dans l'ordre du quiz)
+
+Pour le parcours, créer aussi `COURSE_KEYS` (portée : Functions) : base64 de 867 octets, un par cours (17 ODD × 17 modules × 3 cours) ; valeur < 243 = les 5 réponses en base 3, 255 = cours non publié. Voir `netlify/lib/parcours.mjs`.
 
 ## Traduction (FR → EN)
 
