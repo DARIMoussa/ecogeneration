@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours 17 ODD — Root Solution</title>
+<meta name="description" content="Parcours certifiant gratuit sur les 17 Objectifs de développement durable : 17 modules par ODD, 3 cours par module, des mentors illustrés et des attestations vérifiables en français et en anglais.">
+<link rel="canonical" href="https://ecogeneration.netlify.app/parcours.html">
+<link rel="alternate" hreflang="fr" href="https://ecogeneration.netlify.app/parcours.html">
+<link rel="alternate" hreflang="en" href="https://ecogeneration.netlify.app/en/parcours.html">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
+<link rel="preload" href="/assets/fraktur.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#13402b">
+<meta property="og:title" content="Parcours 17 ODD — Root Solution">
+<meta property="og:description" content="17 modules par ODD, 3 cours par module, des attestations vérifiables en français et en anglais.">
+<meta property="og:image" content="https://ecogeneration.netlify.app/assets/og-image.png">
+<style>
+  @font-face{font-family:"Frak";src:url("/assets/fraktur.woff2") format("woff2");font-weight:700;font-display:swap}
+  :root{--canopee:#13402b;--feuille:#2f7d4f;--pousse:#8cc63f;--sable:#f6f1e7;--sable-fonce:#ebe3d2;--encre:#1b2620}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--sable);color:var(--encre);line-height:1.6}
+  a{color:var(--feuille)}
+  :focus-visible{outline:3px solid var(--pousse);outline-offset:2px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  nav{position:sticky;top:0;z-index:5;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--sable-fonce)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--canopee);font-family:Georgia,serif;font-weight:700;min-width:0}
+  .brand img{width:36px;height:36px;border-radius:9px;flex:none}
+  .goth{font-family:"Frak",Georgia,serif;color:var(--feuille);font-size:1.18em}
+  .nav-r{display:flex;gap:14px;align-items:center;font-size:.92rem;white-space:nowrap}
+  .nav-r a{text-decoration:none;color:var(--encre);opacity:.8}
+  header.hero{padding:44px 0 18px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:700;color:var(--feuille)}
+  h1{font-family:Georgia,serif;color:var(--canopee);font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.15;margin:8px 0 12px}
+  .intro{max-width:70ch;opacity:.85}
+  #me{background:#fff;border:1px solid var(--sable-fonce);border-radius:18px;padding:18px;margin:22px 0}
+  #me h2{font-family:Georgia,serif;font-size:1.2rem;color:var(--canopee);margin-bottom:10px}
+  .me-grid{display:grid;grid-template-columns:2fr 1fr;gap:12px}
+  .me-grid label,.name-l{display:flex;flex-direction:column;font-size:.85rem;gap:4px;opacity:.95}
+  input,select{font:inherit;padding:10px 12px;border:1px solid var(--sable-fonce);border-radius:10px;background:#fff;min-width:0}
+  .me-stats{margin-top:10px;font-size:.92rem}
+  .me-code{margin-top:10px;font-size:.9rem}
+  .me-code summary{cursor:pointer;font-weight:600;color:var(--feuille)}
+  .me-code p{margin:8px 0;opacity:.8}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;align-items:center}
+  .row code{background:var(--sable);padding:8px 10px;border-radius:8px;word-break:break-all;flex:1 1 220px}
+  .row input{flex:1 1 220px}
+  .btn-primary,.btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;border:2px solid var(--canopee)}
+  .btn-primary{background:var(--canopee);color:var(--sable)}
+  .btn-primary:hover{background:var(--feuille);border-color:var(--feuille)}
+  .btn-ghost{background:transparent;color:var(--canopee)}
+  .sm{padding:6px 14px;font-size:.88rem}
+  button:disabled{opacity:.6;cursor:wait}
+  .sdg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:8px 0 40px}
+  .sdg-tile{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--encre);background:#fff;border-radius:18px;padding:14px;border:1px solid var(--sable-fonce);border-top:8px solid var(--c);transition:transform .15s,box-shadow .15s;min-width:0}
+  .sdg-tile:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(19,64,43,.12)}
+  .t-head{display:flex;gap:10px;align-items:center;font-weight:700;line-height:1.2}
+  .t-head b{flex:none;width:38px;height:38px;border-radius:10px;background:var(--c);color:var(--fg);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .t-mentor{display:flex;gap:8px;align-items:center;font-size:.9rem;font-weight:600}
+  .t-mentor small{display:block;font-weight:400;opacity:.7}
+  .t-meta{font-size:.82rem;opacity:.75}
+  .bar{height:6px;background:var(--sable-fonce);border-radius:9px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--c)}
+  .badge{font-size:.82rem;font-weight:700;color:#8a6a12}
+  .sdg-head{display:flex;gap:16px;align-items:center;background:var(--c);color:var(--fg);border-radius:20px;padding:20px;margin:12px 0 16px}
+  .sdg-head b{font-size:2.6rem;font-weight:800;line-height:1}
+  .sdg-head h2{font-family:Georgia,serif;font-size:clamp(1.25rem,3vw,1.8rem);line-height:1.2}
+  .sdg-head.slim b{font-size:2rem}
+  .sdg-head small{opacity:.9}
+  .card{background:#fff;border:1px solid var(--sable-fonce);border-radius:18px;padding:18px;margin:14px 0}
+  .card h3{font-family:Georgia,serif;color:var(--canopee);margin-bottom:8px}
+  .muted{opacity:.7;font-size:.9rem;margin-bottom:8px}
+  .mentor{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;border-left:8px solid var(--c)}
+  .mentor h3 small{font-family:Inter,system-ui,sans-serif;font-weight:400;font-size:.9rem;opacity:.75}
+  .bubble{background:var(--sable);border-radius:14px;padding:10px 14px;margin:8px 0}
+  blockquote{font-family:Georgia,serif;font-style:italic;font-size:1.05rem;border-left:4px solid var(--c);padding-left:12px;margin-top:8px}
+  cite{display:block;font-style:normal;font-family:Inter,system-ui,sans-serif;font-size:.85rem;opacity:.7;margin-top:4px}
+  .mentor-svg{animation:bob 4s ease-in-out infinite;display:block}
+  .mentor-svg .blink{transform-origin:100px 98px;animation:blink 5s infinite}
+  @keyframes bob{50%{transform:translateY(-4px)}}
+  @keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+  @media (prefers-reduced-motion:reduce){.mentor-svg,.mentor-svg .blink{animation:none}}
+  .vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .vid{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000}
+  .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  figcaption{font-size:.82rem;opacity:.75;margin-top:4px}
+  .mods{list-style:none;display:grid;gap:10px;margin:14px 0 40px}
+  .mod details{background:#fff;border:1px solid var(--sable-fonce);border-radius:14px}
+  .mod summary{display:flex;gap:12px;align-items:center;padding:12px 14px;cursor:pointer;list-style:none}
+  .mod summary::-webkit-details-marker{display:none}
+  .mn{flex:none;width:32px;height:32px;border-radius:9px;background:var(--c);color:var(--fg);display:flex;align-items:center;justify-content:center;font-weight:700}
+  .mod.off .mn{opacity:.45}
+  .mt{flex:1;font-weight:600;min-width:0}
+  .ms{font-size:.82rem;opacity:.75;white-space:nowrap}
+  .mod details>p{padding:0 14px 12px}
+  .courses{list-style:none;padding:0 14px 12px;display:grid;gap:8px}
+  .courses li{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between;background:var(--sable);border-radius:10px;padding:8px 10px}
+  .courses li span{flex:1 1 220px}
+  .chip{font-size:.82rem;font-weight:700;text-decoration:none;padding:3px 10px;border-radius:99px}
+  .chip.ok{background:#e4f3d3;color:#2f6b1a}
+  .lesson ul{padding-left:20px;display:grid;gap:8px}
+  fieldset{border:0;margin:14px 0}
+  legend{font-weight:600;margin-bottom:6px}
+  .opt{display:flex;gap:8px;align-items:flex-start;padding:8px 10px;border:1px solid var(--sable-fonce);border-radius:10px;margin:6px 0;cursor:pointer}
+  .opt:has(input:checked){border-color:var(--feuille);background:#eef7e6}
+  .name-l{margin:6px 0 4px;max-width:520px}
+  .win{background:#eef7e6;border:1px solid #cfe7b8;border-radius:12px;padding:10px 14px;margin:12px 0;font-weight:600}
+  .win.big{font-size:1.05rem}
+  .fail{background:#fbe9e2;border:1px solid #f0c3b0;border-radius:12px;padding:10px 14px;margin:12px 0}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+  .cert{background:#fff;border:1px solid var(--sable-fonce);border-radius:16px;padding:14px;margin:14px 0}
+  .cert h4{font-family:Georgia,serif;color:var(--canopee);margin-bottom:4px}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pair figure{display:flex;flex-direction:column;gap:6px;align-items:center;min-width:0}
+  .pair canvas{width:100%;height:auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+  footer{border-top:1px solid var(--sable-fonce);padding:24px 0 40px;font-size:.85rem;opacity:.75}
+  @media (max-width:720px){.me-grid,.pair{grid-template-columns:1fr}.mentor{grid-template-columns:1fr;justify-items:center;text-align:left}.nav-r .hide-s{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/logo-icon.png?v=2" alt=""><span><span class="goth">R</span>oot <span class="goth">S</span>olution</span></a>
+  <div class="nav-r"><a href="/#formations" class="hide-s">Formations</a><a href="/verifier.html">Vérifier</a><a href="/en/parcours.html" hreflang="en" lang="en">EN</a></div>
+</div></nav>
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow" id="t-eyebrow">Parcours certifiant</p>
+    <h1 id="t-h1">17 ODD · 17 modules par ODD · 3 cours par module</h1>
+    <p class="intro" id="t-intro"></p>
+  </header>
+  <section id="me" aria-live="polite"></section>
+  <div id="app"><noscript>JavaScript est nécessaire pour suivre les cours.</noscript></div>
+</main>
+<footer><div class="wrap" id="t-footer"></div></footer>
+<script src="/assets/programme.js?v=1"></script>
+<script src="/assets/parcours-i18n.js?v=1"></script>
+<script src="/assets/mentors.js?v=1"></script>
+<script src="/assets/cert-i18n.js?v=1"></script>
+<script src="/assets/qrcode.js?v=2"></script>
+<script src="/assets/cert-art.js?v=1"></script>
+<script>
+  (function(){const P=PI18N[document.documentElement.lang==='en'?'en':'fr'];
+    document.getElementById('t-eyebrow').textContent=P.eyebrow;document.getElementById('t-h1').textContent=P.h1;
+    document.getElementById('t-intro').textContent=P.intro;document.getElementById('t-footer').textContent=P.footer;})();
+</script>
+<script src="/assets/parcours.js?v=1"></script>
+</body>
+</html>

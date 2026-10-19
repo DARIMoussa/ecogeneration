@@ -10,8 +10,9 @@ export default async (req) => {
   const rec = await getStore({ name: "attestations", consistency: "strong" }).get(id, { type: "json" });
   if (!rec) return json({ valid: false }, 404);
   const { name, module, score, total, issuedAt } = rec;
-  const t = TITLES[module] || { fr: rec.title, en: rec.title };
-  return json({ valid: true, id, name, title: t.fr, titleEn: t.en, score, total, issuedAt });
+  const t = TITLES[module] || { fr: rec.title, en: rec.titleEn || rec.title };
+  const kind = rec.kind || "module";
+  return json({ valid: true, id, name, kind, title: t.fr, titleEn: t.en, score, total, issuedAt });
 };
 
 export const config = { path: "/api/verify" };
