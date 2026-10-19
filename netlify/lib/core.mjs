@@ -3,11 +3,28 @@ import { randomBytes } from "node:crypto";
 
 // Les barèmes (bonnes réponses) ne sont PAS dans le code : ils viennent de la variable
 // d'environnement secrète QUIZ_ANSWERS, définie dans Netlify (Project configuration →
-// Environment variables). Format JSON : {"odd":[i,i,...],"leadership":[i,...]} (index 0-based de la bonne option)
+// Environment variables). Format JSON : {"odd":[...],"leadership":[...],"odd1":[...],…,"odd17":[...]} (index 0-based de la bonne option)
 // Le dépôt peut ainsi être public sans révéler les réponses.
 export const TITLES = {
-  odd: { fr: "Les 17 Objectifs de développement durable", en: "The 17 Sustainable Development Goals" },
+  odd: { fr: "Introduction aux 17 ODD", en: "Introduction to the 17 SDGs" },
   leadership: { fr: "Leadership pour le développement durable", en: "Leadership for Sustainable Development" },
+  odd1: { fr: "ODD 1 — Pas de pauvreté", en: "SDG 1 — No Poverty" },
+  odd2: { fr: "ODD 2 — Faim « zéro »", en: "SDG 2 — Zero Hunger" },
+  odd3: { fr: "ODD 3 — Bonne santé et bien-être", en: "SDG 3 — Good Health and Well-being" },
+  odd4: { fr: "ODD 4 — Éducation de qualité", en: "SDG 4 — Quality Education" },
+  odd5: { fr: "ODD 5 — Égalité entre les sexes", en: "SDG 5 — Gender Equality" },
+  odd6: { fr: "ODD 6 — Eau propre et assainissement", en: "SDG 6 — Clean Water and Sanitation" },
+  odd7: { fr: "ODD 7 — Énergie propre et d'un coût abordable", en: "SDG 7 — Affordable and Clean Energy" },
+  odd8: { fr: "ODD 8 — Travail décent et croissance économique", en: "SDG 8 — Decent Work and Economic Growth" },
+  odd9: { fr: "ODD 9 — Industrie, innovation et infrastructure", en: "SDG 9 — Industry, Innovation and Infrastructure" },
+  odd10: { fr: "ODD 10 — Inégalités réduites", en: "SDG 10 — Reduced Inequalities" },
+  odd11: { fr: "ODD 11 — Villes et communautés durables", en: "SDG 11 — Sustainable Cities and Communities" },
+  odd12: { fr: "ODD 12 — Consommation et production responsables", en: "SDG 12 — Responsible Consumption and Production" },
+  odd13: { fr: "ODD 13 — Mesures relatives à la lutte contre les changements climatiques", en: "SDG 13 — Climate Action" },
+  odd14: { fr: "ODD 14 — Vie aquatique", en: "SDG 14 — Life Below Water" },
+  odd15: { fr: "ODD 15 — Vie terrestre", en: "SDG 15 — Life on Land" },
+  odd16: { fr: "ODD 16 — Paix, justice et institutions efficaces", en: "SDG 16 — Peace, Justice and Strong Institutions" },
+  odd17: { fr: "ODD 17 — Partenariats pour la réalisation des objectifs", en: "SDG 17 — Partnerships for the Goals" },
 };
 
 export function loadModules(raw = globalThis.Netlify?.env?.get?.("QUIZ_ANSWERS") ?? process.env.QUIZ_ANSWERS) {
@@ -53,15 +70,15 @@ export function grade(mod, answers) {
   return { score, total, need: passMark(total), passed: score >= passMark(total) };
 }
 
-// Identifiant lisible, sans caractères ambigus (0/O, 1/I) : EG-XXXX-XXXX (~40 bits d'aléa).
+// Identifiant lisible, sans caractères ambigus (0/O, 1/I) : RS-XXXX-XXXX (Root Solution) (~40 bits d'aléa).
 const ALPHABET = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
 export function newId() {
   const b = randomBytes(8);
   let s = "";
   for (let i = 0; i < 8; i++) s += ALPHABET[b[i] % 32];
-  return `EG-${s.slice(0, 4)}-${s.slice(4)}`;
+  return `RS-${s.slice(0, 4)}-${s.slice(4)}`;
 }
-export const ID_RE = /^EG-[2-9A-HJ-NP-Z]{4}-[2-9A-HJ-NP-Z]{4}$/;
+export const ID_RE = /^RS-[2-9A-HJ-NP-Z]{4}-[2-9A-HJ-NP-Z]{4}$/;
 
 export const json = (data, status = 200, extra = {}) =>
   new Response(JSON.stringify(data), {
