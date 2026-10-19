@@ -10,5 +10,10 @@
 "Vérifiez l'authenticité d'une attestation de réussite délivrée par ÉcoGénération.": "Check that a certificate of achievement issued by ÉcoGénération is authentic.",
 "Français": "Français",
 "ÉcoGénération": "ÉcoGénération",
-"One World Bénin / ACN": "One World Bénin / ACN"
+"One World Bénin / ACN": "One World Bénin / ACN",
+"Saisissez le numéro de référence imprimé sur l'attestation (format RS-XXXX-XXXX), ou scannez son QR code.": "Enter the reference number printed on the certificate (format RS-XXXX-XXXX), or scan its QR code.",
+"Vérifier une attestation — Root Solution": "Verify a certificate — Root Solution",
+"Vérifiez l'authenticité d'une attestation de réussite délivrée par Root Solution for Sustainable Future through Human Education on 17 SDGs.": "Check that a certificate of achievement issued by Root Solution for Sustainable Future through Human Education on 17 SDGs is authentic.",
+"Les attestations Root Solution sont délivrées après réussite d'un test corrigé sur nos serveurs.": "Root Solution certificates are issued after passing a test graded on our servers.",
+"Root Solution": "Root Solution"
 }
