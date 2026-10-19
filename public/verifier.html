@@ -48,14 +48,14 @@
     <button type="submit">Vérifier</button>
   </form>
   <div id="r" class="result" role="status" aria-live="polite"></div>
-  <p class="foot">Les attestations Root Solution sont délivrées après réussite d'un test corrigé sur nos serveurs. <a href="/#formations">Suivre un module</a> · <a href="/mentions-legales.html#confidentialite">Confidentialité</a> · <a href="/en/verifier.html" hreflang="en" lang="en">English</a></p>
+  <p class="foot">Les attestations Root Solution sont délivrées après réussite d'un test corrigé sur nos serveurs. <a href="/parcours.html">Suivre un cours</a> · <a href="/mentions-legales.html#confidentialite">Confidentialité</a> · <a href="/en/verifier.html" hreflang="en" lang="en">English</a></p>
 </main>
 <script>
   const EN=document.documentElement.lang==='en';
-  const T=EN?{checking:'Checking…',ok:'Authentic certificate',holder:'Holder',module:'Module',score:'Score',issued:'Issued on',ref:'Reference',
+  const T=EN?{checking:'Checking…',ok:'Authentic certificate',holder:'Holder',module:'Title',type:'Type',kinds:{course:'Course certificate',module:'Module certificate',sdg:'Full SDG pathway certificate'},score:'Score',issued:'Issued on',ref:'Reference',
       notFound:'<strong>No certificate matches this number.</strong><br>Check what you typed. A certificate that cannot be found was not issued by Root Solution.',
       invalid:'Invalid number.',down:'Service temporarily unavailable. Please try again later.',locale:'en-GB'}
-    :{checking:'Vérification…',ok:'Attestation authentique',holder:'Titulaire',module:'Module',score:'Score',issued:'Délivrée le',ref:'Référence',
+    :{checking:'Vérification…',ok:'Attestation authentique',holder:'Titulaire',module:'Intitulé',type:'Type',kinds:{course:'Attestation de cours',module:'Attestation de module',sdg:'Certificat de parcours complet (ODD)'},score:'Score',issued:'Délivrée le',ref:'Référence',
       notFound:'<strong>Aucune attestation ne correspond à ce numéro.</strong><br>Vérifiez la saisie. Une attestation introuvable n\'a pas été délivrée par Root Solution.',
       invalid:'Numéro invalide.',down:'Service momentanément indisponible. Réessayez plus tard.',locale:'fr-FR'};
   const f=document.getElementById('f'), input=document.getElementById('id'), r=document.getElementById('r');
@@ -71,6 +71,7 @@
         const date=new Date(d.issuedAt).toLocaleDateString(T.locale,{day:'numeric',month:'long',year:'numeric'});
         show('ok',`<div class="badge"><i>✓</i> ${T.ok}</div>
           <dl><dt>${T.holder}</dt><dd>${esc(d.name)}</dd>
+          <dt>${T.type}</dt><dd>${esc(T.kinds[d.kind]||T.kinds.module)}</dd>
           <dt>${T.module}</dt><dd>${esc(EN?(d.titleEn||d.title):d.title)}</dd>
           <dt>${T.score}</dt><dd>${d.score}/${d.total}</dd>
           <dt>${T.issued}</dt><dd>${date}</dd>
