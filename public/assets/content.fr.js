@@ -40,7 +40,7 @@ window.CONTENT = {
     retry: "Réessayer le test",
     certFile: "Attestation-EcoGeneration-",
     cert: {
-      tagline: "Éduquer aujourd'hui, protéger demain",
+      
       title: "ATTESTATION DE RÉUSSITE",
       awarded: "Cette attestation est décernée à",
       passed: "pour avoir réussi le module de formation",
@@ -51,7 +51,8 @@ window.CONTENT = {
       sealLine: "ODD · LEADERSHIP · CLIMAT",
       scan: "Scanner pour vérifier",
     },
-    shareText: "ÉcoGénération — ODD, leadership et climat : l'éducation au développement durable pour l'Afrique subsaharienne.",
+    shareText: "Root Solution for Sustainable Future through Human Education on 17 SDGs — 17 modules certifiants gratuits sur les ODD, le leadership et le climat.",
+    startModule: "Commencer le module",
     copied: "Lien copié !",
     copy: "Copier le lien",
     odd: {
@@ -66,7 +67,11 @@ window.CONTENT = {
       researchQ: "Question de recherche",
       leader: "Être leader",
       learnMore: "En savoir plus (ONU, en anglais)",
-      takeModule: "Suivre le module « Les 17 ODD » et obtenir l'attestation",
+      takeModule: (n) => `Suivre le module certifiant de l'ODD ${n}`,
+      videoBy: "Vidéo :",
+      watch: "Regarder",
+      certified: "Certifiant",
+      moduleDesc: (n) => `Leçon, vidéo adaptée à ton niveau, test de 10 questions et attestation de l'ODD ${n} en français et en anglais.`,
       levelLabel: "Niveau",
     },
   },
@@ -203,7 +208,7 @@ window.CONTENT = {
 
   courses: {
     odd: {
-      titre: "Les 17 Objectifs de développement durable",
+      titre: "Introduction aux 17 ODD",
       html: `<p>En <strong>septembre 2015</strong>, les <strong>193 États membres de l'ONU</strong> ont adopté le <strong>Programme de développement durable à l'horizon 2030</strong> (Agenda 2030). Il fixe <strong>17 objectifs</strong>, déclinés en <strong>169 cibles</strong>, à atteindre d'ici <strong>2030</strong>. Ils succèdent aux 8 Objectifs du Millénaire pour le développement (2000–2015).</p>
         <p>Les ODD sont <strong>universels</strong> (ils concernent tous les pays, riches comme pauvres) et <strong>indivisibles</strong> : progresser sur l'un aide souvent les autres. Leur principe central : <em>« ne laisser personne de côté »</em>.</p>
         <h4>Les 17 objectifs</h4>

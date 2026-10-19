@@ -40,7 +40,7 @@ window.CONTENT = {
     retry: "Retake the test",
     certFile: "Certificate-EcoGeneration-",
     cert: {
-      tagline: "Educating today, protecting tomorrow",
+      
       title: "CERTIFICATE OF ACHIEVEMENT",
       awarded: "This certificate is awarded to",
       passed: "for successfully completing the training module",
@@ -51,7 +51,8 @@ window.CONTENT = {
       sealLine: "SDGs · LEADERSHIP · CLIMATE",
       scan: "Scan to verify",
     },
-    shareText: "ÉcoGénération — SDGs, leadership and climate: sustainable development education for sub-Saharan Africa.",
+    shareText: "Root Solution for Sustainable Future through Human Education on 17 SDGs — 17 free certified modules on the SDGs, leadership and climate.",
+    startModule: "Start the module",
     copied: "Link copied!",
     copy: "Copy link",
     odd: {
@@ -66,7 +67,11 @@ window.CONTENT = {
       researchQ: "Research question",
       leader: "Be a leader",
       learnMore: "Learn more (UN)",
-      takeModule: "Take the “17 SDGs” module and earn the certificate",
+      takeModule: (n) => `Take the SDG ${n} certified module`,
+      videoBy: "Video:",
+      watch: "Watch",
+      certified: "Certified",
+      moduleDesc: (n) => `Lesson, video suited to your level, 10-question test and SDG ${n} certificate in English and French.`,
       levelLabel: "Level",
     },
   },
@@ -200,7 +205,7 @@ window.CONTENT = {
 
   courses: {
     odd: {
-      titre: "The 17 Sustainable Development Goals",
+      titre: "Introduction to the 17 SDGs",
       html: `<p>In <strong>September 2015</strong>, the <strong>193 UN Member States</strong> adopted the <strong>2030 Agenda for Sustainable Development</strong>. It sets <strong>17 goals</strong>, broken down into <strong>169 targets</strong>, to be achieved by <strong>2030</strong>. They follow on from the 8 Millennium Development Goals (2000–2015).</p>
         <p>The SDGs are <strong>universal</strong> (they apply to every country, rich or poor) and <strong>indivisible</strong>: progress on one often helps the others. Their central principle: <em>“leave no one behind”</em>.</p>
         <h4>The 17 goals</h4>
