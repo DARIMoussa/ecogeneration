@@ -72,11 +72,12 @@
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--sable-fonce);
   }
-  .nav-in{position:relative;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto}
+  .nav-in{position:relative;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1280px;margin:0 auto}
   .logo{font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--canopee);display:flex;align-items:center;gap:10px}
   .logo .leaf{width:26px;height:26px;flex:none}
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{color:var(--encre);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.8;transition:opacity .2s}
+  .nav-links{display:flex;gap:20px;align-items:center;flex:none}
+  .brand{flex:0 1 auto}
+  .nav-links a{white-space:nowrap;color:var(--encre);text-decoration:none;font-size:.93rem;font-weight:500;opacity:.8;transition:opacity .2s}
   .nav-links a:hover{opacity:1}
   .nav-links a.btn{color:var(--sable);opacity:1}
   .btn{
@@ -143,7 +144,7 @@
   .cert-pair{display:grid;gap:22px}
   .cert-pair h4{margin:0 0 8px;font-family:var(--display);color:var(--canopee)}
   .menu-btn{display:none;background:none;border:1px solid var(--sable-fonce);border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--canopee)}
-  @media(max-width:760px){
+  @media(max-width:1260px){
     .menu-btn{display:inline-flex}
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--sable);border-bottom:1px solid var(--sable-fonce);padding:8px 24px 16px}
     .nav-links.open{display:flex}
